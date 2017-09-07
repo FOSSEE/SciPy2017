@@ -1,0 +1,150 @@
+<!DOCTYPE HTML>
+{% extends 'base.html' %}
+{% load static %}
+
+<html>
+  <head>
+    {% if user and not user.is_anonymous %}
+    <title>Submit Proposal</title>
+     {% else %}
+     <title>Login</title>
+     {% endif %}
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+  </head>
+  <body>
+
+
+      {% block header %}
+       <header id="header1">
+            <h1>SciPy India 2016</h1>
+            {% if user and not user.is_anonymous %}
+            <h2>Submit Proposal</h2>
+            {% else %}
+            <h2>Login</h2>
+            {% endif %}
+
+</header> 
+{% endblock %}
+
+<div id="wrapper">
+
+{% block nav %}
+
+<div id="navbar-main"> 
+  <div class="navbar navbar-inverse navbar-fixed-top">
+      <div class="navbar-collapse collapse">
+        <ul class="nav navbar-nav">
+         <li><a href="{% url 'website:home' %}" class="active">Home</a></li>        
+               {% if user and not user.is_anonymous %}
+               <li><a href="{% url 'website:cfp' %}">{{ user.get_full_name|default:user.username }}</a>
+                <li><a href="{% url 'auth:logout' %}?next=/2016/cfp">Logout</a></li>
+               {% else %}       
+                <li><a href="{% url 'website:cfp' %}" >Login</a></li>
+           {% endif %}
+        </ul>
+      </div>
+  </div>
+</div>
+{% endblock %}
+
+
+{% block content %} 
+      <!-- <div id="wrapper"> -->
+        <div id="main">
+          <section id="content" class="main">
+     {% if proposal_submit %}
+          <center>
+            <table>
+              <tr>
+                <td>
+                <p>Thank You for your submission. Your proposal has been saved successfully and is under review. You can check the status of submission <a href="{% url 'website:view_abstracts' %}">here </a>!</p>
+                </td>
+                </tr>
+                </table>
+          </center>
+      {% endif %}
+
+
+
+  {% if registration_complete %}
+
+  <center>
+                <p>Thank You for your registration. You can now log in by clicking  <a href="{% url 'website:cfp' %}">here </a>!</p>
+                <br/><br/>
+          </center>
+  {% endif %}
+
+
+
+ {% if user and not user.is_anonymous and not login_required %}
+      <p>We invite you to submit proposals for talks or workshops to be presented at SciPy 2016. The time duration for talks is 15 or 30 minutes and for workshops is 2 to 4 hours. There will be two parallel tracks for the workshops this year.  One track is meant for beginners and the other is for advanced users.     </p>
+                  <span><h2><u>Important Dates</u></h2></span>
+             <ul>
+                <li>Call for proposals opens: <b>October 4, 2016</b></li>
+                <li>Last date for submission of proposals: <b>November 28, 2016</b></li>
+                <li>Announcement of selected proposals: <b>December 1, 2016</b></li>
+            </ul>
+
+            <br/>
+        {% if user.is_superuser %}
+        <center><a href="{% url 'website:view_abstracts' %}" style="background:#D44727" class="button special">View Proposals</a> </center>
+        {% else %}
+                <center>
+                <a href="{% url 'website:view_abstracts' %}" style="background:#D44727" class="button special">View Proposals</a>
+                </center>
+        {% endif %}
+               
+  {% else %}
+          <p align = "justify">We invite you to submit proposals for talks or workshops to be presented at SciPy 2016. The time duration for talks is 15 or 30 minutes and for workshops is 2 to 4 hours. There will be two parallel tracks for the workshops this year.  One track is meant for beginners and the other is for advanced users.
+        </p><hr>
+          <ul class="features">
+          <li>
+                 <span><h2><u>Login</u></h2></span>
+
+                <p>Login/Register to Submit a Proposal</p>
+                {% if invalid %}
+                        <p style="color:red; font-size:15px;">* Invalid Username/Password</p>
+               {% endif %}
+                
+                  <!-- <div id = "my_form"> -->
+                    <form action="" method="POST">
+                        {{ form.as_p }}
+                        <button class="button special" style="background:#D44727" name ="login" type="submit">Login</button><br/><br/>
+                        <a style="padding-right : 20px;" href="{% url 'website:userregister' %}" class="btn btn btn-primary">Create an Account</a>
+                        <a  href="/2016/forgotpassword/">Forgot Password?</a>
+                        {% csrf_token %}
+                    </form>
+                    <!-- </div> -->
+                    <p>Or Sign in with:&nbsp;
+                    <a href="{% url 'social:begin' 'google-oauth2' %}" class="btn btn-social-icon "  style="color:#dd4b39;"><i class="icon-google-plus"></i></a>&nbsp;
+                    <a href="{% url 'social:begin' 'facebook' %}?next={{ request.path }}" class=" btn btn-social-icon" style="color:#3b5998"><i class="icon-facebook"></i></a>
+</p>
+                  </li>
+
+                <!-- </div> -->
+
+            <!-- <div class="col-md-6" > -->
+            
+        <li>
+                  <span><h2><u>Important Dates</u></h2></span>
+             <ul>
+                <li>Call for proposal opens: <b>October 4, 2016</b></li>
+                <li>Last date for submission of proposals: <b>November 28, 2016</b></li>
+                <li>Announcement of selected proposals: <b>December 1, 2016</b></li>
+            </ul>
+ 
+        </li>
+        </ul>
+          <!-- </div> -->
+  {% endif %}   
+     
+        </section>
+        </div>
+      <!-- </div> -->
+
+{% endblock %}
+          
+  </body>
+</html>

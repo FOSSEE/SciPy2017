@@ -1,0 +1,116 @@
+{% extends 'base.html' %}
+{% load static %}
+
+<!DOCTYPE HTML>
+
+<html>
+  <head>
+    <title>Register</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
+    <!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+  </head>
+  <body>
+
+
+    
+      {% block header %}
+       <header id="header1">
+            <h1>SciPy India 2016</h1>
+            <h2>Register</h2>
+</header> 
+{% endblock %}
+
+
+<div id="wrapper">
+{% block nav %}
+<div id="navbar-main"> 
+  <!-- Fixed navbar -->
+  <div class="navbar navbar-inverse navbar-fixed-top">
+      <div class="navbar-collapse collapse">
+        <ul class="nav navbar-nav">            
+           <li><a href="{% url 'website:home' %}" class="active">Home</a></li>
+            </ul>
+         </div>
+      <!--/.nav-collapse --> 
+  </div>
+</div>
+{% endblock %}
+
+
+{% block content %}
+      <div id="wrapper">
+<div id="main">
+<section id="content" class="main">
+
+{% if email_registered %}
+          <center>
+            <div class="alert" style="width:300px;height:50px;">
+                <a class="close" data-dismiss="alert" href="#">&times;</a>
+                <p>Email ID is already registered !</p>
+            </div>
+            <p style="line-height:5px;">Have you already logged in using social logins ?</p>
+            <p style="line-height:5px;">or</p>
+            <p style="line-height:5px;"><a href="{% url 'website:forgotpassword' %}">Click Here</a> if you forgot your username or password</p>
+          </center>
+          {% endif %}
+         {% if registration_complete %}
+          <p> Your Account is Created Successfully !</p>
+           {% endif %}
+          <!-- <div class = "col-md-7">                   -->
+            <!-- <div id = "my_form"> -->
+            <form action="" method="POST">  {% csrf_token %}
+                  {% for field in form %} 
+                  
+                  <p>{{ field.label}}
+                   {% if field.field.required %} <span style="color:red;">*</span> {% endif %}
+                    {{ field }}</p>
+                     <a style="color:red; ">{{ field.errors }}</a>
+                  {% endfor %}
+                <br>
+                    <button class="button special" style="background:#D44727" type="submit" >SignUp</button>
+                    <a class="btn btn-primary" href="{% url 'website:cfp' %}"><u>I have an account</u></a>
+                <!-- </div> -->
+               
+            </form>
+          <!-- </div> -->
+        <!-- </div> -->
+        
+              </section>
+
+          </div>
+        
+
+{% endblock   %}
+          
+    <!-- Scripts -->
+      <script src="assets/js/jquery.min.js"></script>
+      <script src="assets/js/jquery.scrollex.min.js"></script>
+      <script src="assets/js/jquery.scrolly.min.js"></script>
+      <script src="assets/js/skel.min.js"></script>
+      <script src="assets/js/util.js"></script>
+      <!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+      <script src="assets/js/main.js"></script>
+<script>
+$(document).ready(function() {
+    var n1 = Math.round(Math.random() * 10 + 1);
+    var n2 = Math.round(Math.random() * 10 + 1);
+    $("#a").val(n1 + " + " + n2 + " = ");
+    $("#c").click(function() {
+        if (eval($("#a").val()) == $("#b").val()) {
+        } else {
+            alert("Write the correct value ");
+        }
+    });
+});
+</script>
+
+
+  </body>
+</html>
+
+
+  

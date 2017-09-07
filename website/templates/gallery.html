@@ -1,0 +1,38 @@
+{% load static %}
+<center>
+ <div class="w3-content w3-display-container">
+  <img class="mySlides" src= "{% static 'img/images/1.jpg'%}" style="width:70%; height:90%">
+  <img class="mySlides" src= "{% static 'img/images/2.jpg'%}" style="width:70%; height:90%">
+  <img class="mySlides" src= "{% static 'img/images/3.jpg'%}" style="width:70%; height:90%">
+  <img class="mySlides" src= "{% static 'img/images/4.jpg'%}" style="width:70%; height:90%">
+  <img class="mySlides" src= "{% static 'img/images/5.jpg'%}" style="width:70%; height:90%">
+  <img class="mySlides" src= "{% static 'img/images/6.jpg'%}" style="width:70%; height:90%">
+  <img class="mySlides" src= "{% static 'img/images/7.jpg'%}" style="width:70%; height:90%">
+  <img class="mySlides" src= "{% static 'img/images/8.jpg'%}" style="width:70%; height:90%">
+  <img class="mySlides" src= "{% static 'img/images/9.jpg'%}" style="width:70%; height:90%">
+  <img class="mySlides" src= "{% static 'img/images/10.jpg'%}" style="width:70%; height:90%">
+
+  <a class="w3-btn-floating w3-display-left" onclick="plusDivs(-1)"> &#10094; Previous &nbsp;&nbsp;</a>
+  <a class="w3-btn-floating w3-display-right" onclick="plusDivs(1)">&nbsp;&nbsp; Next &#10095;  </a>
+</div>
+</center>
+
+<script>
+var slideIndex = 1;
+showDivs(slideIndex);
+
+function plusDivs(n) {
+  showDivs(slideIndex += n);
+}
+
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  if (n > x.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = x.length}
+  for (i = 0; i < x.length; i++) {
+     x[i].style.display = "none";  
+  }
+  x[slideIndex-1].style.display = "block";  
+}
+</script>
