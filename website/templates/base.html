@@ -8,6 +8,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <meta name="description" content="">
         <meta name="author" content="">
+        <link rel="icon" href="{% static 'img/favicon.ico'%}" type="icon"> 
         <title>SciPy India 2017</title>
         <!-- Bootstrap core CSS -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -113,7 +114,7 @@
                         <hr>
                         <div class="panel panel-default">
                             <div class="panel-body">
-                                <p align="justify" class="p-5">SciPy India 2017, the 9<sup>th</sup> annual conference providing opportunities to spread the use of the Python programming language in the Scientific Computing community in India. It provides a unique opportunity to interact, learn, understand, participate, and contribute to Scientific Computing using Python.
+                                <p align="justify" class="p-5">SciPy India is a conference providing opportunities to spread the use of the Python programming language in the Scientific Computing community in India. It provides a unique opportunity to interact with the "Who's who" of the Python for Scientific Computing fraternity and learn, understand, participate, and contribute to Scientific Computing using Python. One of the goals of the conference is to combine education, engineering, and science with computing through the medium of Python.
                                 </p>
                             </div>
                         </div>
@@ -262,12 +263,6 @@
                             <div class="panel-body">
                                 <div align="justify" class="p-5">
                                     <p>We appreciate your participation in SciPy 2017. We want you to have an enjoyable and enriching experience in the conference. For this all the attendees are required to conform to the following Code of Conduct. Organisers will ensure that it is enforced throughout the event.
-                                    <p>
-                                    <center><a class="btn btn-primary" data-toggle="collapse" href="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
-                                        Show more
-                                        </a>
-                                    </center>
-                                    </p>
                                     <div class="collapse" id="collapseExample">
                                         <div class="card-text">
                                             <p>SciPy India is dedicated to providing a harassment-free conference experience for everyone, regardless of age, gender, sexual orientation, physical appearance, disability, race, religion or employment.</p>
@@ -285,6 +280,12 @@
                                             <p>SciPy India Conference Code of Conduct is licensed under a Creative Commons Attribution 3.0 Unported License.</p>
                                         </div>
                                     </div>
+                                     <p>
+                                    <center><a class="btn btn-primary" data-toggle="collapse" href="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+                                        Show More
+                                        </a>
+                                    </center>
+                                    </p>
                                 </div>
                             </div>
                         </div>
@@ -629,7 +630,7 @@
                                 </dl>
                                 <ul class="list-inline">
                                     <li class="list-inline-item"><a style="background-color:#00aced;color:#ffffff;font-size:48px;" target="_blank" href="https://twitter.com/scipyindia" class="fa fa-twitter"><span class="label"></span></a></li>
-                                    <li class="list-inline-item"><a style="color:#3b5998;font-size:48px;" target="_blank" href="https://www.facebook.com/scipyindia2016/" class="	fa fa-facebook-official"><span class="label"></span></a></li>
+                                    <li class="list-inline-item"><a style="color:#3b5998;font-size:48px;" target="_blank" href="https://www.facebook.com/scipyindia2016/" class="   fa fa-facebook-official"><span class="label"></span></a></li>
                                     <li class="list-inline-item"><a style="background-color:#dd4d39;color:#ffffff;font-size:48px;" target="_blank" href="https://plus.google.com/u/0/104012350840765676803" class="fa fa-google-plus"><span class="label"></span></a></li>
                                 </ul>
                                 Visit SciPy.in/
@@ -637,7 +638,7 @@
                                 <a style="color:blue;" target="_blank" href="http://scipy.in/scipyin/2010/">2010</a>/
                                 <a style="color:blue;" target="_blank" href="http://scipy.in/scipyin/2011/">2011</a>/
                                 <a style="color:blue;" target="_blank" href="http://scipy.in/2012">2012</a>/
-                                <a style="color:blue;" target="_blank" href="http://scipy.in/2013"	>2013</a>/
+                                <a style="color:blue;" target="_blank" href="http://scipy.in/2013"  >2013</a>/
                                 <a style="color:blue;" target="_blank" href="http://scipy.in/2014">2014</a>/
                                 <a style="color:blue;" target="_blank" href="http://scipy.in/2015">2015</a>/
                                 <a style="color:blue;" target="_blank" href="http://scipy.in/2016">2016</a>
@@ -679,23 +680,24 @@
         </script>
         <script type="text/javascript">
             window.onload = function () {
-            	var n1 = Math.round(Math.random() * 10 + 1);
+                var n1 = Math.round(Math.random() * 10 + 1);
                 var n2 = Math.round(Math.random() * 10 + 1);
                 $("#a").val(n1 + " + " + n2 + " = ");
                 var add = n1 + n2;
                 $("#b").on('change', function (){
-                	if (this.value == add){
-                		 $('#myButton').removeAttr('disabled');
-                		 document.getElementById("error").innerHTML = "";    
+                    if (this.value == add){
+                         $('#myButton').removeAttr('disabled');
+                         document.getElementById("error").innerHTML = "";    
             
-                	}
-                	else{
-                		$('#myButton').attr('disabled', true);
-            			document.getElementById("error").innerHTML = "Incorrect!";    
-            		}
+                    }
+                    else{
+                        $('#myButton').attr('disabled', true);
+                        document.getElementById("error").innerHTML = "Incorrect!";    
+                    }
                 });
             }
         </script>
+      
     </body>
 </html>
 
