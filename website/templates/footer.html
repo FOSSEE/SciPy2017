@@ -1,0 +1,118 @@
+        {% load static %}
+        <!------------ contact ------------- -->
+        <section id="contact_us">
+            <br>
+            <br>
+            <br>
+            <br>
+            <div class="container">
+                <div class="align-items-center">
+                    <div class="col-md-offset-4">
+                        <center>
+                            <h2>Contact Us</h2>
+                        </center>
+                        <hr>
+                        <div class="panel panel-default">
+                            <div class="panel-body">
+                                <dl class="alt">
+                                    <dt>Phone</dt>
+                                    <dd> (+91) 22 25764133</dd>
+                                    <dt>Email</dt>
+                                    <dd><a style="color:black;" href="mailto:scipy@fossee.in">scipy [at] fossee [dot] in
+                                        </a>
+                                    </dd>
+                                </dl>
+                                <ul class="list-inline">
+                                    <li class="list-inline-item"><a style="background-color:#00aced;color:#ffffff;font-size:48px;" target="_blank" href="https://twitter.com/scipyindia" class="fa fa-twitter"><span class="label"></span></a></li>
+                                    <li class="list-inline-item"><a style="color:#3b5998;font-size:48px;" target="_blank" href="https://www.facebook.com/scipyindia2016/" class="   fa fa-facebook-official"><span class="label"></span></a></li>
+                                    <li class="list-inline-item"><a style="background-color:#dd4d39;color:#ffffff;font-size:48px;" target="_blank" href="https://plus.google.com/u/0/104012350840765676803" class="fa fa-google-plus"><span class="label"></span></a></li>
+                                </ul>
+                                Visit SciPy.in/
+                                <a style="color:blue;" target="_blank" href="http://scipy.in/2009">2009</a>/
+                                <a style="color:blue;" target="_blank" href="http://scipy.in/scipyin/2010/">2010</a>/
+                                <a style="color:blue;" target="_blank" href="http://scipy.in/scipyin/2011/">2011</a>/
+                                <a style="color:blue;" target="_blank" href="http://scipy.in/2012">2012</a>/
+                                <a style="color:blue;" target="_blank" href="http://scipy.in/2013"  >2013</a>/
+                                <a style="color:blue;" target="_blank" href="http://scipy.in/2014">2014</a>/
+                                <a style="color:blue;" target="_blank" href="http://scipy.in/2015">2015</a>/
+                                <a style="color:blue;" target="_blank" href="http://scipy.in/2016">2016</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-------------------------->
+        <!--------------------------->
+        <!-- Footer -->
+        <footer class="py-5 bg-dark">
+            <div class="container">
+                <p class="m-0 text-center text-white">
+                <center><img src="{% static 'img/fossee.png' %}" width=100 height=40>
+                    <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"></a>
+                    <img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" />
+                </center>
+                <center style="color:white">
+                This work is licensed under a <a target="_blank" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
+                <center>
+                </p>
+            </div>
+            <!-- /.container -->
+        </footer>
+        <!-- Bootstrap core JavaScript -->
+        <script src='https://www.google.com/recaptcha/api.js'></script>
+        <script src="{% static 'vendor/jquery/jquery.min.js' %}"></script>
+        <script src="{% static 'vendor/popper/popper.min.js' %}"></script>
+        <script src="{% static 'vendor/bootstrap/js/bootstrap.min.js' %}"></script>
+        <script>
+            $(function(){ 
+                $('.nav-tabs a').on('click', function (e) {
+                    e.preventDefault();
+                    $(this).tab('show');
+                });  
+            });
+        </script>
+        <script type="text/javascript">
+            window.onload = function () {
+                var n1 = Math.round(Math.random() * 10 + 1);
+                var n2 = Math.round(Math.random() * 10 + 1);
+                $("#a").val(n1 + " + " + n2 + " = ");
+                var add = n1 + n2;
+                $("#b").on('change', function (){
+                    if (this.value == add){
+                         $('#myButton').removeAttr('disabled');
+                         document.getElementById("error").innerHTML = "";    
+            
+                    }
+                    else{
+                        $('#myButton').attr('disabled', true);
+                        document.getElementById("error").innerHTML = "Incorrect!";    
+                    }
+                });
+            }
+        </script>
+<script type="text/javascript">
+
+    $(".btn-primary a").on("click", function() {
+    var $link = $(this);
+    alert("Show More");
+    var $content = $link.parent().prev("div.text-content");
+    var linkText = $link.text();
+
+    $content.toggleClass("short-text, full-text");
+
+    $link.text(getShowLinkText(linkText));
+
+    return false;
+});
+function getShowLinkText(currentText) {
+    var newText = '';
+    if (currentText.toUpperCase() === "Show More") {
+        newText = "Show Less";
+    } else {
+        newText = "Show More";
+    }
+
+    return newText;
+}
+</script>
