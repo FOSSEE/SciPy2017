@@ -93,6 +93,8 @@ STATICFILES_DIRS = (
 
 ROOT_URLCONF = 'scipy2017.urls'
 
+URL_ROOT = '/'
+
 WSGI_APPLICATION = 'scipy2017.wsgi.application'
 
 
@@ -105,8 +107,8 @@ DATABASES = {
         'NAME': DBNAME,                      # Or path to database file if using sqlite3.
         'USER': DBUSER,
         'PASSWORD': DBPWD,
-        'HOST': '',                      # Empty for localhost through domain sockets or '127.0.0.1' for localhost through TCP.
-        'PORT': '',
+        'HOST': '127.0.0.1',                      # Empty for localhost through domain sockets or '127.0.0.1' for localhost through TCP.
+        'PORT': '3306',
     }
 }
 
