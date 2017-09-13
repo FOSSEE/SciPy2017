@@ -176,7 +176,7 @@ def submitcfp(request):
                 headers={"Content-type":"text/html;charset=iso-8859-1"}
                 )
                 email.attach_alternative(message, "text/html")
-                email.send(fail_silently=True)
+                #email.send(fail_silently=True)
                 return render_to_response('cfp.html', context)
             else:
                 context['proposal_form'] =  form
@@ -229,7 +229,7 @@ def submitcfw(request):
                 headers={"Content-type":"text/html;charset=iso-8859-1"}
                 )
                 email.attach_alternative(message, "text/html")
-                email.send(fail_silently=True)
+                #email.send(fail_silently=True)
                 return render_to_response('cfp.html', context)
             else:
                 context['proposal_form'] =  form
@@ -443,7 +443,7 @@ def comment_abstract(request, proposal_id = None):
                         headers={"Content-type":"text/html;charset=iso-8859-1"}
                     )
                     email.attach_alternative(message, "text/html")
-                    email.send(fail_silently=True)
+                    #email.send(fail_silently=True)
                     proposal.status="Commented"
                     proposal.save()
                     rates = Ratings.objects.filter(proposal=proposal)
@@ -552,7 +552,7 @@ def status(request, proposal_id= None):
                 headers={"Content-type":"text/html;charset=iso-8859-1"}
                 )
                 email.attach_alternative(message, "text/html")
-                email.send(fail_silently=True)
+                #email.send(fail_silently=True)
                 proposal.status="Edit"
                 proposal.save()
                 context.update(csrf(request)) 
@@ -658,7 +658,7 @@ def status_change(request):
                         message = """Dear """+proposal.user.first_name+""",
                         Congratulations. Your proposal for the workshop titled '"""+ proposal.title+ """'is accepted. 
                         You shall conduct the workshop at the conference.\n\nYou will be notified regarding instructions of your workshop via email.\n\nThank You ! \n\nRegards,\nSciPy India 2017,\nFOSSEE - IIT Bombay"""
-                    send_mail(subject, message, sender_email, to)
+                    #send_mail(subject, message, sender_email, to)
                     context.update(csrf(request))
                 proposals = Proposal.objects.all()
                 context['proposals'] = proposals
@@ -685,7 +685,7 @@ def status_change(request):
                         We regret to inform you that your proposal for the workshop titled '"""+ proposal.title+ """' as not been shortlisted.<br> 
                         You may register and attend the conference by clicking http://scipyindia2017.doattend.com/
                         \n\nThank You ! \n\nRegards,\nSciPy India 2017,\nFOSSEE - IIT Bombay"""
-                    send_mail(subject, message, sender_email, to)
+                    #send_mail(subject, message, sender_email, to)
                     context.update(csrf(request))  
                 proposals = Proposal.objects.all()
                 context['proposals'] = proposals
@@ -729,7 +729,7 @@ def status_change(request):
                     headers={"Content-type":"text/html;charset=iso-8859-1"}
                     )
                     email.attach_alternative(message, "text/html")
-                    email.send(fail_silently=True)
+                    #email.send(fail_silently=True)
                     proposal.status="Edit"
                     proposal.save()
                     context.update(csrf(request))  
