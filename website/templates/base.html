@@ -29,7 +29,7 @@
                         <ul class="navbar-nav mx-auto">
                             <li class="nav-item">
                                 <a class="nav-link" href="#home" class="nav-link js-scroll-trigger" >Home
-                                <span class="sr-only">(current)</span>
+                                <!--<span class="sr-only">(current)</span>-->
                                 </a>
                             </li>
                             <!-- <li class="nav-item">
@@ -99,7 +99,7 @@
             </header>
             {% endblock %}
         </section>
-        <!------------ about --------------->
+        <!------------ about ------------- -->
         <section id="about">
             <br>
             <br>
@@ -111,7 +111,7 @@
                         <center>
                             <h2>About</h2>
                         </center>
-                        <hr>
+                        <hr class="horizontal">
                         <div class="panel panel-default">
                             <div class="panel-body">
                                 <p align="justify" class="p-5">SciPy India is a conference providing opportunities to spread the use of the Python programming language in the Scientific Computing community in India. It provides a unique opportunity to interact with the "Who's who" of the Python for Scientific Computing fraternity and learn, understand, participate, and contribute to Scientific Computing using Python. One of the goals of the conference is to combine education, engineering, and science with computing through the medium of Python.
@@ -122,8 +122,8 @@
                 </div>
             </div>
         </section>
-        <!-------------------------->
-        <!------------ Speakers --------------->
+        <!------------------------ -->
+        <!------------ Speakers ------------ -->
         <section id="speakers">
             <br>
             <br>
@@ -133,19 +133,51 @@
                 <center>
                     <h2>Speakers</h2>
                     <hr>
-                    <h3 style="font-weight: normal;">To be updated soon.....
-                    </h3>
+                  <!--  <h3 style="font-weight: normal;">To be updated soon.....
+                    </h3> -->
                 </center>
                 <div class="row align-items-center">
                     <center>
                     </center>
                     <!-- Speaker 1 -->
-                    <div class="col-lg-4 col-sm-6 text-center mb-4">
-                        <!-- <img class="rounded-circle img-fluid d-block mx-auto" src="{% static 'img/dummy.png' %}" alt=""> -->
-                        <center> </center>
-                        <p align="justify"></p>
+                 <!-- <div class="col-lg-4 col-sm-6 text-center mb-4"><br>
+                        <img class="img-fluid d-block mx-auto" src="{% static 'img/me_pro.png' %}" alt="">
+                       <p align="justify">Nelle Varoquaux, Postdoctoral fellow<br><span style="font-size: 10px;">(at the Department of Statistics at UC
+Berkeley and a BIDS data science fellow.)</span>
+<br><a href="https://github.com/NelleV" target="_blank"><i style="font-size:30px;color: black;margin-left: 35%" class="fa fa-github" aria-hidden="true"></i></a>
+                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://bids.berkeley.edu/people/nelle-varoquaux" target="_blank"><i class="fa fa-info" style="font-size:30px;color:black"></i></a>
+                         <p align="justify"> She received a PhD in computational
+biology from École des Mines de Paris in 2015. Her research interests are in
+statistical machine learning and scientific computing applied to molecular
+biology problems, such as inferring the 3D architecture of the genome or
+data-integration methods to better understand gene regulatory 
+networks. Recently, as part of the interdisciplinary institute BIDS, she also
+studies open-source communities and contributiors in collaboration with social 
+scientists.
+<br>
+She is a core-developer of scikit-learn, MarkUs and Matplotlib, was Program
+Chair for Scipy in 2015 and 2016.</p></p>
                     </div>
-                    <!-- Speaker 2 -->
+                    -->
+                    <!-- Speaker 2 --><center>
+                  <div class="col-lg-4 col-sm-6 text-center mb-4"><br><p style="font-size: 28px;">KEYNOTE SPEAKER</p>
+                        <img class="img-fluid d-block mx-auto" src="{% static 'img/me_pro.png' %}" alt="">
+                       <p align="justify">Nelle Varoquaux, Postdoctoral fellow<br><span style="font-size: 10px;">(at the Department of Statistics at UC
+Berkeley and a BIDS data science fellow.)</span>
+<br><a href="https://github.com/NelleV" target="_blank"><i style="font-size:30px;color: black;margin-left: 35%" class="fa fa-github" aria-hidden="true"></i></a>
+                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://bids.berkeley.edu/people/nelle-varoquaux" target="_blank"><i class="fa fa-info" style="font-size:30px;color:black"></i></a>
+                         <p align="justify"> She received a PhD in computational
+biology from École des Mines de Paris in 2015. Her research interests are in
+statistical machine learning and scientific computing applied to molecular
+biology problems, such as inferring the 3D architecture of the genome or
+data-integration methods to better understand gene regulatory 
+networks. Recently, as part of the interdisciplinary institute BIDS, she also
+studies open-source communities and contributiors in collaboration with social 
+scientists.
+<br>
+She is a core-developer of scikit-learn, MarkUs and Matplotlib, was Program
+Chair for Scipy in 2015 and 2016.</p></p>
+                    </div></center>
                     <!-- <div class="col-lg-4 col-sm-6 text-center mb-4">
                         <img class="rounded-circle img-fluid d-block mx-auto" src="{% static 'img/dummy.png' %}" alt="">
                         <h3>Updated soon.....
@@ -153,6 +185,24 @@
                         <p align="justify"></p>
                         </div> -->
                     <!-- Speaker 3 -->
+               <!--    <div class="col-lg-4 col-sm-6 text-center mb-4"><br>
+                        <img class="img-fluid d-block mx-auto" src="{% static 'img/me_pro.png' %}" alt="">
+                       <p align="justify">Nelle Varoquaux, Postdoctoral fellow<br><span style="font-size: 10px;">(at the Department of Statistics at UC
+Berkeley and a BIDS data science fellow.)</span>
+<br><a href="https://github.com/NelleV" target="_blank"><i style="font-size:30px;color: black;margin-left: 35%" class="fa fa-github" aria-hidden="true"></i></a>
+                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://bids.berkeley.edu/people/nelle-varoquaux" target="_blank"><i class="fa fa-info" style="font-size:30px;color:black"></i></a>
+                         <p align="justify"> She received a PhD in computational
+biology from École des Mines de Paris in 2015. Her research interests are in
+statistical machine learning and scientific computing applied to molecular
+biology problems, such as inferring the 3D architecture of the genome or
+data-integration methods to better understand gene regulatory 
+networks. Recently, as part of the interdisciplinary institute BIDS, she also
+studies open-source communities and contributiors in collaboration with social 
+scientists.
+<br>
+She is a core-developer of scikit-learn, MarkUs and Matplotlib, was Program
+Chair for Scipy in 2015 and 2016.</p></p>
+                    </div>-->
                     <!-- <div class="col-lg-4 col-sm-6 text-center mb-4">
                         <img class="rounded-circle img-fluid d-block mx-auto" src="{% static 'img/dummy.png' %}" alt="">
                         <h3>Updated soon.....
@@ -163,8 +213,8 @@
                 </div>
             </div>
         </section>
-        <!--------------------------------------->
-        <!------------ register --------------->
+        <!------------------------------------ --->
+        <!------------ register ------- -->
         <section id="register">
             <br>
             <br>
@@ -246,7 +296,7 @@
             </div>
         </section>
         <!-------------------------->
-        <!------------ coc --------------->
+        <!------------ coc ------------- -->
         <section id="coc">
             <br>
             <br>
@@ -294,7 +344,7 @@
             </div>
         </section>
         <!-------------------------->
-        <!------------ schedule--------------->
+        <!------------ schedule------------- -->
         <section id="schedule">
             <br>
             <br>
@@ -481,7 +531,7 @@
             </div>
         </section>
         <!-------------------------->
-        <!------------ about --------------->
+        <!------------ about ------------- -->
         <section id="instructions">
             <br>
             <br>
@@ -531,7 +581,7 @@
             </div>
         </section>
         <!-------------------------->
-        <!------------ venue --------------->
+        <!------------ venue ------------- -->
         <section id="venue">
             <br>
             <br>
@@ -559,7 +609,7 @@
             </div>
         </section>
         <!-------------------------->
-        <!------------ venue --------------->
+        <!------------ venue ------------- -->
         <section id="contact">
             <br>
             <br>
@@ -605,7 +655,7 @@
             </div>
         </section>
         <!-------------------------->
-        <!------------ contact --------------->
+        <!------------ contact ------------- -->
         <section id="contact_us">
             <br>
             <br>
@@ -697,7 +747,31 @@
                 });
             }
         </script>
-      
+<script type="text/javascript">
+
+    $(".btn-primary a").on("click", function() {
+    var $link = $(this);
+    alert("Show More");
+    var $content = $link.parent().prev("div.text-content");
+    var linkText = $link.text();
+
+    $content.toggleClass("short-text, full-text");
+
+    $link.text(getShowLinkText(linkText));
+
+    return false;
+});
+function getShowLinkText(currentText) {
+    var newText = '';
+    if (currentText.toUpperCase() === "Show More") {
+        newText = "Show Less";
+    } else {
+        newText = "Show More";
+    }
+
+    return newText;
+}
+</script>      
     </body>
 </html>
 
