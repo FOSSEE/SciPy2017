@@ -4,11 +4,12 @@
  * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap-one-page-wonder/blob/master/LICENSE)
  */
 @font-face { font-family: Merriweather; src: url('../merriweather/Merriweather-Regular.ttf'); } 
-@font-face { font-family: Merriweather; src: url('../merriweather/Merriweather-Bold.ttf'); } 
+
 @font-face { font-family: Arial Black; src: url('../arial-black/Arial Black.ttf'); } 
 
 body {
     padding-top: 54px;
+    font-family: Merriweather;
 }
 
 @media (min-width: 992px) {
