@@ -1,128 +1,76 @@
-{% extends 'base.html' %}
+
+
 {% load static %}
-
-<!DOCTYPE HTML>
-
-<html>
-  <head>
-    <title>Call for Proposal</title>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
-    <link rel="stylesheet" href="assets/css/main.css" />
-    <!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
-    <!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
-  </head>
-  <body>
-
-
-    
-      {% block header %}
-       <header id="header1">
-            <h1>SciPy India 2016</h1>
-            <h2>Submit Workshop Proposal</h2>
-</header> 
-{% endblock %}
-
-
-<div id="wrapper">
-{% block nav %}
-
-<div id="navbar-main"> 
-  <div class="navbar navbar-inverse navbar-fixed-top">
-      <div class="navbar-collapse collapse">
-        <ul class="nav navbar-nav">
-         <li><a href="{% url 'website:home' %}" class="active">Home</a></li>        
-               {% if user and not user.is_anonymous %}
-               <li><a href="{% url 'website:cfp' %}">{{ user.get_full_name|default:user.username }}</a>
-                <li><a href="{% url 'auth:logout' %}?next=/2016/cfp">Logout</a></li>
-               {% else %}       
-                <li><a href="{% url 'website:cfp' %}" >Login</a></li>
-           {% endif %}
-        </ul>
-      </div>
-  </div>
-</div>
-{% endblock %}
-
-
-
-{% block content %}
-      <div id="wrapper">
-<div id="main">
-<section id="content" class="main">
-{% if proposals_w > 1 %} You have exceeded the workshop proposal submission limit. 
-  You may view your submitted proposals by clicking <a href="{% url 'website:view_abstracts' %}" class="btn "> here</a>
-  </div>
-</div>
-</section>
-    
-
-                                  {% else %} 
-<div id="wrapper">
-<!-- <div id="main"> -->
-<section id="content" class="main">
-                                  
-
-        <!-- <h2>{{ user.get_full_name|default:user.username }} </h2> -->
-        <h2><u>Proposal Guidelines</u></h2>
-        <!-- <li>To be announced</li><br> -->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="description" content="">
+        <meta name="author" content="">
+        <link rel="icon" href="{% static 'img/favicon.ico'%}" type="icon">
+        <title>SciPy India 2017</title>
+        <!-- Bootstrap core CSS -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+        <!-- Custom styles for this template -->
+        <link href="{% static 'css/one-page-wonder.css' %}" rel="stylesheet">
+    </head>
+    <body data-spy="scroll" data-target=".navbar" data-offset="50">
+        {% include 'navbar.html' %}
+        {% block content %}
+        <div class="container">
+            <p>
+            <center>
+                <h2>Submit Workshop Proposal</h2>
+            </center>
+            </p>
+            <hr>
+            {% if proposals_w > 1 %} You have exceeded the workshop proposal submission limit. 
+            You may view your submitted proposals by clicking <a href="{% url 'website:view_abstracts' %}" class="btn "> here</a>
+            <!-- <h2>{{ user.get_full_name|default:user.username }} </h2> -->
+            <!-- <h2>{{ user.get_full_name|default:user.username }} </h2> -->
+            <h2><u>Proposal Guidelines</u></h2>
+            <!-- <li>To be announced</li><br> -->
             <ul>
                 <li>Please note that there are two parallel tracks, one for beginners and one for advanced users.</li>
                 <li>Please make sure the workshops are hands-on with plenty of exercises for the users.</li>
                 <li>It is usually a good idea to pick a particular problem or set of problems and orient your workshop around how to solve those using the package you plan to talk about.</li>
                 <li>Please provide us with links to any resources you have already prepared for the workshop.</li>
                 <li>The more detail you provide on your workshop, the easier it will be for us to pick it.</li>
-                <li>Provide us with the following sections:
-                  <ul>
-                      <li>Duration</li>
-                      <li>Track: beginner or advanced</li>
-                      <li>Intended audience</li>
-                      <li>Why should someone attend your workshop?  What will they get at the end of it?</li>
-                      <li>Outline of workshop with a reasonable breakup in terms of time.</li>
-                      <li>Possibly provide any material or similar material you plan to use.</li>
-                      <li>A small paragraph about you with an emphasis on your experience in the area and teaching this material.  Essentially, why are you well suited to teach this workshop?</li>
-
-                  </ul>
+                <li>
+                    Provide us with the following sections:
+                    <ul>
+                        <li>Duration</li>
+                        <li>Track: beginner or advanced</li>
+                        <li>Intended audience</li>
+                        <li>Why should someone attend your workshop?  What will they get at the end of it?</li>
+                        <li>Outline of workshop with a reasonable breakup in terms of time.</li>
+                        <li>Possibly provide any material or similar material you plan to use.</li>
+                        <li>A small paragraph about you with an emphasis on your experience in the area and teaching this material.  Essentially, why are you well suited to teach this workshop?</li>
+                    </ul>
                 </li>
             </ul>
-        <form  action="" method=POST enctype="multipart/form-data">
-
-<!--           <div class="row1">
- -->          {% for field in proposal_form %} 
-                  <p>{{ field.label}}
-                   {% if field.field.required %} <span style="color:red;">*</span> {% endif %}
-                    {{ field }}</p>
-                     <a style="color:red; ">{{ field.errors }}</a>
-                  {% endfor %}
-          <!-- </div> -->
-          {% csrf_token %}
-          {% if form.error %}
-
-          Auch
-          {% endif %}
-        <center><button class="button special" style="background:#D44727" type="submit">Submit</button></center>
-        
-              </section>
-          </div>
-          {% endif %}
-        
-{% endblock %}
-{% block footer %}
-{% endblock %}
-          
-          
-    <!-- Scripts -->
-      <script src="assets/js/jquery.min.js"></script>
-      <script src="assets/js/jquery.scrollex.min.js"></script>
-      <script src="assets/js/jquery.scrolly.min.js"></script>
-      <script src="assets/js/skel.min.js"></script>
-      <script src="assets/js/util.js"></script>
-      <!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
-      <script src="assets/js/main.js"></script>
-
-  </body>
+            <form  action="" method=POST enctype="multipart/form-data">
+            <!--           <div class="row1">
+                -->          {% for field in proposal_form %} 
+            <p>{{ field.label}}
+                {% if field.field.required %} <span style="color:red;">*</span> {% endif %}
+                {{ field }}
+            </p>
+            <a style="color:red; ">{{ field.errors }}</a>
+            {% endfor %}
+            <!-- </div> -->
+            {% csrf_token %}
+            {% if form.error %}
+            Auch
+            {% endif %}
+            <center><button class="button special" style="background:#D44727" type="submit">Submit</button></center>
+            {% endif %}
+        </div>
+        {% endblock %}
+        {% include 'footer.html' %}
+    </body>
 </html>
 
 
-  

@@ -1,186 +1,145 @@
-{% extends 'base.html' %}
+
+
 {% load static %}
-{% load widget_tweaks %}
-
-<!DOCTYPE HTML>
-
-<html>
-  <head>
-    <title>View Proposals</title>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" href="assets/css/main.css" />
-  </head>
-  <body>
-
-
-    
-      {% block header %}
-       <header id="header1">
-            <h1>SciPy India 2016</h1>
-            <h2>View Proposals</h2>
-</header> 
-{% endblock %}
-
-
-<div id="wrapper">
-{% block nav %}
-
-<div id="navbar-main"> 
-  <div class="navbar navbar-inverse navbar-fixed-top">
-      <div class="navbar-collapse collapse">
-        <ul class="nav navbar-nav">
-         <li><a href="{% url 'website:home' %}" class="active">Home</a></li>        
-               {% if user and not user.is_anonymous %}
-               <li><a href="{% url 'website:cfp' %}">{{ user.get_full_name|default:user.username }}</a>
-                <li><a href="{% url 'auth:logout' %}?next=/2016/cfp">Logout</a></li>
-               {% else %}       
-                <li><a href="{% url 'website:cfp' %}" >Login</a></li>
-           {% endif %}
-        </ul>
-      </div>
-  </div>
-</div>
-{% endblock %}
-
-
-{% block content %}
-      <div id="wrapper">
-<div id="main">
-<section id="content" class="main">
-                {% if not proposals %}
-                <center>
-You have not submitted any proposal. To submit proposal click <a href="{% url 'website:cfp' %}">here </a></center>
-{% else %}
-
-
-   <form action="{% url 'website:status_change' %}" method="post" onsubmit="return confirm('Are You Sure?');"> {% csrf_token %}
-
-
-    <table id = "myTable"  class="tablesorter">
-          <colgroup>
-                {% if user.is_superuser  %}
-        <col width="5%" />
-        <col width="20%" />
-        <col width="10%" />
-        <col width="30%" />
-        <col width="10%" />
-        <col width="10%" />
-        {% else %}
-        <col width="5%" />
-        <col width="70%" />
-        <col width="10%" />
-        <col width="10%" />
-        <col width="20%" />
-
-        {% endif %}
-    </colgroup>
-     {% if user.is_superuser  %}
-    <th> <center><input type="checkbox" onClick="toggle(this)" />
-           </center></th>
-    <th>Speaker
-      {% endif %}
-    <th> Type
-    <th> Title
-      {% if not user.is_superuser %}
-    <th> View
-      {% endif %}
-      {% if user.is_superuser %}
-    <th><center> Duration</center>
-      {% else %}
-    <th> Comments
-      {% endif %}
-    <th> Status
-    {% for proposal in proposals %}
-    <tr>
-        {% if user.is_superuser %}
-         <td>
-          {% if proposal.status = 'Rejected' %}
-          {% else %}
-          <center> <input type = "checkbox" name="delete_proposal" value = {{proposal.id}}></input></center></td>
-          {% endif %}
-        <td>
-            {{ proposal.user.get_full_name}}
-        </td>
-        {% endif %}
-        <td> {{proposal.proposal_type | truncatechars:6 }} </td>
-       
-      {% if user.is_superuser  %}
-        <td style="white-space: nowrap; text-overflow:ellipsis; overflow: hidden; max-width:.5px;"><a title="Title : {{proposal.title}}, Tags: {{proposal.tags}}" href="{% url 'website:comment_abstract' proposal.id %}">{{proposal.title}}</a> </td>
-      {% else %}
-       <td  style="white-space: nowrap; text-overflow:ellipsis; overflow: hidden; max-width:.5px;"> {{proposal.title}}</td>
-         <td ><a href="{% url 'website:abstract_details' proposal.id %}">View</a> </td>
-      {% endif %}
-      <td>{% if user.is_superuser %}
-         
-        <center>{{ proposal.duration }}
-        {% if proposal.proposal_type == 'ABSTRACT' %}
-        Mins{% else %} Hrs {% endif %}</center>
-        {% else %}
-          {{proposal.comments_set.count}}
-        {% endif %}
-
-        </td>
-      <td>
-         {% if proposal.status = 'Accepted' %}
-         <h5 style="color:green;">{{proposal.status}}</h5>
-         {% elif proposal.status = 'Rejected' %}
-          <h5 style="color:red;">{{proposal.status}}</h5>
-           {% elif proposal.status = 'Commented' %}
-          <h5 style="color:brown;">{{proposal.status}}</h5>
-          {% elif proposal.status = 'Edit' %}
-            {% if user.is_superuser %}
-              <h5 style="color:grey;">{{proposal.status}}</h5>
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="description" content="">
+        <meta name="author" content="">
+        <link rel="icon" href="{% static 'img/favicon.ico'%}" type="icon">
+        <title>SciPy India 2017</title>
+        <!-- Bootstrap core CSS -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+        <!-- Custom styles for this template -->
+        <link href="{% static 'css/one-page-wonder.css' %}" rel="stylesheet">
+    </head>
+    <body data-spy="scroll" data-target=".navbar" data-offset="50">
+        {% include 'navbar.html' %}
+        {% block content %}
+        <div class="container">
+            <p>
+            <center>
+                <h2>View Proposals</h2>
+            </center>
+            </p>
+            {% if not proposals %}
+            <center>
+                You have not submitted any proposal. To submit proposal click <a href="{% url 'website:cfp' %}">here </a>
+            </center>
             {% else %}
-               <a href="{% url 'website:edit_proposal' proposal.id %}">{{proposal.status}}</a>  
+            {% if user.is_superuser  %}
+            <div style="float:right"><input type="submit" id="dump" class ="button special"  value="Export as csv" name="dump"/></div>
+            <br>
             {% endif %}
-          {% else %}  
-          <h5 style="color:blue;">{{proposal.status}}</h5>
-         {% endif %}
-
-       </td>
-    </tr>
-    {% endfor %}
-    </table>
-    {% if user.is_superuser  %}
-    <center>
-      <!-- <input type="submit" id="delete" class ="button special" style="background:#D44727;" value="Delete" name="delete"/> -->
-    <input type="submit" id="dump" class ="button special" style="background:#D44727;" value="Export as csv" name="dump"/></center><br>
-    <center>
-    <input type="submit" id="accept" class ="button special" style="background:green;" value="Accept" name="accept"/>
-    <input type="submit" id="rejected" class ="button special" style="background:red;" value="Reject" name="reject"/>
-     <input type="submit" id="resubmit" class ="button special" style="background:grey;" value="Resubmit" name="resubmit"/></center>
-   
-    {% endif %}
-                  </form>
-                  {% endif %}
-
-          
-              </section>
-
-          </div>
-
-           
-
-{% endblock   %}
-          
-    <!-- Scripts -->
-      <script src="assets/js/jquery.min.js"></script>
-      <script src="assets/js/jquery.scrollex.min.js"></script>
-      <script src="assets/js/jquery.scrolly.min.js"></script>
-      <script src="assets/js/skel.min.js"></script>
-      <script src="assets/js/util.js"></script>
-      <script src="assets/js/main.js"></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/processing.js/1.4.1/processing-api.min.js"></script>
-
-<script>
-function toggle(source) {
-  alert('hi');
-  checkboxes = document.getElementsByName('delete_proposal');
-  for(var i=0, n=checkboxes.length;i<n;i++) {
-    checkboxes[i].checked = source.checked;
-  }
-}
-</script>
-</body>
+            <form action="{% url 'website:status_change' %}" method="post" onsubmit="return confirm('Are You Sure?');">
+                {% csrf_token %}
+                <p>
+                <div class="table-responsive">
+                    <table id = "myTable" width="100%" cellpadding="10" class="table-bordered table-hover tablesorter">
+                        <colgroup>
+                            {% if user.is_superuser  %}
+                            <col width="15%" />
+                            <col width="20%" />
+                            <col width="10%" />
+                            <col width="30%" />
+                            <col width="10%" />
+                            <col width="10%" />
+                            {% else %}
+                            <col width="15%" />
+                            <col width="70%" />
+                            <col width="10%" />
+                            <col width="10%" />
+                            <col width="20%" />
+                            {% endif %}
+                        </colgroup>
+                        {% if user.is_superuser  %}
+                        <th style="text-align: center;">
+                            <center><input type="checkbox" onClick="toggle(this)" />
+                            </center>
+                        </th>
+                        <th style="text-align: center;">Speaker
+                            {% endif %}
+                        <th style="text-align: center;"> Type
+                        <th style="text-align: center;"> Title
+                            {% if not user.is_superuser %}
+                        <th style="text-align: center;"> View
+                            {% endif %}
+                            {% if user.is_superuser %}
+                        <th style="text-align: center;">
+                            <center> Duration</center>
+                            {% else %}
+                        <th style="text-align: center;"> Comments
+                            {% endif %}
+                        <th style="text-align: center;"> Status
+                            {% for proposal in proposals %}
+                        <tr>
+                            {% if user.is_superuser %}
+                            <td style="text-align: center;">
+                                {% if proposal.status = 'Rejected' %}
+                                {% else %}
+                                <center> <input type = "checkbox" name="delete_proposal" value = {{proposal.id}}></input></center>
+                            </td>
+                            {% endif %}
+                            <td style="text-align: center;">
+                                {{ proposal.user.get_full_name}}
+                            </td>
+                            {% endif %}
+                            <td style="text-align: center;"> {{proposal.proposal_type }} </td>
+                            {% if user.is_superuser  %}
+                            <td style="white-space: nowrap; text-overflow:ellipsis; overflow: hidden; max-width:.5px;"><a title="Title : {{proposal.title}}, Tags: {{proposal.tags}}" href="{% url 'website:comment_abstract' proposal.id %}">{{proposal.title}}</a> </td>
+                            {% else %}
+                            <td  style="white-space: nowrap; text-overflow:ellipsis; overflow: hidden; max-width:.5px;"> {{proposal.title}}</td>
+                            <td style="text-align: center;"><a href="{% url 'website:abstract_details' proposal.id %}">View</a> </td>
+                            {% endif %}
+                            <td style="text-align: center;">
+                                {% if user.is_superuser %}
+                                <center>{{ proposal.duration }}
+                                    {% if proposal.proposal_type == 'ABSTRACT' %}
+                                    Mins{% else %} Hrs {% endif %}
+                                </center>
+                                {% else %}
+                                {{proposal.comments_set.count}}
+                                {% endif %}
+                            </td>
+                            <td style="text-align: center;">
+                                {% if proposal.status = 'Accepted' %}
+                                <h5 style="color:green;">{{proposal.status}}</h5>
+                                {% elif proposal.status = 'Rejected' %}
+                                <h5 style="color:red;">{{proposal.status}}</h5>
+                                {% elif proposal.status = 'Commented' %}
+                                <h5 style="color:brown;">{{proposal.status}}</h5>
+                                {% elif proposal.status = 'Edit' %}
+                                {% if user.is_superuser %}
+                                <h5 style="color:grey;">{{proposal.status}}</h5>
+                                {% else %}
+                                <a href="{% url 'website:edit_proposal' proposal.id %}">{{proposal.status}}</a>  
+                                {% endif %}
+                                {% else %}  
+                                <h5 style="color:blue;">{{proposal.status}}</h5>
+                                {% endif %}
+                            </td>
+                        </tr>
+                        {% endfor %}
+                    </table>
+                </div>
+                </p>
+                {% if user.is_superuser  %}
+                <!-- <input type="submit" id="delete" class ="button special" style="background:#D44727;" value="Delete" name="delete"/> -->
+                <center>
+                    <input type="submit" id="accept" class ="button special" value="Accept" name="accept"/>
+                    <input type="submit" id="rejected" class ="button special"  value="Reject" name="reject"/>
+                    <input type="submit" id="resubmit" class ="button special"  value="Resubmit" name="resubmit"/>
+                </center>
+                {% endif %}
+            </form>
+            {% endif %}
+        </div>
+        {% endblock %}
+        {% include 'footer.html' %}
+    </body>
 </html>
+
+

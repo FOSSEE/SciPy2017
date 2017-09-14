@@ -1,108 +1,63 @@
-<!DOCTYPE HTML>
-{% extends 'base.html' %}
+
+
 {% load static %}
-
-<html>
-	<head>
-		<title>{{ user.get_full_name|default:user.username }}</title>
-		<meta charset="utf-8" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-	</head>
-	<body>
-
-
-		
-      {% block header %}
-       <header id="header1">
-						<h1>SciPy India 2016</h1>
-						<h2>Abstract Details</h2>
-</header> 
-{% endblock %}
-
-
-
-{% block nav %}
-
-<div id="navbar-main"> 
-  <div class="navbar navbar-inverse navbar-fixed-top">
-      <div class="navbar-collapse collapse">
-        <ul class="nav navbar-nav">
-         <li><a href="{% url 'website:home' %}" class="active">Home</a></li>        
-               {% if user and not user.is_anonymous %}
-               <li><a href="{% url 'website:cfp' %}">{{ user.get_full_name|default:user.username }}</a>
-                <li><a href="{% url 'auth:logout' %}?next=/2016/cfp">Logout</a></li>
-               {% else %}       
-                <li><a href="{% url 'website:cfp' %}" >Login</a></li>
-           {% endif %}
-        </ul>
-      </div>
-  </div>
-</div>
-{% endblock %}
-
-
-
-{% block content %}
-			<div id="wrapper">
-			<div id="main">
-			<section id="content" class="main">
-				<h3>{{ proposal.user.first_name }} {{ proposal.user.last_name }}</h3>
-			<p><b>Title: </b>&nbsp;{{ proposal.title }}</p>
-     		<p><b>About Me: </b>&nbsp;{{ proposal.about_me | linebreaks }}</p>
-        	<p><b>Abstract: </b>&nbsp;{{ proposal.abstract |linebreaks }}</p>
-        	{% if proposal.prerequisite %}
-        		<p><b>Prerequisite: </b>&nbsp;{{ proposal.prerequisite |linebreaks }}</p>
-        	{% endif%}
-          <p><b>Duration: </b>&nbsp;{{ proposal.duration }} {% if proposal.proposal_type == "ABSTRACT"%} Mins {% else %}Hours {%endif%}</p>
-          {% if proposal.proposal_type == "ABSTRACT"%}
-          <p><b>Tags: </b>&nbsp;{{ proposal.tags }}</p>
-          {% else %}
-          <p><b>Level: </b>&nbsp;{{ proposal.tags }}</p>
-          {% endif %}
-            <p><b>Date Created: </b>&nbsp;{{ proposal.date_created }}</p>       
-          {% if url %}
-           <p><b>Attachment: </b>&nbsp;
-           <a href="{{ url }}" class="btn btn-info" target="_blank">{{filename}}</a></p>
-           {% endif %}
-        <p><b>Comments: </b>
-          <hr>
-        {% for comment in comments %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="description" content="">
+        <meta name="author" content="">
+        <link rel="icon" href="{% static 'img/favicon.ico'%}" type="icon">
+        <title>SciPy India 2017</title>
+        <!-- Bootstrap core CSS -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+        <!-- Custom styles for this template -->
+        <link href="{% static 'css/one-page-wonder.css' %}" rel="stylesheet">
+    </head>
+    <body data-spy="scroll" data-target=".navbar" data-offset="50">
+        {% include 'navbar.html' %}
+        {% block content %}
+        <div class="container">
+            <p>
+            <center>
+                <h2>Abstract Details</h2>
+            </center>
+            </p>
+            <h3>{{ proposal.user.first_name }} {{ proposal.user.last_name }}</h3>
+            <p><b>Title: </b>&nbsp;{{ proposal.title }}</p>
+            <p><b>About Me: </b>&nbsp;{{ proposal.about_me | linebreaks }}</p>
+            <p><b>Abstract: </b>&nbsp;{{ proposal.abstract |linebreaks }}</p>
+            {% if proposal.prerequisite %}
+            <p><b>Prerequisite: </b>&nbsp;{{ proposal.prerequisite |linebreaks }}</p>
+            {% endif%}
+            <p><b>Duration: </b>&nbsp;{{ proposal.duration }} {% if proposal.proposal_type == "ABSTRACT"%} Mins {% else %}Hours {%endif%}</p>
+            {% if proposal.proposal_type == "ABSTRACT"%}
+            <p><b>Tags: </b>&nbsp;{{ proposal.tags }}</p>
+            {% else %}
+            <p><b>Level: </b>&nbsp;{{ proposal.tags }}</p>
+            {% endif %}
+            <p><b>Date Created: </b>&nbsp;{{ proposal.date_created }}</p>
+            {% if url %}
+            <p><b>Attachment: </b>&nbsp;
+                <a href="{{ url }}" class="btn btn-info" target="_blank">{{filename}}</a>
+            </p>
+            {% endif %}
+            <p><b>Comments: </b>
+            <hr>
+            {% for comment in comments %}
             <div>
                 <strong>Comment By:</strong>
                 {{ comment.user.first_name }} {{ comment.user.last_name }}
                 <p>{{ comment.comment| linebreaks }}</p>
             </div>
             <hr>
-        {% endfor %}
-						 
-							</section>
-
-					</div>
-      </div>
-   
-{% endblock %}
-					
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/skel.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
-			<script src="assets/js/main.js"></script>
-
-<script>
-$(document).ready(function() {
-    var n1 = Math.round(Math.random() * 10 + 1);
-    var n2 = Math.round(Math.random() * 10 + 1);
-    $("#a").val(n1 + " + " + n2 + " = ");
-    $("#c").click(function() {
-        if (eval($("#a").val()) == $("#b").val()) {
-        } else {
-            alert("Write the correct value ");
-        }
-    });
-});
-</script>
-	</body>
+            {% endfor %}
+        </div>
+        {% endblock %}
+        {% include 'footer.html' %}
+    </body>
 </html>
+
+
