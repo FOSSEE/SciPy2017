@@ -80,7 +80,7 @@
         var n2 = Math.round(Math.random() * 10 + 1);
         $("#a").val(n1 + " + " + n2 + " = ");
         var add = n1 + n2;
-        $("#b").on('change', function (){
+        $("#b").on('keyup', function (){
             if (this.value == add){
                  $('#myButton').removeAttr('disabled');
                  document.getElementById("error").innerHTML = "";    
