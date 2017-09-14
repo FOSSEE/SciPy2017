@@ -22,6 +22,7 @@
             {% if proposals_a > 1 %} You have exceeded the abstract submission limit. 
             You may view your submitted proposals by clicking <a href="{% url 'website:view_abstracts' %}" class="btn "> here</a>
             <!-- <h2>{{ user.get_full_name|default:user.username }} </h2> -->
+             {% else %} 
             <h2><u>Proposal Guidelines</u></h2>
             <ul>
                 <li>The project you are willing to present should be an actual implementation rather than just an idea.</li>

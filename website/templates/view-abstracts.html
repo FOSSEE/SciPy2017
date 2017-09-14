@@ -27,7 +27,7 @@
             </p>
             {% if not proposals %}
             <center>
-                You have not submitted any proposal. To submit proposal click <a href="{% url 'website:cfp' %}">here </a>
+                You have not submitted any proposal. To submit proposal click <a href="{% url 'website:submitcfp' %}">here </a>
             </center>
             {% else %}
             {% if user.is_superuser  %}
@@ -127,7 +127,7 @@
                 </div>
                 </p>
                 {% if user.is_superuser  %}
-                <!-- <input type="submit" id="delete" class ="button special" style="background:#D44727;" value="Delete" name="delete"/> -->
+                <input type="submit" id="delete" class ="button special" value="Delete" name="delete"/>
                 <center>
                     <input type="submit" id="accept" class ="button special" value="Accept" name="accept"/>
                     <input type="submit" id="rejected" class ="button special"  value="Reject" name="reject"/>
