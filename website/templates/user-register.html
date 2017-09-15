@@ -12,6 +12,7 @@
         <title>SciPy India 2017</title>
         <!-- Bootstrap core CSS -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
         <link href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
         <!-- Custom styles for this template -->
         <link href="{% static 'css/one-page-wonder.css' %}" rel="stylesheet">
@@ -37,9 +38,9 @@
             {% if registration_complete %}
             <p> Your Account is Created Successfully !</p>
             {% endif %}
-            <!-- <div class = "col-md-7">                   -->
+          <div class = "col-md-7">                   
             <!-- <div id = "my_form"> -->
-            <form action="" method="POST">
+            <form action="" method="POST" class="form-horizontal">
                 {% csrf_token %}
                 {% for field in form %} 
                 <p>{{ field.label}}
@@ -49,7 +50,7 @@
                 <a style="color:red; ">{{ field.errors }}</a>
                 {% endfor %}
                 <br>
-                <button class="button special" type="submit" >SignUp</button>
+                <button class="btn btn-primary" type="submit" >SignUp</button>
                 <a class="btn btn-primary" href="{% url 'website:cfp' %}"><u>I have an account</u></a>
                 <!-- </div> -->
             </form>

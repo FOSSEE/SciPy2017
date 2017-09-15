@@ -76,6 +76,8 @@
             <p style="color:red; font-size:15px;">* Invalid Username/Password</p>
             {% endif %}
             <!-- <div id = "my_form"> -->
+            <div class="row">
+            <div class="col-4">
             <form action="" method="POST">
                 {{ form.as_p }}
                 <button class="button special" name ="login" type="submit">Login</button><br/><br/>
@@ -88,19 +90,19 @@
                 <a href="{% url 'social:begin' 'google-oauth2' %}" class="btn btn-social-icon "  style="color:#dd4b39;"><i class="icon-google-plus"></i></a>&nbsp;
                 <a href="{% url 'social:begin' 'facebook' %}?next={{ request.path }}" class=" btn btn-social-icon" style="color:#3b5998"><i class="icon-facebook"></i></a>
             </p>
-            </li>
-            <!-- </div> -->
-            <!-- <div class="col-md-6" > -->
-            <li>
-                <span>
+           </div>
+            
+           <div class="col-7" style="float: right;">
+                
                     <h2><u>Important Dates</u></h2>
-                </span>
+                
                 <ul>
                     <li>Call for proposal opens: <b>TBD</b></li>
                     <li>Last date for submission of proposals: <b>TBD</b></li>
                     <li>Announcement of selected proposals: <b>TBD</b></li>
                 </ul>
-            </li>
+            </div>
+            </div>
             <!-- </div> -->
             {% endif %}   
         </div>
