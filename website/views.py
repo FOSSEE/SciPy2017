@@ -17,6 +17,7 @@ from django.db.models import F
 import csv
 from django.core.mail import EmailMultiAlternatives
 import os
+from scipy2017.local import SENDER_EMAIL
 
 from website.forms import ProposalForm, UserRegisterForm, UserLoginForm, WorkshopForm, ContactForm
 from website.models import Proposal, Comments, Ratings
@@ -157,9 +158,9 @@ def submitcfp(request):
                 data.save()
                 context['proposal_submit'] = True
                 sender_name = "SciPy India 2017"
-                sender_email = "scipy@fossee.in"
+                sender_email = SENDER_EMAIL
                 subject = "SciPy India 2017 – Talk Proposal Submission Acknowledgment"
-                to = (social_user.email, "scipy@fossee.in")
+                to = (social_user.email, SENDER_EMAIL)
                 message = """
                 Dear {0}, <br><br>
                 Thank you for showing interest & submitting a talk proposal at SciPy India 2017 conference for the talk titled <b>“{1}”</b>. Reviewal of the proposals will start once the CFP closes.
@@ -210,9 +211,9 @@ def submitcfw(request):
                 data.save()
                 context['proposal_submit'] = True
                 sender_name = "SciPy India 2017"
-                sender_email = "scipy@fossee.in"
+                sender_email = SENDER_EMAIL
                 subject = "SciPy India 2017 – Workshop Proposal Submission Acknowledgment"
-                to = (social_user.email, "scipy@fossee.in")
+                to = (social_user.email, SENDER_EMAIL)
                 message = """
                 Dear {0}, <br><br>
                 Thank you for showing interest & submitting a workshop proposal at SciPy India 2017 conference for the workshop titled <b>“{1}”</b>. Reviewal of the proposals will start once the CFP closes.
@@ -409,8 +410,8 @@ def comment_abstract(request, proposal_id = None):
                     comment.save()
                     comments = Comments.objects.filter(proposal=proposal)
                     sender_name = "SciPy India 2017"
-                    sender_email = "scipy@fossee.in"
-                    to = (proposal.user.email, "scipy@fossee.in" )
+                    sender_email = SENDER_EMAIL
+                    to = (proposal.user.email, SENDER_EMAIL )
                     if proposal.proposal_type == 'ABSTRACT':
                         subject = "SciPy India 2017 - Comment on Your talk Proposal"
                         message = """
@@ -483,8 +484,8 @@ def status(request, proposal_id= None):
                 proposal.status="Accepted"
                 proposal.save()
                 sender_name = "SciPy India 2017"
-                sender_email = "scipy@fossee.in"
-                to = (proposal.user.email, "scipy@fossee.in")
+                sender_email = SENDER_EMAIL
+                to = (proposal.user.email, SENDER_EMAIL)
                 if proposal.proposal_type == 'ABSTRACT':
                     subject = "SciPy India 2017 - Talk Proposal Accepted"
                     message = """Dear """+proposal.user.first_name+""",
@@ -501,8 +502,8 @@ def status(request, proposal_id= None):
                 proposal.status="Rejected"
                 proposal.save()
                 sender_name = "SciPy India 2017"
-                sender_email = "scipy@fossee.in"
-                to = (proposal.user.email,"scipy@fossee.in", )
+                sender_email = SENDER_EMAIL
+                to = (proposal.user.email,SENDER_EMAIL, )
                 if proposal.proposal_type == 'ABSTRACT':
                     subject = "SciPy India 2017 - Talk Proposal Rejected"
                     message = """Dear """+proposal.user.first_name+""",
@@ -518,9 +519,9 @@ def status(request, proposal_id= None):
                 send_mail(subject, message, sender_email, to)
                 context.update(csrf(request))  
             elif 'resubmit' in request.POST:
-                to = (proposal.user.email, "scipy@fossee.in" )
+                to = (proposal.user.email, SENDER_EMAIL )
                 sender_name = "SciPy India 2017"
-                sender_email = "scipy@fossee.in"
+                sender_email = SENDER_EMAIL
                 if proposal.proposal_type == 'ABSTRACT':
                     subject = "SciPy India 2017 - Talk Proposal Resumbmission"
                     message = """
@@ -646,8 +647,8 @@ def status_change(request):
                     proposal.status = "Accepted"
                     proposal.save()
                     sender_name = "SciPy India 2017"
-                    sender_email = "scipy@fossee.in"
-                    to = (proposal.user.email, "scipy@fossee.in")
+                    sender_email = SENDER_EMAIL
+                    to = (proposal.user.email, SENDER_EMAIL)
                     if proposal.proposal_type == 'ABSTRACT':
                         subject = "SciPy India 2017 - Talk Proposal Accepted"
                         message = """Dear """+proposal.user.first_name+""",
@@ -671,8 +672,8 @@ def status_change(request):
                     proposal.status="Rejected"
                     proposal.save()
                     sender_name = "SciPy India 2017"
-                    sender_email = "scipy@fossee.in"
-                    to = (proposal.user.email, "scipy@fossee.in")
+                    sender_email = SENDER_EMAIL
+                    to = (proposal.user.email, SENDER_EMAIL)
                     if proposal.proposal_type == 'ABSTRACT':
                         subject = "SciPy India 2017 - Talk Proposal Rejected"
                         message = """Dear """+proposal.user.first_name+""",
@@ -696,8 +697,8 @@ def status_change(request):
                 for proposal_id in delete_proposal:
                     proposal = Proposal.objects.get(id = proposal_id)
                     sender_name = "SciPy India 2017"
-                    sender_email = "scipy@fossee.in"
-                    to = (proposal.user.email, "scipy@fossee.in" )
+                    sender_email = SENDER_EMAIL
+                    to = (proposal.user.email, SENDER_EMAIL )
                     if proposal.proposal_type == 'ABSTRACT':
                         subject = "SciPy India 2017 - Talk Proposal Resumbmission"
                         message = """

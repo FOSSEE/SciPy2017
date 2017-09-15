@@ -561,11 +561,12 @@
                 <hr>
                 <div class="panel panel-default">
                     <div class="panel-body">
-                        <form id="contact_us" action='#' class="form" role="form" method=POST  enctype="multipart/form-data">
+
+                        <form id="contact_us" action='#' class="form" role="form" method=POST onSubmit="alert('Thank you for your feedback.');" enctype="multipart/form-data" data-toggle="validator">
                             {% csrf_token %}
                             <div class="col-md-15 form-group">
-                                <input class="form-control" id="name" name="name" placeholder="Name" type="text" required />
-                            </div>
+                                <input class="form-control" id="name" name="name" placeholder="Name" type="text" data-minlength="6" required />
+</div>
                             <div class="col-md-15 form-group">
                                 <input class="form-control" id="email" name="email" placeholder="Email" type="email" required />
                             </div>
