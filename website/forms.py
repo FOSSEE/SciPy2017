@@ -163,28 +163,28 @@ class UserRegisterForm(UserCreationForm):
 		model = User
 		fields = ('first_name', 'last_name', 'email', 'username', 'password1',
 		          'password2')
-        first_name = forms.CharField(widget=forms.TextInput(attrs={'placeholder': 'First Name'}),
+        first_name = forms.CharField(widget=forms.TextInput(attrs={'class' : 'form-control', 'placeholder': 'First Name'}),
                         label = 'First Name'
                         )
-        last_name = forms.CharField(widget=forms.TextInput(attrs={'placeholder': 'Last Name'}),
+        last_name = forms.CharField(widget=forms.TextInput(attrs={'class' : 'form-control' ,'placeholder': 'Last Name'}),
                         label = 'Last Name'
                         )
-        email = forms.EmailField(widget=forms.TextInput(attrs={'placeholder': 'Email'}),
+        email = forms.EmailField(widget=forms.TextInput(attrs={'class' : 'form-control' ,'placeholder': 'Email'}),
                         required = True,
                         error_messages = {'required':'Email field required.'},  
                         label = 'Email'
                         )
-        username = forms.CharField(widget=forms.TextInput(attrs={'placeholder': 'Username'}),
+        username = forms.CharField(widget=forms.TextInput(attrs={'class' : 'form-control' ,'placeholder': 'Username'}),
                         required = True,
                         error_messages = {'required':'Username field required.'},  
                         label = 'Username'
                         )
-        password1 = forms.CharField(widget=forms.PasswordInput(attrs={'placeholder': 'Password'}),
+        password1 = forms.CharField(widget=forms.PasswordInput(attrs={'class' : 'form-control' ,'placeholder': 'Password'}),
                         required = True,
                         error_messages = {'required':'Password field required.'},  
                         label = 'Password'
                         )
-        password2 = forms.CharField(widget=forms.PasswordInput(attrs={'placeholder': 'Confirm Password'}),
+        password2 = forms.CharField(widget=forms.PasswordInput(attrs={'class' : 'form-control' ,'placeholder': 'Confirm Password'}),
                         required = True,
                         error_messages = {'required':'Password Confirm field required.'},  
                         label = 'Re-enter Password'
@@ -202,10 +202,10 @@ class UserRegisterForm(UserCreationForm):
 
 class UserLoginForm(forms.Form):
     username = forms.CharField(
-			widget=forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'Username'}), 
-			label=''
+			widget=forms.TextInput(attrs={'class': 'form-inline', 'placeholder': 'Username'}), 
+			label='User Name'
 		)
     password = forms.CharField(
-			widget=forms.PasswordInput(attrs={'class': 'form-control', 'placeholder': 'Password'}), 
-			label=''
+			widget=forms.PasswordInput(attrs={'class': 'form-inline', 'placeholder': 'Password'}), 
+			label='Password'
 		)

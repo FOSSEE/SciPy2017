@@ -14,7 +14,7 @@
                 <li class="nav-item">
                     <a class="nav-link" href="/#home" class="nav-link js-scroll-trigger" >
                         Home
-                        <!--<span class="sr-only">(current)</span>-->
+                        <span class="sr-only">(current)</span>
                     </a>
                 </li>
                 <!-- <li class="nav-item">
@@ -29,10 +29,10 @@
                     </li>
                     <li class="nav-item">
                        <a class="nav-link" href="#coc" class="nav-link js-scroll-trigger" >COC</a>
-                    </li>
+                    </li>-->
                     <li class="nav-item">
                        <a class="nav-link" href="{% url 'website:cfp' %}">Submit</a>
-                    </li> -->
+                    </li> 
                 <li class="nav-item">
                     <a class="nav-link" href="/#schedule" class="nav-link js-scroll-trigger" >Schedule</a>
                 </li>
@@ -48,9 +48,9 @@
                     <li class="nav-item">
                     <a class="nav-link" href="#gallery" class="nav-link js-scroll-trigger" >Gallery</a>
                     </li> -->
-                <li class="nav-item">
+               <!-- <li class="nav-item">
                     <a class="nav-link" href="/#contact" class="nav-link js-scroll-trigger" >Contact</a>
-                </li>
+                </li>-->
             </ul>
             <ul class="navbar-nav" style="margin-left: auto;">
                 {% if user and not user.is_anonymous %}
@@ -59,10 +59,6 @@
                 </li>
                 <li class="nav-item" >
                     <a href="{% url 'auth:logout' %}?next=/2017/cfp" class="nav-link js-scroll-trigger" >Logout</a>
-                </li>
-                {% else %}
-                <li class="nav-item" >
-                    <a class="nav-link" href="{% url 'website:cfp' %}" class="nav-link js-scroll-trigger" >Login</a>
                 </li>
                 {% endif %}
             </ul>

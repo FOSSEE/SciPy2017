@@ -8,7 +8,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <meta name="description" content="">
         <meta name="author" content="">
-        <link rel="icon" href="{% static 'img/favicon.ico'%}" type="icon">
+        <link rel="icon" href="{% static 'img/fevicon.png'%}" type="icon">
         <title>SciPy India 2017</title>
         <!-- Bootstrap core CSS -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -19,6 +19,13 @@
     <body data-spy="scroll" data-target=".navbar" data-offset="50">
         {% include 'navbar.html' %}
         {% block content %}
+        <center>
+        <div style="background-color: #01c3d9;width: auto;">
+        <h1 style="color:black;font-family: Arial;font-weight: bold">
+            <span style="color:black;font-size: 2.25em;font-family: Arial;font-weight: bold">SciPy</span> India
+        </h1>
+        <p style="color:#111111; font-size:28px;font-family: Merriweather;" >November 29 & 30 - 2017</p></div>
+        </center>
         <div class="container">
             <p>
             <center>
@@ -68,42 +75,39 @@
             <p align = "justify">We invite you to submit proposals for talks or workshops to be presented at SciPy 2017. The time duration for talks is 15 or 30 minutes and for workshops is 2 to 4 hours. There will be two parallel tracks for the workshops this year.  One track is meant for beginners and the other is for advanced users.
             </p>
             <hr>
-            <span>
-                <h2><u>Login</u></h2>
-            </span>
-            <p>Login/Register to Submit a Proposal</p>
-            {% if invalid %}
-            <p style="color:red; font-size:15px;">* Invalid Username/Password</p>
-            {% endif %}
-            <!-- <div id = "my_form"> -->
-            <form action="" method="POST">
-                {{ form.as_p }}
-                <button class="button special" name ="login" type="submit">Login</button><br/><br/>
-                <a style="padding-right : 20px;" href="{% url 'website:userregister' %}" class="btn btn btn-primary">Create an Account</a>
-                <a  href="/2017/forgotpassword/">Forgot Password?</a>
-                {% csrf_token %}
-            </form>
-            <!-- </div> -->
-            <p>Or Sign in with:&nbsp;
-                <a href="{% url 'social:begin' 'google-oauth2' %}" class="btn btn-social-icon "  style="color:#dd4b39;"><i class="icon-google-plus"></i></a>&nbsp;
-                <a href="{% url 'social:begin' 'facebook' %}?next={{ request.path }}" class=" btn btn-social-icon" style="color:#3b5998"><i class="icon-facebook"></i></a>
-            </p>
-            </li>
-            <!-- </div> -->
-            <!-- <div class="col-md-6" > -->
-            <li>
-                <span>
-                    <h2><u>Important Dates</u></h2>
-                </span>
-                <ul>
-                    <li>Call for proposals opens: <b>15 Sept. 2017</b></li>
-                <li>Last date for submission of proposals: <b>1st Nov. 2017</b></li>
-                <li>Announcement of selected proposals: <b>15 Nov. 2017</b></li>
-                </ul>
-            </li>
-            <!-- </div> -->
-            {% endif %}   
-        </div>
+            <div class="row">
+            <div style="float:right;padding-left: 30px;">
+            <span><h2><u>Login</u></h2></span>
+
+                <p>Login/Register to Submit a Proposal</p>
+                {% if invalid %}
+                        <p style="color:red; font-size:15px;">* Invalid Username/Password</p>
+               {% endif %}
+                
+                  <!-- <div id = "my_form"> -->
+                    <form action="" method="POST">
+                        {{ form.as_p }}
+                        <button class="button special" name ="login" type="submit">Login</button><br/><br/>
+                        <a style="padding-right : 20px;" href="{% url 'website:userregister' %}" class="btn btn btn-primary">Create an Account</a>
+                        <a  href="/2016/forgotpassword/">Forgot Password?</a>
+                        {% csrf_token %}
+                    </form>
+                    <!-- </div> -->
+                    <p>Or Sign in with:&nbsp;
+                    <a href="{% url 'social:begin' 'google-oauth2' %}" class="btn btn-social-icon "  style="color:#dd4b39;"><i class="fa fa-google-plus" style="font-size:20px;"></i></a>&nbsp;
+                    <a href="{% url 'social:begin' 'facebook' %}?next={{ request.path }}" class=" btn btn-social-icon" style="color:#3b5998"><i class="fa fa-facebook-official" style="font-size:20px;"></i></a></p>
+                  </div> 
+                  <div style="float: right;padding-left: 30px;">
+             <span><h2><u>Important Dates</u></h2></span>
+             <ul>
+                <li>Call for proposal opens: <b>October 4, 2016</b></li>
+                <li>Last date for submission of proposals: <b>November 28, 2016</b></li>
+                <li>Announcement of selected proposals: <b>December 1, 2016</b></li>
+            </ul> 
+            </div>
+                        </div>
+  {% endif %}   
+    </div>
         {% endblock %}
         {% include 'footer.html' %}
     </body>
