@@ -19,7 +19,7 @@ body {
 }
 
 header.masthead {
-    background: url('../img/1.png') no-repeat center center scroll;
+    background: url('../img/Scipy_india_17_bg.png') no-repeat center center scroll;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
@@ -117,4 +117,5 @@ header.masthead > .overlay {
   -webkit-transform: translate3d(0,0,0);
   transform: translate3d(0,0,0);
 }
+
 
