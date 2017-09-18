@@ -28,6 +28,7 @@
             <hr>
             {% if proposals_w > 1 %} You have exceeded the workshop proposal submission limit. 
             You may view your submitted proposals by clicking <a href="{% url 'website:view_abstracts' %}" class="btn "> here</a>
+            {% else %}
             <!-- <h2>{{ user.get_full_name|default:user.username }} </h2> -->
             <!-- <h2>{{ user.get_full_name|default:user.username }} </h2> -->
             <h2><u>Proposal Guidelines</u></h2>
@@ -65,7 +66,7 @@
             {% if form.error %}
             Auch
             {% endif %}
-            <center><button class="button special" style="background:#D44727" type="submit">Submit</button></center>
+            <center><button class="btn btn-info" type="submit">Submit</button></center>
             {% endif %}
         </div>
         {% endblock %}

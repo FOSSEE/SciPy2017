@@ -58,10 +58,12 @@
             </ul>
             <br/>
             {% if user.is_superuser %}
-            <center><a href="{% url 'website:view_abstracts' %}" class="button special">View Proposals</a> </center>
+            <center><a href="{% url 'website:view_abstracts' %}" class="btn btn-info">View Proposals</a> </center>
             {% else %}
             <center>
-                <a href="{% url 'website:view_abstracts' %}" class="button special">View Proposals</a>
+                <a href="{% url 'website:view_abstracts' %}" class="btn btn-info">View Proposals</a>
+                <a href="{% url 'website:submitcfp' %}" class ="btn btn-info" role="button"> Submit paper  </a>
+                <a href="{% url 'website:submitcfw' %}" class ="btn btn-info" role="button">Submit workshop </a>
             </center>
             {% endif %}
             {% else %}
@@ -78,7 +80,7 @@
             <!-- <div id = "my_form"> -->
             <form action="" method="POST">
                 {{ form.as_p }}
-                <button class="button special" name ="login" type="submit">Login</button><br/><br/>
+                <button class="btn btn-info" name ="login" type="submit">Login</button><br/><br/>
                 <a style="padding-right : 20px;" href="{% url 'website:userregister' %}" class="btn btn btn-primary">Create an Account</a>
                 <a  href="/2017/forgotpassword/">Forgot Password?</a>
                 {% csrf_token %}

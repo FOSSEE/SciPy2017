@@ -27,11 +27,13 @@
             </p>
             {% if not proposals %}
             <center>
-                You have not submitted any proposal. To submit proposal click <a href="{% url 'website:submitcfp' %}">here </a>
+                You have not submitted any proposal.<br> <br>
+                <a href="{% url 'website:submitcfp' %}" class ="btn btn-info" role="button"> Submit paper  </a>
+                <a href="{% url 'website:submitcfw' %}" class ="btn btn-info" role="button">Submit workshop </a>
             </center>
             {% else %}
             {% if user.is_superuser  %}
-            <div style="float:right"><input type="submit" id="dump" class ="button special"  value="Export as csv" name="dump"/></div>
+            <div style="float:right"><input type="submit" id="dump" class ="btn btn-info"  value="Export as csv" name="dump"/></div>
             <br>
             {% endif %}
             <form action="{% url 'website:status_change' %}" method="post" onsubmit="return confirm('Are You Sure?');">
@@ -55,10 +57,8 @@
                             <col width="20%" />
                             {% endif %}
                         </colgroup>
-                        {% if user.is_superuser  %}
+                            {% if user.is_superuser  %}
                         <th style="text-align: center;">
-                            <center><input type="checkbox" onClick="toggle(this)" />
-                            </center>
                         </th>
                         <th style="text-align: center;">Speaker
                             {% endif %}
@@ -115,7 +115,7 @@
                                 {% if user.is_superuser %}
                                 <h5 style="color:grey;">{{proposal.status}}</h5>
                                 {% else %}
-                                <a href="{% url 'website:edit_proposal' proposal.id %}">{{proposal.status}}</a>  
+                                <a href="{% url 'website:edit_proposal' proposal.id %}">{{proposal.status}}</a>
                                 {% endif %}
                                 {% else %}  
                                 <h5 style="color:blue;">{{proposal.status}}</h5>
@@ -127,11 +127,11 @@
                 </div>
                 </p>
                 {% if user.is_superuser  %}
-                <input type="submit" id="delete" class ="button special" value="Delete" name="delete"/>
+                <input type="submit" id="delete" class ="btn btn-info" value="Delete" name="delete"/>
                 <center>
-                    <input type="submit" id="accept" class ="button special" value="Accept" name="accept"/>
-                    <input type="submit" id="rejected" class ="button special"  value="Reject" name="reject"/>
-                    <input type="submit" id="resubmit" class ="button special"  value="Resubmit" name="resubmit"/>
+                    <input type="submit" id="accept" class ="btn btn-info" value="Accept" name="accept"/>
+                    <input type="submit" id="rejected" class ="btn btn-info"  value="Reject" name="reject"/>
+                    <input type="submit" id="resubmit" class ="btn btn-info"  value="Resubmit" name="resubmit"/>
                 </center>
                 {% endif %}
             </form>
