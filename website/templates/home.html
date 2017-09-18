@@ -1,35 +1,33 @@
 
-
 {% load static %}
 {% block header %}
 <header class="masthead">
     <div class="overlay">
     <div class="container">
     <div class ="logo_header" style="font-size: 55%;margin-top: 3%;" >
-        <img src="{% static 'img/logo.png' %}" alt="" />
-        <p></p>
-        <h1 style="color:black;font-family: Arial;font-weight: bold">
+        <img class="img-fluid" src="{% static 'img/Scipy_india_logo17.png' %}" alt="" />
+               <!--<h1 style="color:black;font-family: Arial;font-weight: bold">
             <span style="color:black;font-size: 2.25em;font-family: Arial;font-weight: bold">SciPy</span> India
-        </h1>
-        <p style="color:#484848; font-size:28px;font-family: Merriweather;" >November 29 & 30 - 2017</p>
-        <br><br>
+        </h1>-->
+        <p style="color:#111111; font-size:28px;font-family: Merriweather;" >November 29 & 30 - 2017</p>
+        
     </div>
-    <center>
-        <div style="margin-left: 10px;">
+     <center>
+        
             <div class="d-inline-block ">
-                <a href="#attend" style="width : 150px;float: left" class="btn btn-primary gradient" >Register</a>
+                <a href="#register" style="width : 200px;float: left" class="btn btn-primary gradient" >Register</a>
             </div>
             <div class="d-inline-block">
-                <a  href="#" style="width : 150px;float: right;" class="btn btn-primary gradient">Submit</a>
+                <a  href="http://127.0.0.1:8000/cfp/" style="width : 200px;float: right;" class="btn btn-primary gradient">Submit</a>
             </div>
-            <div>
+        
     </center>
     </div>
     </div>
 </header>
 {% endblock %}
 </section>
-<!------------ about ------------- -->
+<!-- ---------- about ------------ -->
 <section id="about">
     <br>
     <br>
@@ -52,8 +50,8 @@
         </div>
     </div>
 </section>
-<!------------------------ -->
-<!------------ Speakers ------------ -->
+<!-- ---------------------- -->
+<!-- ---------- Speakers ------------ -->
 <section id="speakers">
     <br>
     <br>
@@ -91,7 +89,7 @@
                 -->
             <!-- Speaker 2 -->
             <center>
-                <div class="col-lg-4 col-sm-6 text-center mb-4 p-5">
+                <div class="col-lg-4 col-sm-6 text-center mb-4">
                     <br>
                     <p style="font-size: 28px;">KEYNOTE SPEAKER</p>
                     <img class="img-fluid d-block mx-auto" src="{% static 'img/me_pro.png' %}" alt="">
@@ -158,7 +156,7 @@
     <br>
     <div class="container">
         <div class="row align-items-center">
-            <div class="col-md-offset-4 p-5">
+            <div class="col-md-offset-4">
                 <center>
                     <h2>Register</h2>
                 </center>
@@ -181,7 +179,7 @@
                         </tr>
                         <tr>
                             <td bgcolor = "#5cd8e7">
-                                <h9 style="color:#000000;">Light</h9>
+                                <h9 style="color:#000000;">Lite</h9>
                                 <h2  style="color:#000000;"style ="font-size: 25px;">&#8377;600</h2>
                                 <h9 style="color:#000000;">(Till 20th Nov 2017)</h9>
                             </td>
@@ -223,7 +221,10 @@
                     <p id="demo"></p>
                     <footer class="major">
                         <ul class="actions">
-                            <center><a href="#attend" style="width : 150px;" class="btn btn-primary gradient" >Register</a></center>
+                            <center><!--<a href="#attend" style="width : 150px;" class="btn btn-primary gradient" >Register</a></a>-->
+                                <button onclick="popup('scipy-india-2017');" class="btn btn-primary gradient">Register Now</button><noscript id="tsNoJsMsg">Javascript on your browser is not enabled.</noscript><script src="//www.townscript.com/popup-widget/townscript-widget.nocache.js" type="text/javascript"></script>
+                                <!--<iframe src="https://www.townscript.com/widget/scipy-india-2017" frameborder="0" height="600" width="80%"></iframe>-->
+                            </center>
                         </ul>
                     </footer>
                 </div>
@@ -231,8 +232,8 @@
         </div>
     </div>
 </section>
-<!-------------------------->
-<!------------ coc ------------- -->
+<!-- ---------------------- -->
+<!-- ---------- coc ------------ -->
 <section id="coc">
     <br>
     <br>
@@ -268,9 +269,14 @@
                             </div>
                             <p>
                             <center><a class="btn btn-primary" data-toggle="collapse" href="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+                            <i class="fa fa-arrow-down" aria-hidden="true"></i>
+                            <i class="fa fa-arrow-up" aria-hidden="true"></i>
+
+                            </a>
+       <!-- <a class="btn btn-primary" data-toggle="collapse" href="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
                                 Show More
                                 </a>
-                            </center>
+           -->                 </center>
                             </p>
                         </div>
                     </div>
