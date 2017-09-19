@@ -1,644 +1,654 @@
 
+
 {% load static %}
 {% block header %}
 <header class="masthead">
-    <div class="overlay">
-    <div class="container">
-    <div class ="logo_header" style="font-size: 55%;margin-top: 3%;" >
-        <img class="img-fluid" src="{% static 'img/Scipy_india_logo17.png' %}" alt="" />
-               <!--<h1 style="color:black;font-family: Arial;font-weight: bold">
-            <span style="color:black;font-size: 2.25em;font-family: Arial;font-weight: bold">SciPy</span> India
-        </h1>-->
-        <p style="color:#111111; font-size:28px;font-family: Merriweather;" >November 29 & 30 - 2017</p>
-        
-    </div>
-     <center>
-        
+   <div class="overlay">
+      <div class="container">
+         <div class ="logo_header" style="font-size: 55%;margin-top: 3%;" >
+            <img class="img-fluid" src="{% static 'img/Scipy_india_logo17.png' %}" alt="" />
+            <!--<h1 style="color:black;font-family: Arial;font-weight: bold">
+               <span style="color:black;font-size: 2.25em;font-family: Arial;font-weight: bold">SciPy</span> India
+               </h1>-->
+            <p style="color:#111111; font-size:28px;font-family: Merriweather;" >November 29 & 30 - 2017</p>
+         </div>
+         <center>
+            <br><br>
             <div class="d-inline-block ">
-                <a href="#register" style="width : 200px;float: left" class="btn btn-primary gradient" >Register</a>
+               <a href="#register" style="width : 200px;float: left" class="btn btn-primary gradient" >Register</a>
             </div>
             <div class="d-inline-block">
+
                 <a  href="{% url 'website:cfp' %}" style="width : 200px;float: right;" class="btn btn-primary gradient">Submit</a>
+
             </div>
-        
-    </center>
-    </div>
-    </div>
+         </center>
+      </div>
+   </div>
 </header>
 {% endblock %}
 </section>
 <!-- ---------- about ------------ -->
 <section id="about">
-    <br>
-    <br>
-    <br>
-    <br>
-    <div class="container">
-        <div class="row align-items-center">
-            <div class="col-md-offset-4">
-                <center>
-                    <h2>About</h2>
-                </center>
-                <hr class="horizontal">
-                <div class="panel panel-default">
-                    <div class="panel-body">
-                        <p align="justify" class="p-5">SciPy India is a conference providing opportunities to spread the use of the Python programming language in the Scientific Computing community in India. It provides a unique opportunity to interact with the "Who's who" of the Python for Scientific Computing fraternity and learn, understand, participate, and contribute to Scientific Computing using Python. One of the goals of the conference is to combine education, engineering, and science with computing through the medium of Python.
-                        </p>
-                    </div>
-                </div>
+   <br>
+   <br>
+   <br>
+   <br>
+   <div class="container">
+      <div class="row align-items-center">
+         <div class="col-md-offset-4">
+            <center>
+               <h2>About</h2>
+            </center>
+            <hr class="horizontal">
+            <div class="panel panel-default">
+               <div class="panel-body">
+                  <p align="justify" class="p-5">SciPy India is a conference providing opportunities to spread the use of the Python programming language in the Scientific Computing community in India. It provides a unique opportunity to interact with the "Who's who" of the Python for Scientific Computing fraternity and learn, understand, participate, and contribute to Scientific Computing using Python. One of the goals of the conference is to combine education, engineering, and science with computing through the medium of Python.
+                  </p>
+               </div>
             </div>
-        </div>
-    </div>
+         </div>
+      </div>
+   </div>
 </section>
 <!-- ---------------------- -->
 <!-- ---------- Speakers ------------ -->
 <section id="speakers">
-    <br>
-    <br>
-    <br>
-    <br>
-    <div class="container">
-        <center>
-            <h2>Speakers</h2>
-            <hr>
-            <!--  <h3 style="font-weight: normal;">To be updated soon.....
-                </h3> -->
-        </center>
-        <div class="row align-items-center">
-            <center>
-            </center>
-            <!-- Speaker 1 -->
-            <!-- <div class="col-lg-4 col-sm-6 text-center mb-4"><br>
-                <img class="img-fluid d-block mx-auto" src="{% static 'img/me_pro.png' %}" alt="">
-                <p align="justify">Nelle Varoquaux, Postdoctoral fellow<br><span style="font-size: 10px;">(at the Department of Statistics at UC
-                Berkeley and a BIDS data science fellow.)</span>
-                <br><a href="https://github.com/NelleV" target="_blank"><i style="font-size:30px;color: black;margin-left: 35%" class="fa fa-github" aria-hidden="true"></i></a>
-                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://bids.berkeley.edu/people/nelle-varoquaux" target="_blank"><i class="fa fa-info" style="font-size:30px;color:black"></i></a>
-                 <p align="justify"> She received a PhD in computational
-                biology from École des Mines de Paris in 2015. Her research interests are in
-                statistical machine learning and scientific computing applied to molecular
-                biology problems, such as inferring the 3D architecture of the genome or
-                data-integration methods to better understand gene regulatory 
-                networks. Recently, as part of the interdisciplinary institute BIDS, she also
-                studies open-source communities and contributiors in collaboration with social 
-                scientists.
-                <br>
-                She is a core-developer of scikit-learn, MarkUs and Matplotlib, was Program
-                Chair for Scipy in 2015 and 2016.</p></p>
-                </div>
-                -->
-            <!-- Speaker 2 -->
-            <center>
-                <div class="col-lg-4 col-sm-6 text-center mb-4">
-                    <br>
-                    <p style="font-size: 28px;">KEYNOTE SPEAKER</p>
-                    <img class="img-fluid d-block mx-auto" src="{% static 'img/me_pro.png' %}" alt="">
-                    <p align="justify">Nelle Varoquaux, Postdoctoral fellow<br><span style="font-size: 10px;">(at the Department of Statistics at UC
-                        Berkeley and a BIDS data science fellow.)</span>
-                        <br><a href="https://github.com/NelleV" target="_blank"><i style="font-size:30px;color: black;margin-left: 35%" class="fa fa-github" aria-hidden="true"></i></a>
-                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://bids.berkeley.edu/people/nelle-varoquaux" target="_blank"><i class="fa fa-info" style="font-size:30px;color:black"></i></a>
-                    <p align="justify"> She received a PhD in computational
-                        biology from École des Mines de Paris in 2015. Her research interests are in
-                        statistical machine learning and scientific computing applied to molecular
-                        biology problems, such as inferring the 3D architecture of the genome or
-                        data-integration methods to better understand gene regulatory 
-                        networks. Recently, as part of the interdisciplinary institute BIDS, she also
-                        studies open-source communities and contributiors in collaboration with social 
-                        scientists.
-                        <br>
-                        She is a core-developer of scikit-learn, MarkUs and Matplotlib, was Program
-                        Chair for Scipy in 2015 and 2016.
-                    </p>
-                    </p>
-                </div>
-            </center>
-            <!-- <div class="col-lg-4 col-sm-6 text-center mb-4">
-                <img class="rounded-circle img-fluid d-block mx-auto" src="{% static 'img/dummy.png' %}" alt="">
-                <h3>Updated soon.....
-                </h3>
-                <p align="justify"></p>
-                </div> -->
-            <!-- Speaker 3 -->
-            <!--    <div class="col-lg-4 col-sm-6 text-center mb-4"><br>
-                <img class="img-fluid d-block mx-auto" src="{% static 'img/me_pro.png' %}" alt="">
-                <p align="justify">Nelle Varoquaux, Postdoctoral fellow<br><span style="font-size: 10px;">(at the Department of Statistics at UC
-                Berkeley and a BIDS data science fellow.)</span>
-                <br><a href="https://github.com/NelleV" target="_blank"><i style="font-size:30px;color: black;margin-left: 35%" class="fa fa-github" aria-hidden="true"></i></a>
-                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://bids.berkeley.edu/people/nelle-varoquaux" target="_blank"><i class="fa fa-info" style="font-size:30px;color:black"></i></a>
-                 <p align="justify"> She received a PhD in computational
-                biology from École des Mines de Paris in 2015. Her research interests are in
-                statistical machine learning and scientific computing applied to molecular
-                biology problems, such as inferring the 3D architecture of the genome or
-                data-integration methods to better understand gene regulatory 
-                networks. Recently, as part of the interdisciplinary institute BIDS, she also
-                studies open-source communities and contributiors in collaboration with social 
-                scientists.
-                <br>
-                She is a core-developer of scikit-learn, MarkUs and Matplotlib, was Program
-                Chair for Scipy in 2015 and 2016.</p></p>
-                </div>-->
-            <!-- <div class="col-lg-4 col-sm-6 text-center mb-4">
-                <img class="rounded-circle img-fluid d-block mx-auto" src="{% static 'img/dummy.png' %}" alt="">
-                <h3>Updated soon.....
-                </h3>
-                <p align="justify"></p>
-                </div> -->
-            <!-- -->
-        </div>
-    </div>
+   <br>
+   <br>
+   <br>
+   <br>
+   <div class="container">
+      <center>
+         <h2>Speakers</h2>
+         <hr>
+         <!--  <h3 style="font-weight: normal;">To be updated soon.....
+            </h3> -->
+      </center>
+      <div class="row align-items-center">
+         <center>
+         </center>
+         <!-- Speaker 1 -->
+         <!-- <div class="col-lg-4 col-sm-6 text-center mb-4"><br>
+            <img class="img-fluid d-block mx-auto" src="{% static 'img/me_pro.png' %}" alt="">
+            <p align="justify">Nelle Varoquaux, Postdoctoral fellow<br><span style="font-size: 10px;">(at the Department of Statistics at UC
+            Berkeley and a BIDS data science fellow.)</span>
+            <br><a href="https://github.com/NelleV" target="_blank"><i style="font-size:30px;color: black;margin-left: 35%" class="fa fa-github" aria-hidden="true"></i></a>
+             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://bids.berkeley.edu/people/nelle-varoquaux" target="_blank"><i class="fa fa-info" style="font-size:30px;color:black"></i></a>
+             <p align="justify"> She received a PhD in computational
+            biology from École des Mines de Paris in 2015. Her research interests are in
+            statistical machine learning and scientific computing applied to molecular
+            biology problems, such as inferring the 3D architecture of the genome or
+            data-integration methods to better understand gene regulatory 
+            networks. Recently, as part of the interdisciplinary institute BIDS, she also
+            studies open-source communities and contributiors in collaboration with social 
+            scientists.
+            <br>
+            She is a core-developer of scikit-learn, MarkUs and Matplotlib, was Program
+            Chair for Scipy in 2015 and 2016.</p></p>
+            </div>
+            -->
+         <!-- Speaker 2 -->
+         <center>
+            <div class="col-lg-4 col-sm-6 text-center mb-4">
+               <br>
+               <p style="font-size: 28px;">KEYNOTE SPEAKER</p>
+               <img class="img-fluid d-block mx-auto" src="{% static 'img/me_pro.png' %}" alt="">
+               <p align="justify">Nelle Varoquaux<br><span style="font-size: 10px;">(a postdoctoral fellow at the Department of Statistics at UC Berkeley and a BIDS data science fellow.)</span>
+                  <br><br><a href="https://github.com/NelleV" target="_blank"><i style="font-size:30px;color: black;margin-left: 35%" class="fa fa-github" aria-hidden="true"></i></a>
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://bids.berkeley.edu/people/nelle-varoquaux" target="_blank"><i class="fa fa-info" style="font-size:30px;color:black"></i></a>
+               <p align="justify"> She received a PhD in computational
+                  biology from École des Mines de Paris in 2015. Her research interests are in
+                  statistical machine learning and scientific computing applied to molecular
+                  biology problems, such as inferring the 3D architecture of the genome or
+                  data-integration methods to better understand gene regulatory 
+                  networks. Recently, as part of the interdisciplinary institute BIDS, she also
+                  studies open-source communities and contributiors in collaboration with social 
+                  scientists.
+                  <br>
+                  She is a core-developer of scikit-learn, MarkUs and Matplotlib, was Program
+                  Chair for Scipy in 2015 and 2016.
+               </p>
+               </p>
+            </div>
+         </center>
+         <!-- <div class="col-lg-4 col-sm-6 text-center mb-4">
+            <img class="rounded-circle img-fluid d-block mx-auto" src="{% static 'img/dummy.png' %}" alt="">
+            <h3>Updated soon.....
+            </h3>
+            <p align="justify"></p>
+            </div> -->
+         <!-- Speaker 3 -->
+         <!--    <div class="col-lg-4 col-sm-6 text-center mb-4"><br>
+            <img class="img-fluid d-block mx-auto" src="{% static 'img/me_pro.png' %}" alt="">
+            <p align="justify">Nelle Varoquaux, Postdoctoral fellow<br><span style="font-size: 10px;">(at the Department of Statistics at UC
+            Berkeley and a BIDS data science fellow.)</span>
+            <br><a href="https://github.com/NelleV" target="_blank"><i style="font-size:30px;color: black;margin-left: 35%" class="fa fa-github" aria-hidden="true"></i></a>
+             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://bids.berkeley.edu/people/nelle-varoquaux" target="_blank"><i class="fa fa-info" style="font-size:30px;color:black"></i></a>
+             <p align="justify"> She received a PhD in computational
+            biology from École des Mines de Paris in 2015. Her research interests are in
+            statistical machine learning and scientific computing applied to molecular
+            biology problems, such as inferring the 3D architecture of the genome or
+            data-integration methods to better understand gene regulatory 
+            networks. Recently, as part of the interdisciplinary institute BIDS, she also
+            studies open-source communities and contributiors in collaboration with social 
+            scientists.
+            <br>
+            She is a core-developer of scikit-learn, MarkUs and Matplotlib, was Program
+            Chair for Scipy in 2015 and 2016.</p></p>
+            </div>-->
+         <!-- <div class="col-lg-4 col-sm-6 text-center mb-4">
+            <img class="rounded-circle img-fluid d-block mx-auto" src="{% static 'img/dummy.png' %}" alt="">
+            <h3>Updated soon.....
+            </h3>
+            <p align="justify"></p>
+            </div> -->
+         <!-- -->
+      </div>
+   </div>
 </section>
 <!------------------------------------ --->
 <!------------ register ------- -->
 <section id="register">
-    <br>
-    <br>
-    <br>
-    <br>
-    <div class="container">
-        <div class="row align-items-center">
-            <div class="col-md-offset-4">
-                <center>
-                    <h2>Register</h2>
-                </center>
-                <hr>
-                <div class="panel panel-default">
-                    <table class="table" >
-                        <colgroup>
-                            <col width="20%" />
-                            <col width="60%" />
-                        </colgroup>
-                        <tr>
-                            <td bgcolor="#01c3d9">
-                                <h9 style="color:#000000;">Early Bird</h9>
-                                <h2 style="color:#000000;" style ="font-size: 25px;">&#8377;1200</h2>
-                                <h9 style="color:#000000;">(Till 15<sup>th</sup> Oct 2017)</h9>
-                            </td>
-                            <td>
-                                This ticket includes conference (tutorials + talks), lunch, and snacks for 2 days and dinner for the first day. It does not include Accommodation & T-Shirt. This is a non-refundable ticket.
-                            </td>
-                        </tr>
-                        <tr>
-                            <td bgcolor = "#5cd8e7">
-                                <h9 style="color:#000000;">Lite</h9>
-                                <h2  style="color:#000000;"style ="font-size: 25px;">&#8377;600</h2>
-                                <h9 style="color:#000000;">(Till 20<sup>th</sup> Nov 2017)</h9>
-                            </td>
-                            <td>
-                                This Ticket allows you to ONLY attend the conference for 2 Days (snacks for two days will be served). Does not include any conference amenities (Accommodation, Lunch, Dinner & T-shirt).This is a non-refundable ticket.
-                            </td>
-                        </tr>
-                        <tr>
-                            <td bgcolor="#8cc9f0">
-                                <h9 style="color:#000000;">Regular</h9>
-                                <h2 style="color:#000000;" style ="font-size: 25px;">&#8377;1400</h2>
-                                <h9 style="color:#000000;">(16<sup>th</sup> Oct - 25<sup>th</sup> Nov 2017)</h9>
-                            </td>
-                            <td>
-                                This ticket includes conference (tutorials + talks), lunch and snacks for 2 days and dinner for the first day. It does not include Accommodation & T-Shirt. This is a non-refundable ticket.
-                            </td>
-                        </tr>
-                        <tr>
-                            <td bgcolor ="#9de8f1">
-                                <h9 style="color:#000000;">Accomodation</h9>
-                                <h2 style="color:#000000;" style ="font-size: 25px;">&#8377;600</h2>
-                                <h9 style="color:#000000;">Add On</h9>
-                            </td>
-                            <td>
-                                Accommodation is provided on a shared basis (twin sharing) inside IIT-B campus (Boys/Girls hostel). Accommodation will be provided for 2 days, i.e, 28-29 and 29-30 November. Accommodation does not include other amenities like dinner, etc. Extension of period of stay is not available. This is a non-refundable ticket.
-                            </td>
-                        <tr>
-                            <td bgcolor= "#cef3f8">
-                                <h9 style="color:#000000;">T-Shirt</h9>
-                                <h2 style="color:#000000;" style ="font-size: 25px;">&#8377;350</h2>
-                                <h9 style="color:#000000;">Add On</h9>
-                            </td>
-                            <td>
-                                Change of size, exchange at the venue is not available. This is a non-refundable ticket.
-                            </td>
-                        </tr>
-                        </tr>
-                    </table>
-                    <p id="demo"></p>
-                    <footer class="major">
-                        <ul class="actions">
-                            <center><!--<a href="#attend" style="width : 150px;" class="btn btn-primary gradient" >Register</a></a>-->
-                                <button onclick="popup('scipy-india-2017');" class="btn btn-primary gradient">Register Now</button><noscript id="tsNoJsMsg">Javascript on your browser is not enabled.</noscript><script src="//www.townscript.com/popup-widget/townscript-widget.nocache.js" type="text/javascript"></script>
-                                <!--<iframe src="https://www.townscript.com/widget/scipy-india-2017" frameborder="0" height="600" width="80%"></iframe>-->
-                            </center>
-                        </ul>
-                    </footer>
-                </div>
+   <br>
+   <br>
+   <br>
+   <br>
+   <div class="container">
+      <div class="row align-items-center">
+         <div class="col-md-offset-4">
+            <center>
+               <h2>Register</h2>
+            </center>
+            <hr>
+            <div class="panel panel-default">
+               <table class="table" >
+                  <colgroup>
+                     <col width="20%" />
+                     <col width="60%" />
+                  </colgroup>
+                  <tr>
+                     <td bgcolor="#01c3d9">
+                        <h9 style="color:#000000;">Early Bird</h9>
+                        <h2 style="color:#000000;" style ="font-size: 25px;">&#8377;1200</h2>
+                        <h9 style="color:#000000;">(Till 15<sup>th</sup> Oct 2017)</h9>
+                     </td>
+                     <td>
+                        This ticket includes conference (tutorials + talks), lunch, and snacks for 2 days and dinner for the first day. It does not include Accommodation & T-Shirt. This is a non-refundable ticket.
+                     </td>
+                  </tr>
+                  <tr>
+                     <td bgcolor = "#5cd8e7">
+                        <h9 style="color:#000000;">Lite</h9>
+                        <h2  style="color:#000000;"style ="font-size: 25px;">&#8377;600</h2>
+                        <h9 style="color:#000000;">(Till 20<sup>th</sup> Nov 2017)</h9>
+                     </td>
+                     <td>
+                        This Ticket allows you to ONLY attend the conference for 2 Days (snacks for two days will be served). Does not include any conference amenities (Accommodation, Lunch, Dinner & T-shirt).This is a non-refundable ticket.
+                     </td>
+                  </tr>
+                  <tr>
+                     <td bgcolor="#8cc9f0">
+                        <h9 style="color:#000000;">Regular</h9>
+                        <h2 style="color:#000000;" style ="font-size: 25px;">&#8377;1400</h2>
+                        <h9 style="color:#000000;">(16<sup>th</sup> Oct - 25<sup>th</sup> Nov 2017)</h9>
+                     </td>
+                     <td>
+                        This ticket includes conference (tutorials + talks), lunch and snacks for 2 days and dinner for the first day. It does not include Accommodation & T-Shirt. This is a non-refundable ticket.
+                     </td>
+                  </tr>
+                  <tr>
+                     <td bgcolor ="#9de8f1">
+                        <h9 style="color:#000000;">Accomodation</h9>
+                        <h2 style="color:#000000;" style ="font-size: 25px;">&#8377;600</h2>
+                        <h9 style="color:#000000;">Add On</h9>
+                     </td>
+                     <td>
+                        Accommodation is provided on a shared basis (twin sharing) inside IIT-B campus (Boys/Girls hostel). Accommodation will be provided for 2 days, i.e, 28-29 and 29-30 November. Accommodation does not include other amenities like dinner, etc. Extension of period of stay is not available. This is a non-refundable ticket.
+                     </td>
+                  <tr>
+                     <td bgcolor= "#cef3f8">
+                        <h9 style="color:#000000;">T-Shirt</h9>
+                        <h2 style="color:#000000;" style ="font-size: 25px;">&#8377;350</h2>
+                        <h9 style="color:#000000;">Add On</h9>
+                     </td>
+                     <td>
+                        Change of size, exchange at the venue is not available. This is a non-refundable ticket.
+                     </td>
+                  </tr>
+                  </tr>
+               </table>
+               <p id="demo"></p>
+               <footer class="major">
+                  <ul class="actions">
+                     <center>
+                        <!--<a href="#attend" style="width : 150px;" class="btn btn-primary gradient" >Register</a></a>-->
+                        <button onclick="popup('scipy-india-2017');" class="btn btn-primary gradient">Register Now</button>
+                        <noscript id="tsNoJsMsg">Javascript on your browser is not enabled.</noscript>
+                        <script src="//www.townscript.com/popup-widget/townscript-widget.nocache.js" type="text/javascript"></script>
+                        <!--<iframe src="https://www.townscript.com/widget/scipy-india-2017" frameborder="0" height="600" width="80%"></iframe>-->
+                     </center>
+                  </ul>
+               </footer>
             </div>
-        </div>
-    </div>
+         </div>
+      </div>
+   </div>
 </section>
 <!-- ---------------------- -->
 <!-- ---------- coc ------------ -->
 <section id="coc">
-    <br>
-    <br>
-    <br>
-    <br>
-    <div class="container">
-        <div class="row align-items-center">
-            <div class="col-md-offset-4">
-                <center>
-                    <h2>Code Of Conduct</h2>
-                </center>
-                <hr>
-                <div class="panel panel-default">
-                    <div class="panel-body">
-                        <div align="justify" class="p-5">
-                            <p>We appreciate your participation in SciPy 2017. We want you to have an enjoyable and enriching experience in the conference. For this all the attendees are required to conform to the following Code of Conduct. Organisers will ensure that it is enforced throughout the event.
-                            <div class="collapse" id="collapseExample">
-                                <div class="card-text">
-                                    <p>SciPy India is dedicated to providing a harassment-free conference experience for everyone, regardless of age, gender, sexual orientation, physical appearance, disability, race, religion or employment.</p>
-                                    <p>Harassment includes offensive verbal comments related to gender, sexual orientation, disability, physical appearance, body size, race, religion, sexual images in public spaces, deliberate intimidation, stalking, following, harassing photography or recording, sustained disruption of talks or other events, inappropriate physical contact, and unwelcome sexual attention. We have zero tolerance on harassment of conference participants in any form, including, but not limited to the activities mentioned here.</p>
-                                    <p>Participants asked to stop any harassing behavior are expected to comply immediately.</p>
-                                    <p>All communication should be appropriate for a professional audience, including people from many different backgrounds. Sexual language or imagery is inappropriate for all aspects of the conference, including talks. Remember that sexist, racist or any other form of exclusionary or offensive jokes or excessive public swearing are not appropriate at any venue of SciPy India.</p>
-                                    <p>Do not insult or put down attendees or engage in any action that violates the open, welcoming and sharing spirit of the conference. Be kind and sensitive to the people around you when you are attending the conference, and avoid any kind of offensive or degrading behavior.</p>
-                                    <p><b>If a participant engages in behavior that violates this code of conduct, the conference organizers may take any action they deem appropriate, including warning the offender or expulsion from the conference with no refund.</b></p>
-                                    <p>Thank you for helping to make SciPy India a welcoming, friendly event for all.</p>
-                                    <p><b>Contact Information:</b></p>
-                                    <p>If you are being harassed, notice that someone else is being harassed, or have any other concerns, please contact a member of conference staff. Conference staff will be wearing "SciPy India: Organiser" badges.</p>
-                                    <p>Conference staff will be happy to help participants contact venue security or local law enforcement, provide escorts, or otherwise assist those experiencing harassment to feel safe for the duration of the conference. We value your attendance.</p>
-                                    <p><b>License:</b></p>
-                                    <p>This Code of Conduct was forked from PSF Code of Conduct by Python Software Foundation which is under a Creative Commons Attribution 3.0 Unported License.</p>
-                                    <p>SciPy India Conference Code of Conduct is licensed under a Creative Commons Attribution 3.0 Unported License.</p>
-                                </div>
-                            </div>
-                            <p>
-                            <center><a class="btn btn-primary" data-toggle="collapse" href="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
-                            <i class="fa fa-arrow-down" aria-hidden="true"></i>
-                            <i class="fa fa-arrow-up" aria-hidden="true"></i>
-
-                            </a>
-       <!-- <a class="btn btn-primary" data-toggle="collapse" href="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
-                                Show More
-                                </a>
-           -->                 </center>
-                            </p>
+   <br>
+   <br>
+   <br>
+   <br>
+   <div class="container">
+      <div class="row align-items-center">
+         <div class="col-md-offset-4">
+            <center>
+               <h2>Code Of Conduct</h2>
+            </center>
+            <hr>
+            <div class="panel panel-default">
+               <div class="panel-body">
+                  <div align="justify" class="p-5">
+                     <p>We appreciate your participation in SciPy 2017. We want you to have an enjoyable and enriching experience in the conference. For this all the attendees are required to conform to the following Code of Conduct. Organisers will ensure that it is enforced throughout the event.
+                     <div class="collapse" id="collapseExample">
+                        <div class="card-text">
+                           <p>SciPy India is dedicated to providing a harassment-free conference experience for everyone, regardless of age, gender, sexual orientation, physical appearance, disability, race, religion or employment.</p>
+                           <p>Harassment includes offensive verbal comments related to gender, sexual orientation, disability, physical appearance, body size, race, religion, sexual images in public spaces, deliberate intimidation, stalking, following, harassing photography or recording, sustained disruption of talks or other events, inappropriate physical contact, and unwelcome sexual attention. We have zero tolerance on harassment of conference participants in any form, including, but not limited to the activities mentioned here.</p>
+                           <p>Participants asked to stop any harassing behavior are expected to comply immediately.</p>
+                           <p>All communication should be appropriate for a professional audience, including people from many different backgrounds. Sexual language or imagery is inappropriate for all aspects of the conference, including talks. Remember that sexist, racist or any other form of exclusionary or offensive jokes or excessive public swearing are not appropriate at any venue of SciPy India.</p>
+                           <p>Do not insult or put down attendees or engage in any action that violates the open, welcoming and sharing spirit of the conference. Be kind and sensitive to the people around you when you are attending the conference, and avoid any kind of offensive or degrading behavior.</p>
+                           <p><b>If a participant engages in behavior that violates this code of conduct, the conference organizers may take any action they deem appropriate, including warning the offender or expulsion from the conference with no refund.</b></p>
+                           <p>Thank you for helping to make SciPy India a welcoming, friendly event for all.</p>
+                           <p><b>Contact Information:</b></p>
+                           <p>If you are being harassed, notice that someone else is being harassed, or have any other concerns, please contact a member of conference staff. Conference staff will be wearing "SciPy India: Organiser" badges.</p>
+                           <p>Conference staff will be happy to help participants contact venue security or local law enforcement, provide escorts, or otherwise assist those experiencing harassment to feel safe for the duration of the conference. We value your attendance.</p>
+                           <p><b>License:</b></p>
+                           <p>This Code of Conduct was forked from PSF Code of Conduct by Python Software Foundation which is under a Creative Commons Attribution 3.0 Unported License.</p>
+                           <p>SciPy India Conference Code of Conduct is licensed under a Creative Commons Attribution 3.0 Unported License.</p>
                         </div>
-                    </div>
-                </div>
+                     </div>
+                     <p>
+                     <center>
+                        <a class="btn btn-primary" data-toggle="collapse" href="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+                        <i class="fa fa-arrow-down" aria-hidden="true"></i>
+                        <i class="fa fa-arrow-up" aria-hidden="true"></i>
+                        </a>
+                        <!-- <a class="btn btn-primary" data-toggle="collapse" href="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+                           Show More
+                           </a>
+                           -->                 
+                     </center>
+                     </p>
+                  </div>
+               </div>
             </div>
-        </div>
-    </div>
+         </div>
+      </div>
+   </div>
 </section>
 <!-------------------------->
 <!------------ schedule------------- -->
 <section id="schedule">
-    <br>
-    <br>
-    <br>
-    <br>
-    <div class="container">
-        <center>
-            <h2>Schedule</h2>
-            <h3 style="font-weight: normal;">To be updated soon.....
-            </h3>
-        </center>
-        <hr>
-        <div class="row align-items-center">
-            <div class="col-md-offset-4">
-                <hr>
-                <!-- <ul class="nav nav-tabs">
-                    <li class="nav-item">
-                       <a class="nav-link active" href="#day1">Day 1</a>
-                    </li>
-                    <li class="nav-item">
-                       <a class="nav-link" href="#day2">Day 2</a>
-                    </li>
-                    </ul>
-                    <div class="tab-content">
-                    <div class="tab-pane active" id="day1" >
-                       <center>
-                          <h4>29 Nov 2017 (Day 1 - Saturday)</h4>
-                       </center>
-                       <table width="100%" class="table-striped">
-                          <thead>
-                             <th width="25%"><b>Time</b></th>
-                             <th width="40%" ><b>Basic Track</b> </th>
-                             <th width="40%"> <b>Advanced Track</b></th>
-                          </thead>
-                          <tbody>
-                             <tr >
-                                <td>08:30 AM - 09:00 AM</td>
-                                <td colspan="3" style="text-align:center"><b>REGISTRATION / BREAKFAST  </b></td>
-                                <td> </td>
-                             </tr>
-                             <tr >
-                                <td>09:00 AM - 1:00 PM</td>
-                                <td >Workshop: Introductory Scientific Computing with Python: 
-                                   Ipython, Matplotlib, NumPy, SciPy - Prof. Prabhu Ramachandran
-                                </td>
-                                <td>Workshop: Introduction to Automated Testing in Python</td>
-                             </tr>
-                             <tr >
-                                <td>01:00 PM - 02:00 PM</td>
-                                <td colspan="3" style="text-align:center"><b>LUNCH</b></td>
-                                <td></td>
-                             </tr>
-                             <tr >
-                                <td  >02:00 PM - 04:00 PM</td>
-                                <td >Workshop: Python for Microcontrollers</td>
-                                <td>Workshop: Algorithm to Application: Using Traits and ETS</td>
-                             </tr>
-                             <tr >
-                                <td>04:00 PM - 04:15 PM</td>
-                                <td colspan="3" style="text-align:center"><b>TEA</b></td>
-                                <td></td>
-                             </tr>
-                             <tr >
-                                <td>04:15 PM - 06:00 PM</td>
-                                <td >Workshop: Introduction to Git</td>
-                                <td>Workshop: ExpEYES</td>
-                             </tr>
-                          </tbody>
-                       </table>
-                       <p></p>
-                    </div>
-                    <div class="tab-pane" id="day2" >
-                       <center>
-                          <h4>30 Nov 2017 (Day 2 - Sunday)</h4>
-                       </center>
-                       <table class="table table-bordered">
-                          <thead>
-                             <th width="20%"><b>Time</b></th>
-                             <th width="70%"><b>Session</b> </th>
-                             <th width="20%"><b>Slides</b></th>
-                          </thead>
-                          <tbody>
-                             <tr >
-                                <td>08:30 AM - 09:00 AM</td>
-                                <td><b>BREAKFAST    </b></td>
-                                <td></td>
-                             </tr>
-                             <tr >
-                                <td>09:00 AM - 10:00 AM</td>
-                                <td><b>Keynote</b>: Algorithmic Data Exploration - Mr. S. Anand   </td>
-                                <td><a href="http://www.slideshare.net/gramener/automating-data-exploration-scipy-2016" target="_blank" >View here</a></td>
-                             </tr>
-                             <tr >
-                                <td>10:00 AM - 10:25 AM</td>
-                                <td>Talk: Learn the Brain with Nilearn - Kamalaker Dadi   </td>
-                                <td><a href="http://scipy.in/2016/downloads/Kamalaker.pdf" target="_blank">View here</a></td>
-                             </tr>
-                             <tr >
-                                <td>10:25 AM - 10:50 AM</td>
-                                <td>Talk: Scientific Python in Disaster Simulation and Visualization: Modeling and Simulation of Wildland Fire Spread
-                                   using CAN Model - Gugan Selvaraj 
-                                </td>
-                                <td><a href="http://scipy.in/2016/downloads/Gugan.pdf" target="_blank">View here</a></td>
-                             </tr>
-                             <tr >
-                                <td>10:50 AM - 11:15 AM</td>
-                                <td>Talk: Package ensemble: A package to create ensemble Machine Learning models - Prajwal Kailas      </td>
-                                <td><a href="http://scipy.in/2016/downloads/Prajwal_Kailas.zip" >View here</a></td>
-                             </tr>
-                             <tr >
-                                <td>11:15 AM - 11:30 AM </td>
-                                <td><b>TEA</b></td>
-                                <td></td>
-                             <tr >
-                                <td>11:30 AM - 11:55 AM</td>
-                                <td>Talk: Python & Caffe: Getting started with Deep Learning - Saurabh Kumar      </td>
-                                <td><a href="http://scipy.in/2016/downloads/saurabhkumar.pdf" target="_blank">View here</a></td>
-                             </tr>
-                             <tr >
-                                <td>11:55 AM - 12:20 PM</td>
-                                <td>Talk: Extracting structured data from Millions of Mobile SMS Messages - From Conception to Production - Vineesha Budhrani    </td>
-                             </tr>
-                             <tr >
-                                <td>12:20 PM - 12:45 PM </td>
-                                <td>Talk: Using Analytics to Unpack Your Financial Biography from CIBIL - Kedar Deore   </td>
-                             </tr>
-                             <tr >
-                                <td>12:45 PM - 01:10 PM </td>
-                                <td>Talk: Processing medium-sized data with Python, Pandas and Postgres - Chinmay Kanchi      </td>
-                                <td><a href="http://scipy.in/2016/downloads/chinmay_kanchi.zip" >View here</a></td>
-                             </tr>
-                             </tr>
-                             <tr >
-                                <td>01:10 PM - 02:10 PM</td>
-                                <td><b>LUNCH</b></td>
-                                <td></td>
-                             </tr>
-                             <tr >
-                                <td>02:10 PM - 03:10 PM</td>
-                                <td><b>Keynote</b>: Taking Python to Classrooms - Dr. Ajith Kumar       </td>
-                             </tr>
-                             <tr >
-                                <td>03:10 PM - 03:35 PM</td>
-                                <td>Talk: Developing Python Backends for Machine Learning Applications - Jaidev Deshpande     </td>
-                                <td><a href="http://nbviewer.jupyter.org/format/slides/github/jaidevd/jaidevd.github.io/blob/source/blog/posts/developing-python-backends-for-machine-learning-applications.ipynb#/" target="_blank">View here</a></td>
-                             </tr>
-                             <tr >
-                                <td>03:35 PM - 04:00 PM </td>
-                                <td>Talk: Good Enough Practices for Scientific Computing in Python - Pankaj Pandey    </td>
-                                <td><a href="http://scipy.in/2016/downloads/Pankaj_Pandey.pdf" target="_blank">View here</a></td>
-                             </tr>
-                             <tr >
-                                <td>04:00 PM - 04:15 PM </td>
-                                <td>Talk: Compressive Sensing: A glimpse into the Magic Reconstruction using Python - Saurabh Kumar   </td>
-                                <td><a href="http://scipy.in/2016/downloads/saurabhKumar_2.pdf" target="_blank">View here</a></td>
-                             </tr>
-                             <tr >
-                                <td>04:15 PM - 04:30 PM</td>
-                                <td>Talk: Raspberry PI based Smart Greenhouse for environment monitoring and control - Saiprasad Barke and Shradda Barke  </td>
-                                <td><a href="http://scipy.in/2016/downloads/Saiprasad_and_Shradda.pdf" target="_blank">View here</a></td>
-                             </tr>
-                             <tr >
-                                <td>04:30 PM - 04:45 PM</td>
-                                <td><b>TEA</b></td>
-                                <td></td>
-                             </tr>
-                             <tr >
-                                <td>04:45 PM - 05:45 PM</td>
-                                <td><b>Lightning Talks   </b></td>
-                                <td></td>
-                             </tr>
-                             <tr >
-                                <td>05:45 PM - 06:00 PM</td>
-                                <td><b>Closing   </b></td>
-                                <td></td>
-                             </tr>
-                          </tbody>
-                       </table>
-                       <p></p>
-                    </div>
-                    </div> -->
-            </div>
-        </div>
-    </div>
+   <br>
+   <br>
+   <br>
+   <br>
+   <div class="container">
+      <center>
+         <h2>Schedule</h2>
+         <h3 style="font-weight: normal;">To be updated soon.....
+         </h3>
+      </center>
+      <hr>
+      <div class="row align-items-center">
+         <div class="col-md-offset-4">
+            <hr>
+            <!-- <ul class="nav nav-tabs">
+               <li class="nav-item">
+                  <a class="nav-link active" href="#day1">Day 1</a>
+               </li>
+               <li class="nav-item">
+                  <a class="nav-link" href="#day2">Day 2</a>
+               </li>
+               </ul>
+               <div class="tab-content">
+               <div class="tab-pane active" id="day1" >
+                  <center>
+                     <h4>29 Nov 2017 (Day 1 - Saturday)</h4>
+                  </center>
+                  <table width="100%" class="table-striped">
+                     <thead>
+                        <th width="25%"><b>Time</b></th>
+                        <th width="40%" ><b>Basic Track</b> </th>
+                        <th width="40%"> <b>Advanced Track</b></th>
+                     </thead>
+                     <tbody>
+                        <tr >
+                           <td>08:30 AM - 09:00 AM</td>
+                           <td colspan="3" style="text-align:center"><b>REGISTRATION / BREAKFAST  </b></td>
+                           <td> </td>
+                        </tr>
+                        <tr >
+                           <td>09:00 AM - 1:00 PM</td>
+                           <td >Workshop: Introductory Scientific Computing with Python: 
+                              Ipython, Matplotlib, NumPy, SciPy - Prof. Prabhu Ramachandran
+                           </td>
+                           <td>Workshop: Introduction to Automated Testing in Python</td>
+                        </tr>
+                        <tr >
+                           <td>01:00 PM - 02:00 PM</td>
+                           <td colspan="3" style="text-align:center"><b>LUNCH</b></td>
+                           <td></td>
+                        </tr>
+                        <tr >
+                           <td  >02:00 PM - 04:00 PM</td>
+                           <td >Workshop: Python for Microcontrollers</td>
+                           <td>Workshop: Algorithm to Application: Using Traits and ETS</td>
+                        </tr>
+                        <tr >
+                           <td>04:00 PM - 04:15 PM</td>
+                           <td colspan="3" style="text-align:center"><b>TEA</b></td>
+                           <td></td>
+                        </tr>
+                        <tr >
+                           <td>04:15 PM - 06:00 PM</td>
+                           <td >Workshop: Introduction to Git</td>
+                           <td>Workshop: ExpEYES</td>
+                        </tr>
+                     </tbody>
+                  </table>
+                  <p></p>
+               </div>
+               <div class="tab-pane" id="day2" >
+                  <center>
+                     <h4>30 Nov 2017 (Day 2 - Sunday)</h4>
+                  </center>
+                  <table class="table table-bordered">
+                     <thead>
+                        <th width="20%"><b>Time</b></th>
+                        <th width="70%"><b>Session</b> </th>
+                        <th width="20%"><b>Slides</b></th>
+                     </thead>
+                     <tbody>
+                        <tr >
+                           <td>08:30 AM - 09:00 AM</td>
+                           <td><b>BREAKFAST    </b></td>
+                           <td></td>
+                        </tr>
+                        <tr >
+                           <td>09:00 AM - 10:00 AM</td>
+                           <td><b>Keynote</b>: Algorithmic Data Exploration - Mr. S. Anand   </td>
+                           <td><a href="http://www.slideshare.net/gramener/automating-data-exploration-scipy-2016" target="_blank" >View here</a></td>
+                        </tr>
+                        <tr >
+                           <td>10:00 AM - 10:25 AM</td>
+                           <td>Talk: Learn the Brain with Nilearn - Kamalaker Dadi   </td>
+                           <td><a href="http://scipy.in/2016/downloads/Kamalaker.pdf" target="_blank">View here</a></td>
+                        </tr>
+                        <tr >
+                           <td>10:25 AM - 10:50 AM</td>
+                           <td>Talk: Scientific Python in Disaster Simulation and Visualization: Modeling and Simulation of Wildland Fire Spread
+                              using CAN Model - Gugan Selvaraj 
+                           </td>
+                           <td><a href="http://scipy.in/2016/downloads/Gugan.pdf" target="_blank">View here</a></td>
+                        </tr>
+                        <tr >
+                           <td>10:50 AM - 11:15 AM</td>
+                           <td>Talk: Package ensemble: A package to create ensemble Machine Learning models - Prajwal Kailas      </td>
+                           <td><a href="http://scipy.in/2016/downloads/Prajwal_Kailas.zip" >View here</a></td>
+                        </tr>
+                        <tr >
+                           <td>11:15 AM - 11:30 AM </td>
+                           <td><b>TEA</b></td>
+                           <td></td>
+                        <tr >
+                           <td>11:30 AM - 11:55 AM</td>
+                           <td>Talk: Python & Caffe: Getting started with Deep Learning - Saurabh Kumar      </td>
+                           <td><a href="http://scipy.in/2016/downloads/saurabhkumar.pdf" target="_blank">View here</a></td>
+                        </tr>
+                        <tr >
+                           <td>11:55 AM - 12:20 PM</td>
+                           <td>Talk: Extracting structured data from Millions of Mobile SMS Messages - From Conception to Production - Vineesha Budhrani    </td>
+                        </tr>
+                        <tr >
+                           <td>12:20 PM - 12:45 PM </td>
+                           <td>Talk: Using Analytics to Unpack Your Financial Biography from CIBIL - Kedar Deore   </td>
+                        </tr>
+                        <tr >
+                           <td>12:45 PM - 01:10 PM </td>
+                           <td>Talk: Processing medium-sized data with Python, Pandas and Postgres - Chinmay Kanchi      </td>
+                           <td><a href="http://scipy.in/2016/downloads/chinmay_kanchi.zip" >View here</a></td>
+                        </tr>
+                        </tr>
+                        <tr >
+                           <td>01:10 PM - 02:10 PM</td>
+                           <td><b>LUNCH</b></td>
+                           <td></td>
+                        </tr>
+                        <tr >
+                           <td>02:10 PM - 03:10 PM</td>
+                           <td><b>Keynote</b>: Taking Python to Classrooms - Dr. Ajith Kumar       </td>
+                        </tr>
+                        <tr >
+                           <td>03:10 PM - 03:35 PM</td>
+                           <td>Talk: Developing Python Backends for Machine Learning Applications - Jaidev Deshpande     </td>
+                           <td><a href="http://nbviewer.jupyter.org/format/slides/github/jaidevd/jaidevd.github.io/blob/source/blog/posts/developing-python-backends-for-machine-learning-applications.ipynb#/" target="_blank">View here</a></td>
+                        </tr>
+                        <tr >
+                           <td>03:35 PM - 04:00 PM </td>
+                           <td>Talk: Good Enough Practices for Scientific Computing in Python - Pankaj Pandey    </td>
+                           <td><a href="http://scipy.in/2016/downloads/Pankaj_Pandey.pdf" target="_blank">View here</a></td>
+                        </tr>
+                        <tr >
+                           <td>04:00 PM - 04:15 PM </td>
+                           <td>Talk: Compressive Sensing: A glimpse into the Magic Reconstruction using Python - Saurabh Kumar   </td>
+                           <td><a href="http://scipy.in/2016/downloads/saurabhKumar_2.pdf" target="_blank">View here</a></td>
+                        </tr>
+                        <tr >
+                           <td>04:15 PM - 04:30 PM</td>
+                           <td>Talk: Raspberry PI based Smart Greenhouse for environment monitoring and control - Saiprasad Barke and Shradda Barke  </td>
+                           <td><a href="http://scipy.in/2016/downloads/Saiprasad_and_Shradda.pdf" target="_blank">View here</a></td>
+                        </tr>
+                        <tr >
+                           <td>04:30 PM - 04:45 PM</td>
+                           <td><b>TEA</b></td>
+                           <td></td>
+                        </tr>
+                        <tr >
+                           <td>04:45 PM - 05:45 PM</td>
+                           <td><b>Lightning Talks   </b></td>
+                           <td></td>
+                        </tr>
+                        <tr >
+                           <td>05:45 PM - 06:00 PM</td>
+                           <td><b>Closing   </b></td>
+                           <td></td>
+                        </tr>
+                     </tbody>
+                  </table>
+                  <p></p>
+               </div>
+               </div> -->
+         </div>
+      </div>
+   </div>
 </section>
 <!-------------------------->
 <!------------ about ------------- -->
 <section id="instructions">
-    <br>
-    <br>
-    <br>
-    <br>
-    <div class="container">
-        <center>
-            <h2>Instructions</h2>
-            <h3 style="font-weight: normal;">To be updated soon.....
-            </h3>
-        </center>
-        <hr>
-        <div class="row align-items-center">
-            <div class="col-md-offset-4">
-                <div class="panel panel-default">
-                    <div class="panel-body">
-                        <!-- <table class="table table-condensed" style="text-align: justify;">
-                            <tbody>
-                               <tr>
-                                  <td>General Instructions</td>
-                                  <td width="60%">These instructions will help you during the stay at IIT Bombay. </td>
-                                  <td><a href="http://scipy.in/2016/downloads/General_instruction.pdf" target="_blank">View here</a> </td>
-                               </tr>
-                               <tr>
-                                  <td>SciPy 2017: <br>Preferred Workshop Track</td>
-                                  <td>Please select the workshop in which you wish to participate (Satellite conference registrants need not submit this form).</td>
-                                  <td><a href="http://tinyurl.com/SciPy2016-Workshop" target="_blank">View here</a> </td>
-                               <tr>
-                               <tr >
-                                  <td>Workshop Instructions</td>
-                                  <td >These instructions are for all the registered participants. It has the details of the workshops which will be conducted in SciPy India 2016 conference. Please read it carefully and follow the steps to install various software packages.<br>
-                                     <b>Note:</b> You will not be able to participate in the workshops without installing the above packages. There will not be any separate setup session at the venue.
-                                  </td>
-                                  <td><a href="http://scipy.in/2016/downloads/SciPy_instruction_workshop.pdf" target="_blank">View here</a> </td>
-                               </tr>
-                               <tr >
-                                  <td>Workshop Material </td>
-                                  <td >1)<b> Workshop</b>: Introductory Scientific Computing with Python: Ipython, Matplotlib, NumPy, SciPy - Prof. Prabhu Ramachandran<br></td>
-                                  <td><a href="http://scipy.in/2016/downloads/workshop/intro_scipy_circulate.zip" target="_blank">View here</a> </td>
-                               </tr>
-                            </tbody>
-                            </table> -->
-                    </div>
-                </div>
+   <br>
+   <br>
+   <br>
+   <br>
+   <div class="container">
+      <center>
+         <h2>Instructions</h2>
+         <h3 style="font-weight: normal;">To be updated soon.....
+         </h3>
+      </center>
+      <hr>
+      <div class="row align-items-center">
+         <div class="col-md-offset-4">
+            <div class="panel panel-default">
+               <div class="panel-body">
+                  <!-- <table class="table table-condensed" style="text-align: justify;">
+                     <tbody>
+                        <tr>
+                           <td>General Instructions</td>
+                           <td width="60%">These instructions will help you during the stay at IIT Bombay. </td>
+                           <td><a href="http://scipy.in/2016/downloads/General_instruction.pdf" target="_blank">View here</a> </td>
+                        </tr>
+                        <tr>
+                           <td>SciPy 2017: <br>Preferred Workshop Track</td>
+                           <td>Please select the workshop in which you wish to participate (Satellite conference registrants need not submit this form).</td>
+                           <td><a href="http://tinyurl.com/SciPy2016-Workshop" target="_blank">View here</a> </td>
+                        <tr>
+                        <tr >
+                           <td>Workshop Instructions</td>
+                           <td >These instructions are for all the registered participants. It has the details of the workshops which will be conducted in SciPy India 2016 conference. Please read it carefully and follow the steps to install various software packages.<br>
+                              <b>Note:</b> You will not be able to participate in the workshops without installing the above packages. There will not be any separate setup session at the venue.
+                           </td>
+                           <td><a href="http://scipy.in/2016/downloads/SciPy_instruction_workshop.pdf" target="_blank">View here</a> </td>
+                        </tr>
+                        <tr >
+                           <td>Workshop Material </td>
+                           <td >1)<b> Workshop</b>: Introductory Scientific Computing with Python: Ipython, Matplotlib, NumPy, SciPy - Prof. Prabhu Ramachandran<br></td>
+                           <td><a href="http://scipy.in/2016/downloads/workshop/intro_scipy_circulate.zip" target="_blank">View here</a> </td>
+                        </tr>
+                     </tbody>
+                     </table> -->
+               </div>
             </div>
-        </div>
-    </div>
+         </div>
+      </div>
+   </div>
 </section>
 <!-------------------------->
 <!------------ venue ------------- -->
 <section id="venue">
-    <br>
-    <br>
-    <br>
-    <br>
-    <div class="container">
-        <div class="align-items-center">
-            <div class="col-md-offset-4">
-                <center>
-                    <h2>Venue</h2>
-                </center>
-                <hr>
-                <div class="panel panel-default">
-                    <div class="panel-body">
-                        <center>
-                            <h4>Lecture Hall Complex, IIT Bombay</h4>
-                            <div class="embed-responsive embed-responsive-16by9">
-                                <iframe class="embed-responsive-item" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3769.472585331343!2d72.916895!3d19.130779999999994!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c7f4215f57bf%3A0xcf0c03ea45a113e1!2sLecture+Hall+Complex+(LHC)!5e0!3m2!1sen!2sin!4v1434726932900"></iframe>
-                            </div>
-                        </center>
-                    </div>
-                </div>
+   <br>
+   <br>
+   <br>
+   <br>
+   <div class="container">
+      <div class="align-items-center">
+         <div class="col-md-offset-4">
+            <center>
+               <h2>Venue</h2>
+            </center>
+            <hr>
+            <div class="panel panel-default">
+               <div class="panel-body">
+                  <center>
+                     <h4>Lecture Hall Complex, IIT Bombay</h4>
+                     <div class="embed-responsive embed-responsive-16by9">
+                        <iframe class="embed-responsive-item" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3769.472585331343!2d72.916895!3d19.130779999999994!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c7f4215f57bf%3A0xcf0c03ea45a113e1!2sLecture+Hall+Complex+(LHC)!5e0!3m2!1sen!2sin!4v1434726932900"></iframe>
+                     </div>
+                  </center>
+               </div>
             </div>
-        </div>
-    </div>
+         </div>
+      </div>
+   </div>
 </section>
 <!-------------------------->
 <!------------ venue ------------- -->
-
 <section id="sponsors">
-<br>
-    <br>
-    <br>
-    <br>
-    <div class="container">
-        <div class="align-items-center">
-            <div class="col-md-offset-4">
-                <center>
-                    <h2>Sponsors</h2>
-                </center>
-                <hr>
-</div></div></div></section>
-
-<section id="poster">
-<br>
-    <br>
-    <br>
-    <br>
-    <div class="container">
-        <div class="align-items-center">
-            <div class="col-md-offset-4">
-                <center>
-                    <h2>Poster</h2>
-                </center>
-                <hr>
-                <div class="panel panel-default">
-                    <div class="panel-body">
-                        <br><center>
-                            <a href="{% static 'img/poster_Scipy2017.png'%}" target="_blank"><img src="{% static 'img/Th_Scipy2017.png'%}" /></a>
-                        <br><br>
-    
-                        <p align="justify">We request you to share the event details through this poster with faculty members, students and others who might be interested. You may print the poster (native size - A4) and display on the notice boards.</p>
-                    </center>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+   <br>
+   <br>
+   <br>
+   <br>
+   <div class="container">
+      <div class="align-items-center">
+         <div class="col-md-offset-4">
+            <center>
+               <h2>Sponsors</h2>
+            </center>
+            <hr>
+            <p align="justify">Thank you for your interest to sponsor Scipy India 2017.</p>
+            <p align="justify">
+               SciPy India, an annual conference organized by FOSSEE (Free and Open Source Software for Education) based at IIT Bombay, provides the  opportunity to unfurl the use of the Python programming language in the Scientific Computing community in India. SciPy India being organized since 2009, attracts more than 250 students and faculty every year. This conference provides the participants with a unique opportunity to interact and connect with the Python community. 
+            </p>
+            <p align="justify">
+              Here’s a call to the interested organizations to sponsor this conference and get associated with the event. Through this sponsorship, you could engage with top professionals and enhance your organization’s brand visibility amongst Python users.
+            </p>
+            <p align="justify"><a href="{% static 'pdf/SciPy2017prospectus.pdf' %}" target="_blank">Download Prospectus</a></p>
+         </div>
+      </div>
+   </div>
 </section>
-
-<section id="contact">
-    <br>
-    <br>
-    <br>
-    <br>
-    <div class="container">
-        <div class="align-items-center">
-            <div class="col-md-offset-4">
-                <center>
-                    <h2>Write to Us</h2>
-                    <p>Feel free to send us an email if you have any questions.</p>
-                </center>
-                <hr>
-                <div class="panel panel-default">
-                    <div class="panel-body">
-
-                        <form id="contact_us" action='#' class="form" role="form" method=POST onSubmit="alert('Thank you for your feedback.');" enctype="multipart/form-data" data-toggle="validator">
-                            {% csrf_token %}
-                            <div class="col-md-15 form-group">
-                                <input class="form-control" id="name" name="name" placeholder="Name" type="text" data-minlength="6" required />
-</div>
-                            <div class="col-md-15 form-group">
-                                <input class="form-control" id="email" name="email" placeholder="Email" type="email" required />
-                            </div>
-                            <div class="col-md-15 form-group">
-                                <textarea class="form-control" id="message" name="message" placeholder="Message" rows="5"></textarea> 
-                            </div>
-                            <div class="col-md-15 form-group">
-                                <input class="form-control" style="color:black;" readonly type="text" id="a" />
-                            </div>
-                            <div class="col-md-15 form-group">
-                                <input placeholder = "Answer" class="form-control" type="text" id="b"/>
-                            </div>
-                            <div class = "col-md-3">
-                                <!-- <button class="button" href="" id = "c" type="submit">Send Message</button> -->
-                                <button id="myButton" disabled >Send Message</button><br>
-                                <p style="color: red;" id= "error">
-                            </div>
-                        </form>
-                    </div>
-                </div>
+<section id="poster">
+   <br>
+   <br>
+   <br>
+   <br>
+   <div class="container">
+      <div class="align-items-center">
+         <div class="col-md-offset-4">
+            <center>
+               <h2>Poster</h2>
+            </center>
+            <hr>
+            <div class="panel panel-default">
+               <div class="panel-body">
+                  <br>
+                  <center>
+                     <a href="{% static 'img/poster_Scipy2017.png'%}" target="_blank"><img src="{% static 'img/Th_Scipy2017.png'%}" /></a>
+                     <br><br>
+                     <p align="justify">We request you to share the event details through this poster with faculty members, students and others who might be interested. You may print the poster (native size - A4) and display on the notice boards.</p>
+                  </center>
+               </div>
             </div>
-        </div>
-    </div>
+         </div>
+      </div>
+   </div>
+</section>
+<section id="contact">
+   <br>
+   <br>
+   <br>
+   <br>
+   <div class="container">
+      <div class="align-items-center">
+         <div class="col-md-offset-4">
+            <center>
+               <h2>Write to Us</h2>
+               <p>Feel free to send us an email if you have any questions.</p>
+            </center>
+            <hr>
+            <div class="panel panel-default">
+               <div class="panel-body">
+                  <form id="contact_us" action='#' class="form" role="form" method=POST onSubmit="alert('Thank you for your feedback.');" enctype="multipart/form-data" data-toggle="validator">
+                     {% csrf_token %}
+                     <div class="col-md-15 form-group">
+                        <input class="form-control" id="name" name="name" placeholder="Name" type="text" data-minlength="6" required />
+                     </div>
+                     <div class="col-md-15 form-group">
+                        <input class="form-control" id="email" name="email" placeholder="Email" type="email" required />
+                     </div>
+                     <div class="col-md-15 form-group">
+                        <textarea class="form-control" id="message" name="message" placeholder="Message" rows="5"></textarea> 
+                     </div>
+                     <div class="col-md-15 form-group">
+                        <input class="form-control" style="color:black;" readonly type="text" id="a" />
+                     </div>
+                     <div class="col-md-15 form-group">
+                        <input placeholder = "Answer" class="form-control" type="text" id="b"/>
+                     </div>
+                     <div class = "col-md-3">
+                        <!-- <button class="button" href="" id = "c" type="submit">Send Message</button> -->
+                        <button id="myButton" disabled >Send Message</button><br>
+                        <p style="color: red;" id= "error">
+                     </div>
+                  </form>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
 </section>
 <!-------------------------->
-
 
