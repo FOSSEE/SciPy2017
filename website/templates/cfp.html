@@ -95,7 +95,7 @@
                </form>
                <!-- </div> -->
                <p>Or Sign in with:&nbsp;
-                  <a href="{% url 'social:begin' 'google-oauth2' %}" class="btn btn-social-icon "  style="color:#dd4b39;"><i class="fa fa-google-plus" style="font-size:20px;"></i></a>&nbsp;
+                  <a href="{% url 'social:begin' 'google-oauth2' %}?next={{ request.path }}" class="btn btn-social-icon "  style="color:#dd4b39;"><i class="fa fa-google-plus" style="font-size:20px;"></i></a>&nbsp;
                   <a href="{% url 'social:begin' 'facebook' %}?next={{ request.path }}" class=" btn btn-social-icon" style="color:#3b5998"><i class="fa fa-facebook-official" style="font-size:20px;"></i></a>
                </p>
             </div>
