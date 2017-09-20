@@ -15,11 +15,11 @@
          <center>
             <br><br>
             <div class="d-inline-block ">
-               <a href="#register" style="width : 200px;float: left" class="btn btn-primary gradient" >Register</a>
+               <a href="#register" style="width : 200px;float: left;border: none" class="btn btn-primary gradient" >Register</a>
             </div>
             <div class="d-inline-block">
 
-                <a  href="{% url 'website:cfp' %}" style="width : 200px;float: right;" class="btn btn-primary gradient">Submit</a>
+                <a  href="{% url 'website:cfp' %}" style="width : 200px;float: right;border: none" class="btn btn-primary gradient">Submit</a>
 
             </div>
          </center>
@@ -59,69 +59,53 @@
    <br>
    <br>
    <div class="container">
-      <center>
-         <h2>Speakers</h2>
-      </center>
-         <hr>     
-         <table class="table" style="text-align:justify">
-                  <colgroup>
-                     <col width="50%" />
-                     <col width="50%" />
-                  </colgroup>
-                  <tr>
-                     <td>
-                        
-                     </td>
-                     <td>
-                      <center>
-                        <p style="font-size: 28px;">KEYNOTE SPEAKER</p>
-                       </center>
-                     </td>
-                  </tr>
-                  <tr>
-                     <td> <center><img class="img-responsive" src="{% static 'img/AjitSir_spkr.png' %}" height=auto width=auto alt=""></center>
-                     </td>
-                     <td> <center><img class="img-responsive" src="{% static 'img/me_pro.png' %}" height=auto width=auto alt=""></center> 
-                     </td>
-                       
-                  </tr>
-                  <tr>
-                     <td>
-                        <center><p>Dr. Ajith Kumar</p>
-                           <span style="font-size: 10px;">(scientist working with the <a target="_blank" href = "http://www.iuac.res.in/">IUAC</a>.)
-                           </span>
-                        </center><br><br>
-                        <a href="https://github.com/expeyes" target="_blank">
-                              <i style="font-size:30px;color: black;margin-left: 35%" class="fa fa-github" aria-hidden="true"></i>
-                        </a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                        <a href="http://expeyes.in/" target="_blank">
-                              <i class="fa fa-info" style="font-size:30px;color:black"></i>
-                        </a>
-                     </td>
-                     <td>
-                       <center> <p>Nelle Varoquaux</p>
-                           <span style="font-size: 10px;">(a postdoctoral fellow at the Department of Statistics at UC Berkeley and a BIDS data science fellow.)
-                           </span>
-                        </center><br><br>
-                        <a href="https://github.com/NelleV" target="_blank">
-                           <i style="font-size:30px;color: black;margin-left: 35%" class="fa fa-github" aria-hidden="true"></i>
-                        </a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                        <a href="https://bids.berkeley.edu/people/nelle-varoquaux" target="_blank">
-                           <i class="fa fa-info" style="font-size:30px;color:black"></i>
-                        </a> 
-                     </td>
-                  </tr>
-                  <tr>
-                     <td>His main area of work is development of instrumentation for particle accelerators and associated experiments, including radio-frequency accelerating structures, control and data acquisition systems, digital and radio frequency electronics modules. He initiated the Phoenix / expEYES project. ExpEYES is currently the cheapest educational system to teach science. 
-                     </td>
-                     <td>She received a PhD in computational biology from École des Mines de Paris in 2015. Her research interests are in statistical machine learning and scientific computing applied to molecular biology problems, such as inferring the 3D architecture of the genome or data-integration methods to better understand gene regulatory networks. Recently, as part of the interdisciplinary institute BIDS, she also studies open-source communities and contributiors in collaboration with social scientists.<br>
-                     She is a core-developer of scikit-learn, MarkUs and Matplotlib, was Program Chair for Scipy in 2015 and 2016.
-                     </td>
-                  </tr>
-         </table>
-      </div>
-</section>
-     
+<div class="row align-items-center">
+<div class="col-md-offset-4">
+            <center>
+               <h2>Speakers</h2>
+            </center>
+            <hr>
+         <!-- Speaker 1 -->
+         <div class="col-lg-6 col-sm-6 text-center mb-4" style="float: left;margin-top: 0px;">
+         <br><h6>Speaker</h6>
+            <img class="img-fluid d-block mx-auto" src="{% static 'img/AjitSir_spkr.png' %}" alt="">
+            
+            <p align="justify"><center>Dr. Ajith Kumar <br><span style="font-size: 10px;">(scientist working with the IUAC.)</span></center><center>
+            <br><a href="https://github.com/expeyes" target="_blank"><i style="font-size:30px;color: black;" class="fa fa-github" aria-hidden="true"></i></a>
+            
+             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://expeyes.in/" target="_blank"><i class="fa fa-info" style="font-size:30px;color:black"></i>
+             </a></center></p>
+             
+             <p align="justify">His main area of work is development of instrumentation for particle accelerators and associated experiments, including radio-frequency accelerating structures, control and data acquisition systems, digital and radio frequency electronics modules. He initiated the Phoenix / expEYES project. ExpEYES is currently the cheapest educational system to teach science. </p>
+            </div>
+            
+         <!-- Speaker 2 -->
+                   <div class="col-lg-6 col-sm-6 text-center mb-4" style="float: right">
+               <br>
+               <h6>Keynote Speaker</h6>
+               <img class="img-fluid d-block mx-auto" src="{% static 'img/me_pro.png' %}" alt="">
+               <p align="justify"><center>Nelle Varoquaux<br><span style="font-size: 10px;">(a postdoctoral fellow at the Department of Statistics at UC Berkeley and a BIDS data science fellow.)</span>
+               </center>
+                  <br><center><a href="https://github.com/NelleV" target="_blank"><i style="font-size:30px;color: black;" class="fa fa-github" aria-hidden="true"></i></a>
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://bids.berkeley.edu/people/nelle-varoquaux" target="_blank"><i class="fa fa-info" style="font-size:30px;color:black"></i></a>
+                  </center></p>
+               <p align="justify"> She received a PhD in computational
+                  biology from École des Mines de Paris in 2015. Her research interests are in
+                  statistical machine learning and scientific computing applied to molecular
+                  biology problems, such as inferring the 3D architecture of the genome or
+                  data-integration methods to better understand gene regulatory 
+                  networks. Recently, as part of the interdisciplinary institute BIDS, she also
+                  studies open-source communities and contributiors in collaboration with social 
+                  scientists.
+                  </p><p align="justify">
+                  She is a core-developer of scikit-learn, MarkUs and Matplotlib, was Program
+                  Chair for Scipy in 2015 and 2016.
+               </p>
+              
+               </div>
+            </div>
+         </div></div></section>
+
 <!-- ---------------------------------- -->
 <!-- ---------- register ------ -->
 <section id="register">
@@ -198,7 +182,7 @@
                   <ul class="actions">
                      <center>
                         <!--<a href="#attend" style="width : 150px;" class="btn btn-primary gradient" >Register</a></a>-->
-                        <button onclick="popup('scipy-india-2017');" class="btn btn-primary gradient">Register Now</button>
+                        <button onclick="popup('scipy-india-2017');" class="btn btn-primary gradient" style="border: none;">Register Now</button>
                         <noscript id="tsNoJsMsg">Javascript on your browser is not enabled.</noscript>
                         <script src="//www.townscript.com/popup-widget/townscript-widget.nocache.js" type="text/javascript"></script>
                         <!--<iframe src="https://www.townscript.com/widget/scipy-india-2017" frameborder="0" height="600" width="80%"></iframe>-->
@@ -247,7 +231,7 @@
                      </div>
                      <p>
                      <center>
-                        <a class="btn btn-primary" data-toggle="collapse" href="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+                        <a class="btn btn-primary gradient" data-toggle="collapse" href="#collapseExample" aria-expanded="false" aria-controls="collapseExample" style="text-decoration: none;border: none;">
                         <i class="fa fa-arrow-down" aria-hidden="true"></i>
                         <i class="fa fa-arrow-up" aria-hidden="true"></i>
                         </a>
@@ -528,47 +512,9 @@
          </div>
       </div>
    </div>
-</section>
-<!-------------------------->
+</section><!-------------------------->
 <!------------ venue ------------- -->
-<section id="sponsors">
-   <br>
-   <br>
-   <br>
-   <br>
-   <div class="container">
-      <div class="align-items-center">
-         <div class="col-md-offset-4">
-            <center>
-               <h2>Sponsor</h2>
-            </center>
-            <hr>
-            <table class="table" >
-                  <colgroup>
-                     <col width="60%" />
-                     <col width="20%" />
-                  </colgroup>
-                  <tr>
-                  <td>
-                     <p align="justify">Thank you for your interest to sponsor Scipy India 2017.</p>
-                     <p align="justify">
-                        SciPy India, an annual conference organized by FOSSEE (Free and Open Source Software for Education) based at IIT Bombay, provides the  opportunity to unfurl the use of the Python programming language in the Scientific Computing community in India. SciPy India being organized since 2009, attracts more than 250 students and faculty every year. This conference provides the participants with a unique opportunity to interact and connect with the Python community. 
-                     </p>
-                     <p align="justify">
-                        Here’s a call to the interested organizations to sponsor this conference and get associated with the event. Through this sponsorship, you could engage with top professionals and enhance your organization’s brand visibility amongst Python users.
-                     </p>
-                  </td>
-                  <td>
-                        <img src="{% static 'img/sponsor_thumnail.png'%}" style="width:100%;height: 100%;" />
-                        <a href="{% static 'pdf/Scipy2017prospectus.pdf' %}" target="_blank">
-                        <center><button class="btn btn-primary" >Download Prospectus</button></center></a>
-                  </td>
-                  </tr>
-            </table>
-         </div>
-      </div>
-   </div>
-</section>
+
 <section id="poster">
    <br>
    <br>
@@ -595,6 +541,34 @@
       </div>
    </div>
 </section>
+<section id="sponsors">
+   <br>
+   <br>
+   <br>
+   <br>
+   <div class="container">
+          <center>
+               <h2>Sponsor</h2>
+            </center>
+            <hr>
+            <div class="row align-items-center">
+         <!-- Speaker 1--> 
+         <div class="col-lg-8 col-sm-6 text-center mb-4" align="justify">
+         <br><p align="justify">Thank you for your interest to sponsor Scipy India 2017.</p>
+                     <p align="justify">
+                        SciPy India, an annual conference organized by FOSSEE (Free and Open Source Software for Education) based at IIT Bombay, provides the  opportunity to unfurl the use of the Python programming language in the Scientific Computing community in India. SciPy India being organized since 2009, attracts more than 250 students and faculty every year. This conference provides the participants with a unique opportunity to interact and connect with the Python community. 
+                     </p>
+                     <p align="justify">
+                        Here’s a call to the interested organizations to sponsor this conference and get associated with the event. Through this sponsorship, you could engage with top professionals and enhance your organization’s brand visibility amongst Python users.
+                     </p>
+                     </div>
+                     <div class="col-lg-4 col-sm-6 text-center mb-4">
+                     <center><img src="{% static 'img/th_spnbook.png'%}" /></center>
+                        <a href="{% static 'pdf/Scipy2017prospectus.pdf' %}" target="_blank">
+                        <center><button class="btn btn-primary" >Download Prospectus</button></center></a>
+            </div>
+            </div></div></section>
+            
 <section id="contact">
    <br>
    <br>
