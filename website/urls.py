@@ -26,3 +26,4 @@ urlpatterns = patterns('',
     url(r'^process-contact-form/(?P<next_url>\d+)', 'website.views.contact_us', name='contact_us'),
     # url(r'^view-abstracts/download_csv/$','website.views.download_csv', name='download_csv')
     )+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+
