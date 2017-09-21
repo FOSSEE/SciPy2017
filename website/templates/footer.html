@@ -75,6 +75,28 @@
     });
 </script>
 <script type="text/javascript">
+function trim(stringToTrim) {
+    return stringToTrim.replace(/^\s+|\s+$/g,"");
+}
+function validateMessage() {
+        var x = document.getElementById("message").value;
+        var y = x.trim().length;
+        if (x.trim()==null || x.trim()==""|| x.trim()==" ") {
+            alert("Enter a message");
+            return false;
+        }
+        else if (y<15) {
+            alert("Minimum character limit is 15");
+            return false;
+        }
+        else
+        {
+            alert('Thank you for your feedback.');
+        }
+        
+    }
+</script>
+<script type="text/javascript">
     window.onload = function () {
         var n1 = Math.round(Math.random() * 10 + 1);
         var n2 = Math.round(Math.random() * 10 + 1);
