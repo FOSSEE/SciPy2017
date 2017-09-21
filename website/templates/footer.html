@@ -34,7 +34,7 @@
                         <a style="color:blue;" target="_blank" href="http://scipy.in/scipyin/2010/">2010</a>/
                         <a style="color:blue;" target="_blank" href="http://scipy.in/scipyin/2011/">2011</a>/
                         <a style="color:blue;" target="_blank" href="http://scipy.in/2012">2012</a>/
-                        <a style="color:blue;" target="_blank" href="http://scipy.in/2013"  >2013</a>/
+                        <a style="color:blue;" target="_blank" href="http://scipy.in/2013">2013</a>/
                         <a style="color:blue;" target="_blank" href="http://scipy.in/2014">2014</a>/
                         <a style="color:blue;" target="_blank" href="http://scipy.in/2015">2015</a>/
                         <a style="color:blue;" target="_blank" href="http://scipy.in/2016">2016</a>
@@ -73,6 +73,28 @@
             $(this).tab('show');
         });  
     });
+</script>
+<script type="text/javascript">
+function trim(stringToTrim) {
+    return stringToTrim.replace(/^\s+|\s+$/g,"");
+}
+function validateMessage() {
+        var x = document.getElementById("message").value;
+        var y = x.trim().length;
+        if (x.trim()==null || x.trim()==""|| x.trim()==" ") {
+            alert("Enter a message");
+            return false;
+        }
+        else if (y<15) {
+            alert("Minimum character limit is 15");
+            return false;
+        }
+        else
+        {
+            alert('Thank you for your feedback.');
+        }
+        
+    }
 </script>
 <script type="text/javascript">
     window.onload = function () {
