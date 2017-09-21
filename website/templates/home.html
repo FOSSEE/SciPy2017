@@ -15,12 +15,12 @@
          <center>
             <br><br>
             <div class="d-inline-block ">
-               <a href="#register" style="width : 200px;float: left;border: none" class="btn btn-primary gradient" >Register</a>
+               <a href="#register" style="width : 200px;float: left;border: none" class="btn btn-primary gradient" >Register
+               </a>
             </div>
             <div class="d-inline-block">
-
-                <a  href="{% url 'website:cfp' %}" style="width : 200px;float: right;border: none" class="btn btn-primary gradient">Submit</a>
-
+               <a  href="{% url 'website:cfp' %}" style="width : 200px;float: right;border: none" class="btn btn-primary gradient">Submit
+               </a>
             </div>
          </center>
       </div>
@@ -59,36 +59,56 @@
    <br>
    <br>
    <div class="container">
-<div class="row align-items-center">
-<div class="col-md-offset-4">
+      <div class="row align-items-center">
+         <div class="col-md-offset-4">
             <center>
                <h2>Speakers</h2>
             </center>
             <hr>
-         <!-- Speaker 1 -->
-         <div class="col-lg-6 col-sm-6 text-center mb-4" style="float: left;margin-top: 0px;">
-         <br><h6>Speaker</h6>
-            <img class="img-fluid d-block mx-auto" src="{% static 'img/AjitSir_spkr.png' %}" alt="">
-            
-            <p align="justify"><center>Dr. Ajith Kumar <br><span style="font-size: 10px;">(scientist working with the <a href="http://www.iuac.res.in/">IUAC</a>.)</span></center><center>
-            <br><a href="https://github.com/expeyes" target="_blank"><i style="font-size:30px;color: black;" class="fa fa-github" aria-hidden="true"></i></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            
-             <a href="http://expeyes.in/" target="_blank"><i class="fa fa-info" style="font-size:30px;color:black"></i>
-             </a></center></p>
-             
-             <p align="justify">His main area of work is development of instrumentation for particle accelerators and associated experiments, including radio-frequency accelerating structures, control and data acquisition systems, digital and radio frequency electronics modules. He initiated the Phoenix / expEYES project. ExpEYES is currently the cheapest educational system to teach science. </p>
+            <!-- Speaker 1 -->
+            <div class="col-lg-6 col-sm-6 text-center mb-4" style="float: left;margin-top: 0px;">
+               <br>
+               <h6>Speaker</h6>
+               <img class="img-fluid d-block mx-auto" src="{% static 'img/AjitSir_spkr.png' %}" alt="">
+               <p align="justify">
+               <center>Dr. Ajith Kumar <br>
+                  <span style="font-size: 10px;">(scientist working with the 
+                     <a href="http://www.iuac.res.in/" target="_blank">IUAC</a>.)
+                  </span>
+               </center>
+               <center>
+                  <br>
+                  <a href="https://github.com/expeyes" target="_blank">
+                     <i style="font-size:30px;color: black;" class="fa fa-github" aria-hidden="true"></i>
+                  </a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  <a href="http://expeyes.in/" target="_blank">
+                     <i class="fa fa-info" style="font-size:30px;color:black"></i>
+                  </a>
+               </center>
+               </p>
+               <p align="justify">His main area of work is development of instrumentation for particle accelerators and associated experiments, including radio-frequency accelerating structures, control and data acquisition systems, digital and radio frequency electronics modules. He initiated the Phoenix / expEYES project. ExpEYES is currently the cheapest educational system to teach science. 
+               </p>
             </div>
-            
-         <!-- Speaker 2 -->
-                   <div class="col-lg-6 col-sm-6 text-center mb-4" style="float: right">
+            <!-- Speaker 2 -->
+            <div class="col-lg-6 col-sm-6 text-center mb-4" style="float: right">
                <br>
                <h6>Keynote Speaker</h6>
                <img class="img-fluid d-block mx-auto" src="{% static 'img/me_pro.png' %}" alt="">
-               <p align="justify"><center>Nelle Varoquaux<br><span style="font-size: 10px;">(a postdoctoral fellow at the Department of Statistics at UC Berkeley and a BIDS data science fellow.)</span>
+               <p align="justify">
+               <center>Nelle Varoquaux<br>
+                  <span style="font-size: 10px;">(a postdoctoral fellow at the Department of Statistics at UC Berkeley and a BIDS data science fellow.)
+                  </span>
                </center>
-                  <br><center><a href="https://github.com/NelleV" target="_blank"><i style="font-size:30px;color: black;" class="fa fa-github" aria-hidden="true"></i></a>
-                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://bids.berkeley.edu/people/nelle-varoquaux" target="_blank"><i class="fa fa-info" style="font-size:30px;color:black"></i></a>
-                  </center></p>
+               <br>
+               <center>
+                  <a href="https://github.com/NelleV" target="_blank">
+                     <i style="font-size:30px;color: black;" class="fa fa-github" aria-hidden="true"></i>
+                  </a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  <a href="https://bids.berkeley.edu/people/nelle-varoquaux" target="_blank">
+                     <i class="fa fa-info" style="font-size:30px;color:black"></i>
+                  </a>
+               </center>
+               </p>
                <p align="justify"> She received a PhD in computational
                   biology from École des Mines de Paris in 2015. Her research interests are in
                   statistical machine learning and scientific computing applied to molecular
@@ -97,15 +117,16 @@
                   networks. Recently, as part of the interdisciplinary institute BIDS, she also
                   studies open-source communities and contributiors in collaboration with social 
                   scientists.
-                  </p><p align="justify">
+               </p>
+               <p align="justify">
                   She is a core-developer of scikit-learn, MarkUs and Matplotlib, was Program
                   Chair for Scipy in 2015 and 2016.
                </p>
-              
-               </div>
             </div>
-         </div></div></section>
-
+         </div>
+      </div>
+   </div>
+</section>
 <!-- ---------------------------------- -->
 <!-- ---------- register ------ -->
 <section id="register">
@@ -182,9 +203,11 @@
                   <ul class="actions">
                      <center>
                         <!--<a href="#attend" style="width : 150px;" class="btn btn-primary gradient" >Register</a></a>-->
-                        <button onclick="popup('scipy-india-2017');" class="btn btn-primary gradient" style="border: none;">Register Now</button>
+                        <button onclick="popup('scipy-india-2017');" class="btn btn-primary gradient" style="border: none;">Register Now
+                        </button>
                         <noscript id="tsNoJsMsg">Javascript on your browser is not enabled.</noscript>
-                        <script src="//www.townscript.com/popup-widget/townscript-widget.nocache.js" type="text/javascript"></script>
+                        <script src="//www.townscript.com/popup-widget/townscript-widget.nocache.js" type="text/javascript">
+                        </script>
                         <!--<iframe src="https://www.townscript.com/widget/scipy-india-2017" frameborder="0" height="600" width="80%"></iframe>-->
                      </center>
                   </ul>
@@ -214,19 +237,38 @@
                      <p>We appreciate your participation in SciPy 2017. We want you to have an enjoyable and enriching experience in the conference. For this all the attendees are required to conform to the following Code of Conduct. Organisers will ensure that it is enforced throughout the event.
                      <div class="collapse" id="collapseExample">
                         <div class="card-text">
-                           <p>SciPy India is dedicated to providing a harassment-free conference experience for everyone, regardless of age, gender, sexual orientation, physical appearance, disability, race, religion or employment.</p>
-                           <p>Harassment includes offensive verbal comments related to gender, sexual orientation, disability, physical appearance, body size, race, religion, sexual images in public spaces, deliberate intimidation, stalking, following, harassing photography or recording, sustained disruption of talks or other events, inappropriate physical contact, and unwelcome sexual attention. We have zero tolerance on harassment of conference participants in any form, including, but not limited to the activities mentioned here.</p>
-                           <p>Participants asked to stop any harassing behavior are expected to comply immediately.</p>
-                           <p>All communication should be appropriate for a professional audience, including people from many different backgrounds. Sexual language or imagery is inappropriate for all aspects of the conference, including talks. Remember that sexist, racist or any other form of exclusionary or offensive jokes or excessive public swearing are not appropriate at any venue of SciPy India.</p>
-                           <p>Do not insult or put down attendees or engage in any action that violates the open, welcoming and sharing spirit of the conference. Be kind and sensitive to the people around you when you are attending the conference, and avoid any kind of offensive or degrading behavior.</p>
-                           <p><b>If a participant engages in behavior that violates this code of conduct, the conference organizers may take any action they deem appropriate, including warning the offender or expulsion from the conference with no refund.</b></p>
-                           <p>Thank you for helping to make SciPy India a welcoming, friendly event for all.</p>
-                           <p><b>Contact Information:</b></p>
-                           <p>If you are being harassed, notice that someone else is being harassed, or have any other concerns, please contact a member of conference staff. Conference staff will be wearing "SciPy India: Organiser" badges.</p>
-                           <p>Conference staff will be happy to help participants contact venue security or local law enforcement, provide escorts, or otherwise assist those experiencing harassment to feel safe for the duration of the conference. We value your attendance.</p>
-                           <p><b>License:</b></p>
-                           <p>This Code of Conduct was forked from PSF Code of Conduct by Python Software Foundation which is under a Creative Commons Attribution 3.0 Unported License.</p>
-                           <p>SciPy India Conference Code of Conduct is licensed under a Creative Commons Attribution 3.0 Unported License.</p>
+                           <p>SciPy India is dedicated to providing a harassment-free conference experience for everyone, regardless of age, gender, sexual orientation, physical appearance, disability, race, religion or employment.
+                           </p>
+                           <p>Harassment includes offensive verbal comments related to gender, sexual orientation, disability, physical appearance, body size, race, religion, sexual images in public spaces, deliberate intimidation, stalking, following, harassing photography or recording, sustained disruption of talks or other events, inappropriate physical contact, and unwelcome sexual attention. We have zero tolerance on harassment of conference participants in any form, including, but not limited to the activities mentioned here.
+                           </p>
+                           <p>Participants asked to stop any harassing behavior are expected to comply immediately.
+                           </p>
+                           <p>All communication should be appropriate for a professional audience, including people from many different backgrounds. Sexual language or imagery is inappropriate for all aspects of the conference, including talks. Remember that sexist, racist or any other form of exclusionary or offensive jokes or excessive public swearing are not appropriate at any venue of SciPy India.
+                           </p>
+                           <p>Do not insult or put down attendees or engage in any action that violates the open, welcoming and sharing spirit of the conference. Be kind and sensitive to the people around you when you are attending the conference, and avoid any kind of offensive or degrading behavior.
+                           </p>
+                           <p>
+                              <b>If a participant engages in behavior that violates this code of conduct, the conference organizers may take any action they deem appropriate, including warning the offender or expulsion from the conference with no refund.
+                              </b>
+                           </p>
+                           <p>Thank you for helping to make SciPy India a welcoming, friendly event for all.
+                           </p>
+                           <p>
+                              <b>Contact Information:
+                              </b>
+                           </p>
+                           <p>If you are being harassed, notice that someone else is being harassed, or have any other concerns, please contact a member of conference staff. Conference staff will be wearing "SciPy India: Organiser" badges.
+                           </p>
+                           <p>Conference staff will be happy to help participants contact venue security or local law enforcement, provide escorts, or otherwise assist those experiencing harassment to feel safe for the duration of the conference. We value your attendance.
+                           </p>
+                           <p>
+                              <b>License:
+                              </b>
+                           </p>
+                           <p>This Code of Conduct was forked from PSF Code of Conduct by Python Software Foundation which is under a Creative Commons Attribution 3.0 Unported License.
+                           </p>
+                           <p>SciPy India Conference Code of Conduct is licensed under a Creative Commons Attribution 3.0 Unported License.
+                           </p>
                         </div>
                      </div>
                      <p>
@@ -512,7 +554,8 @@
          </div>
       </div>
    </div>
-</section><!-------------------------->
+</section>
+<!-------------------------->
 <!------------ venue ------------- -->
 <section id="sponsors">
    <br>
@@ -520,48 +563,35 @@
    <br>
    <br>
    <div class="container">
-          <center>
-               <h2>Sponsor</h2>
-            </center>
-            <hr>
-            <div class="row align-items-center">
+      <center>
+         <h2>Sponsor</h2>
+      </center>
+      <hr>
+      <div class="row align-items-center">
          <!-- Speaker 1--> 
          <div class="col-lg-8 col-sm-6 text-center mb-4" align="justify">
-         <br><p align="justify">Thank you for your interest to sponsor Scipy India 2017.</p>
-                     <p align="justify">
-                        SciPy India, an annual conference organized by FOSSEE (Free and Open Source Software for Education) based at IIT Bombay, provides the  opportunity to unfurl the use of the Python programming language in the Scientific Computing community in India. SciPy India being organized since 2009, attracts more than 250 students and faculty every year. This conference provides the participants with a unique opportunity to interact and connect with the Python community. 
-                     </p>
-                     <p align="justify">
-                        Here’s a call to the interested organizations to sponsor this conference and get associated with the event. Through this sponsorship, you could engage with top professionals and enhance your organization’s brand visibility amongst Python users.
-                     </p>
-                     </div>
-                     <div class="col-lg-4 col-sm-6 text-center mb-4">
-                     <center><img src="{% static 'img/th_spnbook.png'%}" /></center>
-                        <a href="{% static 'pdf/Scipy2017prospectus.pdf' %}" target="_blank">
-                        <center><button class="btn btn-primary gradient" style="border: none;" >Download</button></center></a>
-            </div>
-            </div></div></section>
-<section id="organiser">
-<br>
-   <br>
-   <br>
-   <br>
-   <div class="container">
-          <center>
-               <h2>Organiser</h2>
+            <br>
+            <p align="justify">Thank you for your interest to sponsor Scipy India 2017.
+            </p>
+            <p align="justify">
+               SciPy India, an annual conference organized by FOSSEE (Free and Open Source Software for Education) based at IIT Bombay, provides the  opportunity to unfurl the use of the Python programming language in the Scientific Computing community in India. SciPy India being organized since 2009, attracts more than 250 students and faculty every year. This conference provides the participants with a unique opportunity to interact and connect with the Python community. 
+            </p>
+            <p align="justify">
+               Here’s a call to the interested organizations to sponsor this conference and get associated with the event. Through this sponsorship, you could engage with top professionals and enhance your organization’s brand visibility amongst Python users.
+            </p>
+         </div>
+         <div class="col-lg-4 col-sm-6 text-center mb-4">
+            <center>
+               <img src="{% static 'img/th_spnbook.png'%}" />  
             </center>
-            <hr>
-            <div class="row align-items-center">
-         <!-- Speaker 1--> 
-         
-               <div class="col-lg-3 col-sm-4 text-center mb-4">
-                     <img src="{% static 'img/fossee.png'%}" width="70%" />
-                        
-               </div>
-               <div class="col-lg-8 col-sm-6 text-center mb-4" align="justify">
-                    <br> <p align="justify">The Annual SciPy India conference is organised by the team members of FOSSEE project which is part of the National Mission on Education through ICT with the thrust area being Adaptation and deployment of open source simulation packages equivalent to proprietary software, funded by MHRD, based at the Indian Institute of Technology Bombay (IITB).</p>
-               </div>
-            </div>
+            <a href="{% static 'pdf/Scipy2017prospectus.pdf' %}" target="_blank">
+               <center>
+                  <button class="btn btn-primary gradient" style="border: none;" >Download
+                  </button>
+               </center>
+            </a>
+         </div>
+      </div>
    </div>
 </section>
 <section id="poster">
@@ -580,9 +610,12 @@
                <div class="panel-body">
                   <br>
                   <center>
-                     <a href="{% static 'img/poster_Scipy2017.png'%}" target="_blank"><img src="{% static 'img/Th_Scipy2017.png'%}" /></a>
+                     <a href="{% static 'img/poster_Scipy2017.png'%}" target="_blank">
+                        <img src="{% static 'img/Th_Scipy2017.png'%}" />
+                     </a>
                      <br><br>
-                     <p align="justify">We request you to share the event details through this poster with faculty members, students and others who might be interested. You may print the poster (native size - A4) and display on the notice boards.</p>
+                     <p align="justify">We request you to share the event details through this poster with faculty members, students and others who might be interested. You may print the poster (native size - A4) and display on the notice boards.
+                     </p>
                   </center>
                </div>
             </div>
@@ -590,8 +623,32 @@
       </div>
    </div>
 </section>
-
-            
+<section id="organiser">
+   <br>
+   <br>
+   <br>
+   <br>
+   <div class="container">
+      <center>
+         <h2>Organiser</h2>
+      </center>
+      <hr>
+      <div class="row align-items-center">
+         <!-- Speaker 1--> 
+         <div class="col-lg-3 col-sm-4 text-center mb-4">
+            <a href="http://fossee.in/" target="_blank">
+               <img src="{% static 'img/fossee.png'%}" width="70%" />
+            </a>                        
+         </div>
+         <div class="col-lg-8 col-sm-6 text-center mb-4" align="justify">
+            <br> 
+            <p align="justify">The Annual SciPy India conference is organised by the team members of 
+               <a href="http://fossee.in/" target="_blank"> FOSSEE</a> project which is part of the National Mission on Education through ICT with the thrust area being Adaptation and deployment of open source simulation packages equivalent to proprietary software, funded by MHRD, based at the Indian Institute of Technology Bombay (IITB).
+            </p>
+         </div>
+      </div>
+   </div>
+</section>
 <section id="contact">
    <br>
    <br>
