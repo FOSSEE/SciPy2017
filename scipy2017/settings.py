@@ -22,8 +22,8 @@ BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 SECRET_KEY = 'w81ia+6)sak!)t@kv=@x267y78ceh4iu2c@o@2#8+h$kua3e9a'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
-#DEBUG = False
+#DEBUG = True
+DEBUG = False
 
 SESSION_EXPIRE_AT_BROWSER_CLOSE = True
 
