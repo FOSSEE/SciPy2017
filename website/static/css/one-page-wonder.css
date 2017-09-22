@@ -118,4 +118,14 @@ header.masthead > .overlay {
   transform: translate3d(0,0,0);
 }
 
+#main input[type="password"],
+    #main input[type="email"],
+    #main textarea {
+       width: 90%;
+       border:solid 1px #565050; 
+      -webkit-border-radius: 5px;
+-moz-border-radius: 5px;
+border-radius: 5px;
+    }
+
 
