@@ -97,11 +97,11 @@ def home(request):
         django_user = User.objects.get(username=social_user)
         context['user'] = django_user
     if request.method == "POST":
-        sender_name = request.POST['name']
-        sender_email = request.POST['email']
+        sender_name = request.POST.get('name', None)
+        sender_email = request.POST.get('email', None)
         to = (TO_EMAIL, sender_email)
         subject = "Query from - "+sender_name
-        message = request.POST['message']
+        message = request.POST.get('message', None)
         try:
             send_mail(subject, message, sender_email, to)
             context['mailsent'] = True
@@ -114,13 +114,13 @@ def cfp(request):
     if request.method == "POST":
         context = {}
         context.update(csrf(request))
-        username = request.POST['username']
-        password = request.POST['password']
+        username = request.POST.get('username', None)
+        password = request.POST.get('password', None)
         user = authenticate(username=username, password=password)
         if user is not None:
             login(request, user)
             if 'next' in request.GET:
-                next = request.GET['next']
+                next = request.GET.get('next', None)
                 return HttpResponseRedirect(next)
             proposals = Proposal.objects.filter(user = request.user).count()
             context['user'] = user
@@ -169,7 +169,7 @@ def submitcfp(request):
                 <br>Thank You ! <br><br>Regards,<br>SciPy India 2017,<br>FOSSEE - IIT Bombay.
                 """.format(
                 social_user.first_name,
-                request.POST['title'],
+                request.POST.get('title', None),
                 'http://scipy.in/2017/view-abstracts/',  )
                 email = EmailMultiAlternatives(
                 subject,'',
@@ -222,7 +222,7 @@ def submitcfw(request):
                 <br>Thank You ! <br><br>Regards,<br>SciPy India 2017,<br>FOSSEE - IIT Bombay.
                 """.format(
                 social_user.first_name,
-                request.POST['title'],
+                request.POST.get('title', None),
                 'http://scipy.in/2017/view-abstracts/',  )
                 email = EmailMultiAlternatives(
                 subject,'',
@@ -361,11 +361,11 @@ def rate_proposal(request, proposal_id = None):
             ratings = Ratings.objects.filter(proposal_id= proposal_id, user_id = user.id)
             if ratings:
                 for rate in ratings:
-                    rate.rating = request.POST['rating']
+                    rate.rating = request.POST.get('rating', None)
                     rate.save()
             else:
                 newrate = Ratings()
-                newrate.rating = request.POST['rating']
+                newrate.rating = request.POST.get('rating', None)
                 newrate.user = user
                 newrate.proposal = proposal
                 newrate.save()
@@ -404,7 +404,7 @@ def comment_abstract(request, proposal_id = None):
                     pass
                 if request.method == 'POST':
                     comment = Comments()
-                    comment.comment = request.POST['comment']
+                    comment.comment = request.POST.get('comment', None)
                     comment.user = user
                     comment.proposal = proposal
                     comment.save()
