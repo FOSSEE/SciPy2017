@@ -49,7 +49,10 @@
                     {% endfor %}
                 </div>
                 {% csrf_token %}
-                <center><button class="btn btn-info" type="submit">Submit</button></center>
+                <center>
+                    <button class="btn btn-info" type="submit">Submit</button>
+                    <a href="{% url 'website:view_abstracts' %}" class ="btn btn-info" role="button">Back</a>
+                </center>
             </form>
             {% endif %}
         </div>
