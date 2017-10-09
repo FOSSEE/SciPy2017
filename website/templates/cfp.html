@@ -83,11 +83,11 @@
          <br/>
          {% if user.is_superuser %}
          <center>
-            <a href="{% url 'website:view_abstracts' %}" class="button special">View Proposals</a>
+            <a href="{% url 'website:view_abstracts' %}" class="btn btn-info">View Proposals</a>
          </center>
          {% else %}
          <center>
-            <a href="{% url 'website:view_abstracts' %}" class="button special">View Proposals</a>
+            <a href="{% url 'website:view_abstracts' %}" class="btn btn-info">View Proposals</a>
          </center>
          {% endif %}
          {% else %}
