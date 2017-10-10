@@ -100,7 +100,7 @@ def home(request):
         sender_name = request.POST.get('name', None)
         sender_email = request.POST.get('email', None)
         to = (TO_EMAIL, sender_email)
-        subject = "Query from - "+sender_name
+        subject = "Query from - "+str(sender_name)
         message = request.POST.get('message', None)
         try:
             send_mail(subject, message, sender_email, to)
