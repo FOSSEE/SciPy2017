@@ -19,7 +19,7 @@
                </a>
             </div>
             <div class="d-inline-block">
-               <a  href="{% url 'website:cfp' %}" style="width : 200px;float: right;border: none" class="btn btn-primary gradient">Submit
+               <a  href="#submit" style="width : 200px;float: right;border: none" class="btn btn-primary gradient">Submit
                </a>
             </div>
          </center>
@@ -215,6 +215,60 @@
             </div>
          </div>
       </div>
+   </div>
+</section>
+
+
+<!-- ------------------------ -->
+<!-- Submit -->
+<section id="submit">
+   <br>
+   <br>
+   <br>
+   <br>
+   <div class="container">
+      <div class="row align-items-center">
+         <div class="col-md-offset-4">
+            <center>
+               <h2>Submit a Paper/Workshop</h2>
+            </center>
+            <hr class="horizontal">
+            <div class="panel panel-default">
+               <div class="panel-body">
+                  <p align="justify" class="p-5">We invite you to submit proposals for talks or workshops to be presented at SciPy 2017. The time duration for talks is 15 or 30 minutes and for workshops is 2 to 4 hours. There will be two parallel tracks for the workshops this year. One track is meant for beginners and the other is for advanced users. 
+                  </p>
+                  <center>
+                     <span>
+                  <h4>
+                     <u>Important Dates</u>
+                  </h4>               
+                     </span>
+                  </center>
+                  <div class="row align-items-center" style="margin-left: 4%;"> 
+                     <div class="col-sm-4" style="background-color: #5cd8e7;" ><br>
+                        <p> Call for proposals opens:<br> 
+                           <b>15<sup>th</sup> Sept. 2017</b>
+                        </p>
+                     </div>
+                     <div class="col-sm-4" style="background-color: #9de8f1;"><br>
+                        <p>Last date for submission of proposals:<br>
+                           <b>1<sup>st</sup> Nov. 2017</b>
+                        </p>
+                     </div>
+                     <div class="col-sm-4" style="background-color: #cef3f8;"><br>
+                        <p>Announcement of selected proposals: <br>
+                           <b>15<sup>th</sup> Nov. 2017</b>
+                        </p>
+                     </div>
+                  </div>
+                  <br><br>
+                  <center>
+                     <a href="{% url 'website:cfp' %}" class="btn btn-primary gradient" style="border: none;">Submit</a>
+                  </center>
+               </div>
+         </div>
+      </div>
+   </div>
    </div>
 </section>
 <!-- ---------------------- -->
@@ -568,7 +622,6 @@
       </center>
       <hr>
       <div class="row align-items-center">
-         <!-- Speaker 1--> 
          <div class="col-lg-8 col-sm-6 text-center mb-4" align="justify">
             <br>
             <p align="justify">Thank you for your interest to sponsor Scipy India 2017.
@@ -606,17 +659,19 @@
                <h2>Poster</h2>
             </center>
             <hr>
-            <div class="panel panel-default">
-               <div class="panel-body">
-                  <br>
-                  <center>
-                     <a href="{% static 'pdf/poster_option7a.pdf'%}" target="_blank">
+            <div class="row align-items-center">
+               
+               <div class="col-lg-8 col-sm-8 text-center mb-4">
+                  <p align="justify">We request you to share the event details through this poster with faculty members, students and others who might be interested. You may print the poster (native size - A4) and display on the notice boards.
+                  </p>
+                  <p align="justify">
+                  Download the poster by clicking on the image.
+                  </p>                 
+               </div>
+               <div class="col-lg-4 col-sm-4 text-center mb-4" align="justify">
+                   <a href="{% static 'pdf/poster_option7a.pdf'%}" target="_blank">
                         <img src="{% static 'img/Th_Scipy2017.png'%}" />
                      </a>
-                     <br><br>
-                     <p align="justify">We request you to share the event details through this poster with faculty members, students and others who might be interested. You may print the poster (native size - A4) and display on the notice boards.
-                     </p>
-                  </center>
                </div>
             </div>
          </div>
