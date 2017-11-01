@@ -26,7 +26,7 @@
             </center>
             </p>
             <hr>
-            {% if proposals_w > 1 %} You have exceeded the workshop proposal submission limit. 
+            {% if proposals_w >= 1 %} You have exceeded the workshop proposal submission limit. 
             You may view your submitted proposals by clicking <a href="{% url 'website:view_abstracts' %}" class="btn "> here</a>
             {% else %}
             <!-- <h2>{{ user.get_full_name|default:user.username }} </h2> -->

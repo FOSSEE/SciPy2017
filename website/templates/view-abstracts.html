@@ -121,11 +121,23 @@
                                 <h5 style="color:blue;">{{proposal.status}}</h5>
                                 {% endif %}
                             </td>
-                        </tr>
+                            
+                            <div>   
+                                {% if not user.is_superuser and type == 'ABSTRACT' %}
+                                <a href="{% url 'website:submitcfw' %}" class ="btn btn-info" role="button">Submit workshop </a>    
+                                {% elif not user.is_superuser and type == 'WORKSHOP' %}
+                                <a href="{% url 'website:submitcfp' %}" class ="btn btn-info" role="button"> Submit paper  </a>
+                                {% elif not user.is_superuser%}
+                                {% endif %}
+                            </div>
+                            <br>
+                         </tr>
                         {% endfor %}
-                    </table>
-                </div>
+                </table>
+                </div><br>
                 </p>
+
+
                 {% if user.is_superuser  %}
                 <input type="submit" id="delete" class ="btn btn-info" value="Delete" name="delete"/>
                 <center>

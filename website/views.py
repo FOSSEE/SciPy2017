@@ -261,8 +261,18 @@ def view_abstracts(request):
         elif user is not None:
             if Proposal.objects.filter(user = user).exists :
                 proposals = Proposal.objects.filter(user = user).order_by('status')
+                proposal_list= [pro.proposal_type for pro in proposals]
+                if 'WORKSHOP' in proposal_list and 'ABSTRACT' in proposal_list:
+                    proposal_type = 'BOTH'
+                elif 'WORKSHOP' in proposal_list and 'ABSTRACT' not in proposal_list:
+                    proposal_type = 'WORKSHOP'
+                else:
+                    proposal_type = 'ABSTRACT' 
+
+                
                 context['counts'] = count_list
-                context['proposals'] = proposals
+                context['proposals'] =proposals
+                context['type'] = proposal_type
                 context['user'] = user
             return render(request, 'view-abstracts.html', context)
         else:
