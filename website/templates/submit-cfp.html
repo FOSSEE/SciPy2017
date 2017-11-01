@@ -19,7 +19,7 @@
         {% include 'navbar.html' %}
         {% block content %}
         <div class="container">
-            {% if proposals_a > 1 %} You have exceeded the abstract submission limit. 
+            {% if proposals_a >= 1 %} You have exceeded the abstract submission limit. 
             You may view your submitted proposals by clicking <a href="{% url 'website:view_abstracts' %}" class ="btn btn-info" role="button"> here</a>
             <!-- <h2>{{ user.get_full_name|default:user.username }} </h2> -->
              {% else %} <br>
