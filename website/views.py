@@ -521,17 +521,33 @@ def status(request, proposal_id= None):
                 to = (proposal.user.email,TO_EMAIL, )
                 if proposal.proposal_type == 'ABSTRACT':
                     subject = "SciPy India 2017 - Talk Proposal Rejected"
+                   # message = """Dear """+proposal.user.first_name+""",
+                   #Thank you for your submission to the conference.  Unfortunately, due to the large number of excellent talks that were submitted, your talk was not selected.  We hope you are not discouraged and request you to kindly attend the conference and participate.  We have an excellent line up of workshops (8 in total) and many excellent talks. You may also wish to give a lightning talk (a short 5 minute talk) at the conference if you so desire.
+                   #We look forward to your active participation in the conference.
+                   #\n\nThank You ! \n\nRegards,\nSciPy India 2017,\nFOSSEE - IIT Bombay"""
                     message = """Dear """+proposal.user.first_name+""",
-                   Thank you for your submission to the conference.  Unfortunately, due to the large number of excellent talks that were submitted, your talk was not selected.  We hope you are not discouraged and request you to kindly attend the conference and participate.  We have an excellent line up of workshops (8 in total) and many excellent talks. You may also wish to give a lightning talk (a short 5 minute talk) at the conference if you so desire.
-                   We look forward to your active participation in the conference.
-                   \n\nThank You ! \n\nRegards,\nSciPy India 2017,\nFOSSEE - IIT Bombay"""
+                   Your talk was rejected because the contents of your work (your report for example) were entirely plagiarized.  This is unacceptable and this amounts to severe academic malpractice and misconduct. As such we do not encourage this at any level whatsoever.  We strongly suggest that you change your ways.  You should NEVER EVER copy paste any content, no matter where you see it.  Even if you cite the place where you lifted material from, it is not acceptable to copy anything verbatim.  Always write in your own words. Your own personal integrity is much more important than a publication.  When giving a tutorial it is understandable that you may use material that someone else has made if you acknowledge this correctly and with their full knowledge.  However, the expectation is that you have done something yourself too.  In your case a bulk of the work seems plagiarized and even if your talk material is your own, your act of plagiarizing content for your report is unacceptable to us.
+
+                   Having said that, we do encourage you to attend the conference.  We hope you do change your ways and be honest in the future.
+
+                    \n\nRegards,\n\n
+                    SciPy India Program chairs"""
+
                 elif proposal.proposal_type == 'WORKSHOP':
                     subject = "SciPy India 2017 - Workshop Proposal Rejected"
+                   # message = """Dear """+proposal.user.first_name+""",
+                   # Thank you for your submission to the conference. 
+                   # Unfortunately, due to the large number of excellent workshops submitted, yours was not selected. We hope you are not discouraged and request you to kindly attend the conference and participate. We have an excellent line up of workshops (8 in total) and many excellent talks. You may also wish to give a lightning talk (a short 5 minute talk) at the conference if you so desire. 
+                   # We look forward to your active participation in the conference.
+                   # \n\nThank You ! \n\nRegards,\nSciPy India 2017,\nFOSSEE - IIT Bombay"""
                     message = """Dear """+proposal.user.first_name+""",
-                    Thank you for your submission to the conference. 
-                    Unfortunately, due to the large number of excellent workshops submitted, yours was not selected. We hope you are not discouraged and request you to kindly attend the conference and participate. We have an excellent line up of workshops (8 in total) and many excellent talks. You may also wish to give a lightning talk (a short 5 minute talk) at the conference if you so desire. 
-                    We look forward to your active participation in the conference.
-                    \n\nThank You ! \n\nRegards,\nSciPy India 2017,\nFOSSEE - IIT Bombay"""
+                   Thank you for your excellent workshop submission titled “Digital forensics using Python”.  The program committee was really excited about your proposal and thought it was a very good one.  While the tools you use are certainly in the SciPy toolstack the application was not entirely in the domain of the attendees we typically have at SciPy.  This along with the fact that we had many really good workshops that were submitted made it hard to select your proposal this time -- your proposal narrowly missed out.  We strongly suggest that you submit this to other more generic Python conferences like the many PyCon and PyData conferences as it may be a much better fit there.  We also encourage you to try again next year and if we have a larger audience, we may have space for it next year.  This year with two tracks we already have 8 excellent workshops selected.
+
+                    We really hope you are not discouraged as it was indeed a very good submission and a rather original one at that.  We hope you understand and do consider participating in the conference anyway.
+
+                    We look forward to seeing you at the conference and to your continued interest and participation.
+                    \n\nRegards,\n\nSciPy India Program chairs"""
+
                 send_mail(subject, message, sender_email, to)
                 context.update(csrf(request))  
             elif 'resubmit' in request.POST:
@@ -699,17 +715,30 @@ We strongly suggest that you try to plan your workshops carefully and focus on d
                     to = (proposal.user.email, TO_EMAIL)
                     if proposal.proposal_type == 'ABSTRACT':
                         subject = "SciPy India 2017 - Talk Proposal Rejected"
+                       # message = """Dear """+proposal.user.first_name+""",
+                        #Thank you for your submission to the conference.  Unfortunately, due to the large number of excellent talks that were submitted, your talk was not selected.  We hope you are not discouraged and request you to kindly attend the conference and participate.  We have an excellent line up of workshops (8 in total) and many excellent talks. You may also wish to give a lightning talk (a short 5 minute talk) at the conference if you so desire.
+                   #We look forward to your active participation in the conference.
+                   #\n\nThank You ! \n\nRegards,\nSciPy India 2017,\nFOSSEE - IIT Bombay"""
                         message = """Dear """+proposal.user.first_name+""",
-                        Thank you for your submission to the conference.  Unfortunately, due to the large number of excellent talks that were submitted, your talk was not selected.  We hope you are not discouraged and request you to kindly attend the conference and participate.  We have an excellent line up of workshops (8 in total) and many excellent talks. You may also wish to give a lightning talk (a short 5 minute talk) at the conference if you so desire.
-                   We look forward to your active participation in the conference.
-                   \n\nThank You ! \n\nRegards,\nSciPy India 2017,\nFOSSEE - IIT Bombay"""
+                   Your talk was rejected because the contents of your work (your report for example) were entirely plagiarized.  This is unacceptable and this amounts to severe academic malpractice and misconduct. As such we do not encourage this at any level whatsoever.  We strongly suggest that you change your ways.  You should NEVER EVER copy paste any content, no matter where you see it.  Even if you cite the place where you lifted material from, it is not acceptable to copy anything verbatim.  Always write in your own words. Your own personal integrity is much more important than a publication.  When giving a tutorial it is understandable that you may use material that someone else has made if you acknowledge this correctly and with their full knowledge.  However, the expectation is that you have done something yourself too.  In your case a bulk of the work seems plagiarized and even if your talk material is your own, your act of plagiarizing content for your report is unacceptable to us.
+
+                   Having said that, we do encourage you to attend the conference.  We hope you do change your ways and be honest in the future.
+
+                    \n\nRegards,\n\nSciPy India Program chairs"""
                     elif proposal.proposal_type == 'WORKSHOP':
                         subject = "SciPy India 2017 - Workshop Proposal Rejected"
+                        #message = """Dear """+proposal.user.first_name+""",
+                        #Thank you for your submission to the conference. 
+                    #Unfortunately, due to the large number of excellent workshops submitted, yours was not selected. We hope you are not discouraged and request you to kindly attend the conference and participate. We have an excellent line up of workshops (8 in total) and many excellent talks. You may also wish to give a lightning talk (a short 5 minute talk) at the conference if you so desire. 
+                    #We look forward to your active participation in the conference.
+                    #\n\nThank You ! \n\nRegards,\nSciPy India 2017,\nFOSSEE - IIT Bombay"""
                         message = """Dear """+proposal.user.first_name+""",
-                        Thank you for your submission to the conference. 
-                    Unfortunately, due to the large number of excellent workshops submitted, yours was not selected. We hope you are not discouraged and request you to kindly attend the conference and participate. We have an excellent line up of workshops (8 in total) and many excellent talks. You may also wish to give a lightning talk (a short 5 minute talk) at the conference if you so desire. 
-                    We look forward to your active participation in the conference.
-                    \n\nThank You ! \n\nRegards,\nSciPy India 2017,\nFOSSEE - IIT Bombay"""
+                   Thank you for your excellent workshop submission titled “Digital forensics using Python”.  The program committee was really excited about your proposal and thought it was a very good one.  While the tools you use are certainly in the SciPy toolstack the application was not entirely in the domain of the attendees we typically have at SciPy.  This along with the fact that we had many really good workshops that were submitted made it hard to select your proposal this time -- your proposal narrowly missed out.  We strongly suggest that you submit this to other more generic Python conferences like the many PyCon and PyData conferences as it may be a much better fit there.  We also encourage you to try again next year and if we have a larger audience, we may have space for it next year.  This year with two tracks we already have 8 excellent workshops selected.
+
+                    We really hope you are not discouraged as it was indeed a very good submission and a rather original one at that.  We hope you understand and do consider participating in the conference anyway.
+
+                    We look forward to seeing you at the conference and to your continued interest and participation.
+                    \n\nRegards,\n\nSciPy India Program chairs"""
                     send_mail(subject, message, sender_email, to)
                     context.update(csrf(request))  
                 proposals = Proposal.objects.all()
