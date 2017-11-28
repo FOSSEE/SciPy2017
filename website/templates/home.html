@@ -149,6 +149,25 @@
                   </colgroup>
                   <tr>
                      <td bgcolor="#01c3d9">
+                     <h5 style="color:#000000;">On-Spot Registration</h5>
+                     <h9 style="color:#000000;font-size: 20px;"> Lite - &#8377;1000</h9><br>
+                     <h9 style="color:#ff6600;font-size: 15px;">Subject to Availability</h9>
+                     </td>
+                     <td>This ticket allows you to ONLY attend the conference (tutorials + talks) for 2 Days (snacks for two days will be served). Does not include Accommodation, Lunch, Dinner &amp; T-Shirt. This is a non-refundable ticket.
+                     </td>
+                  </tr>
+                  <tr>
+                     <td bgcolor="#5cd8e7">
+                        <h5 style="color:#000000;">On-Spot Registration</h5>
+                        <h9 style="color:#000000;font-size: 20px;"> Regular - &#8377;2000</h9><br>
+                        <h9 style="color:#ff6600;font-size: 15px;">Subject to Availability</h9>                     
+                     </td>
+                     <td>This ticket includes conference (tutorials + talks), lunch and snacks for 2 days and dinner for the first day. It does not include Accommodation & T-Shirt. This is a non-refundable ticket.
+                     </td>
+                  </tr>
+                  <!--
+                  <tr>
+                     <td bgcolor="#01c3d9">
                         <h9 style="color:#000000;">Early Bird</h9>
                         <h2 style="color:#000000;font-size: 25px;">&#8377;1200</h2>
                         <h9 style="color:#000000;">(Till 25<sup>th</sup> Oct 2017)</h9>
@@ -176,7 +195,7 @@
                      <td>
                         This ticket includes conference (tutorials + talks), lunch and snacks for 2 days and dinner for the first day. It does not include Accommodation & T-Shirt. This is a non-refundable ticket.
                      </td>
-                  </tr>
+                  </tr>-->
                   <tr>
                      <td bgcolor ="#9de8f1">
                         <h9 style="color:#000000;">Accomodation</h9>
@@ -391,9 +410,9 @@
                         </tr>
                         <tr >
                            <td>09:00 AM - 10:55 AM</td>
-                           <td> Controlling devices with Python using KuttyPy<br> - Dr. Ajith Kumar </td>
+                           <td> Controlling devices with Python using KuttyPy<br> - Dr. Ajith Kumar <span style="float: right;"><a href="{% static 'pdf/Controlling_devices_using_kuttypy.pdf' %}" target="_blank">Instructions</a></span></td>
                            <td> Image Classification using deep learning (keras/Tensorflow)<br> - Kashyap Raval <span style="float: right;">
-                           <!--<a href="{% static 'pdf/SciPy2017-Workshop instructions.pdf' %}" target="_blank">Instructions</a>-->        
+                           <!--<a href="{% static 'pdf/Controlling_devices_using_kuttypy.pdf' %}" target="_blank">Instructions</a>-->
                            </span></td>
                         </tr>
                         <tr style="background-color: #9de8f1;">
@@ -403,7 +422,8 @@
                         </tr>
                         <tr >
                            <td>11:05 AM - 01:00 PM</td>
-                           <td > Scientific Computing using Orange<br> - Ankit Mahato <span style="float: right;"><!--<a href="https://static.fossee.in/python/abstract/Ankit-Workshop.pdf" target="_blank">Instructions</a>--></span></td>
+                           <td > Scientific Computing using Orange<br> - Ankit Mahato <span style="float: right;">
+                           <a href="{% static 'pdf/Scientific Computing using Orange.pdf' %}" target="_blank">Instructions</a></span></td>
                            <td> GPU Computing using PyOpenCL<br> - Aditya Bhosale <span style="float: right;">
                            <a href="{% static 'pdf/GPU_Computing_using_PyOpenCL.pdf' %}" target="_blank">Instructions</a></span></td>
                         </tr>
@@ -414,8 +434,7 @@
                         </tr>
                         <tr >
                            <td>02:00 PM - 03:55 PM</td>
-                           <td > Python for Data Analysis<br> - Anamika Gupta &amp; Naveen Kumar<span style="float: right;">
-                           <!--<a href="https://static.fossee.in/python/abstract/Anamika-workshop.pdf" target="_blank">Instructions</a> --></span> </td>
+                           <td > Python for Data Analysis<br> - Anamika Gupta &amp; Naveen Kumar<span style="float: right;"><a href="{% static 'pdf/Python_for_data_analysis.pdf' %}" target="_blank">Instructions</a> </span> </td>
                            <td> Model Evaluation and Selection with Scikit-Learn<br> -  Jaidev Deshpande <span style="float: right;">
                            <a href="{% static 'pdf/Model_Evaluation_and_Selection_with_Scikit-Learn.pdf' %}" target="_blank">Instructions</a></span></td>
                         </tr>
@@ -472,9 +491,14 @@
                         </tr>
                         <tr >
                            <td>11:30 AM - 11:50 AM</td>
+                           <td> ANN based Maximum Power Point Tracker for a Standalone PV System<br> - Rohitha Kurdikeri &amp; Apeksha N Patil</td>
+                           <td><a href="https://scipy.in/2017/downloads/rohithabk/attachment/ABSTRACT/Scipy_final_1_rohithabk..pdf" target="_blank">View here</td>
+                        </tr>
+                        <!--<tr >
+                           <td>11:30 AM - 11:50 AM</td>
                            <td> SymEngine: Leveraging The Power Of A Computer Algebra System (CAS) To Another<br> - Shikhar Jaiswal </td>
                            <td><a href="https://static.fossee.in/python/abstract/Shikar-talk.pdf" target="_blank" >View here</a></td> 
-                        </tr>
+                        </tr>-->
                         <tr >
                            <td>11:50 AM - 12:10 PM</td>
                            <td> Reynolds - A GUI for OpenFoam as a Blender addon <br>- Deepak Surti</td>
@@ -544,13 +568,8 @@
                            <td> Multi-Threading: The Unknown Truth of Python<br> - Ritu Chawla Mehra</td>
                            <td><a href="https://scipy.in/2017/downloads/rituchawlamehra/attachment/ABSTRACT/Conference_Proposal_Ritu_Chawla_Mehra_rituchawlamehra..pdf" target="_blank">View Here</a></td>
                         </tr>
-                        <tr >
-                           <td>05:40 PM - 06:00 PM</td>
-                           <td> ANN based Maximum Power Point Tracker for a Standalone PV System<br> - Rohitha Kurdikeri &amp; Apeksha N Patil</td>
-                           <td><a href="https://scipy.in/2017/downloads/rohithabk/attachment/ABSTRACT/Scipy_final_1_rohithabk..pdf" target="_blank">View here</td>
-                        </tr>
                         <tr>
-                           <td>06:00 PM - 06:15 PM</td>
+                           <td>05:40 PM - 06:00 PM</td>
                            <td colspan="2">Closing</td>
                            
                         </tr>
